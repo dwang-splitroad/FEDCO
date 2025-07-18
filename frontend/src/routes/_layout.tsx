@@ -1,30 +1,19 @@
 import { Flex } from "@chakra-ui/react"
-import { Outlet, createFileRoute, redirect } from "@tanstack/react-router"
+import { Outlet, createFileRoute } from "@tanstack/react-router"
 
 import Navbar from "@/components/Common/Navbar"
-import Sidebar from "@/components/Common/Sidebar"
-import { isLoggedIn } from "@/hooks/useAuth"
 
 export const Route = createFileRoute("/_layout")({
   component: Layout,
-  beforeLoad: async () => {
-    if (!isLoggedIn()) {
-      throw redirect({
-        to: "/login",
-      })
-    }
-  },
+  // Removed authentication requirement for public website
 })
 
 function Layout() {
   return (
-    <Flex direction="column" h="100vh">
+    <Flex direction="column" minH="100vh" bg="gray.50">
       <Navbar />
-      <Flex flex="1" overflow="hidden">
-        <Sidebar />
-        <Flex flex="1" direction="column" p={4} overflowY="auto">
-          <Outlet />
-        </Flex>
+      <Flex flex="1" direction="column">
+        <Outlet />
       </Flex>
     </Flex>
   )
