@@ -5,9 +5,7 @@ import {
   Text,
   Box,
   Menu,
-  Portal,
-  Container,
-  Heading
+  Portal
 } from "@chakra-ui/react"
 import { Link } from "@tanstack/react-router"
 import { FiChevronDown } from "react-icons/fi"

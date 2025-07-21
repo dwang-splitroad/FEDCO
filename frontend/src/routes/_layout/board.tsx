@@ -59,29 +59,26 @@ function BoardPage() {
           <Box flex={1} bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
             {/* Executive Board Section */}
             <SectionHeading color="#232883">Executive Board</SectionHeading>
-            <Stack direction="column" spacing={6} mb={14}>
+            <Stack direction="column" gap={6} mb={14}>
               <BoardMember name="Jason Grube" role="President" org="Rochester Iron & Metal" color="#e07a22" />
               <BoardMember name="Andrew Horstman" role="Vice President" org="Fulton County REMC" color="#e07a22" />
-              <BoardMember name="Michelle Million" role="Secretary/Treasurer" org="Gohn Ag" color="#e07a22" />
-              <BoardMember name="David Heyde" role="Immediate Past President" org="E&B Paving" color="#e07a22" />
+              <BoardMember name="Brian Johnson" role="Treasurer" org="Smith, Sawyer & Smith" color="#e07a22" />
+              <BoardMember name="Kathy Rans" role="Secretary" org="Fulton County Chamber of Commerce" color="#e07a22" />
             </Stack>
 
             {/* Directors Section */}
             <SectionHeading color="#232883">Directors</SectionHeading>
-            <Stack direction="column" spacing={6} mb={14}>
+            <Stack direction="column" gap={6} mb={14}>
               <BoardMember name="Lauren Adley" role="Board Attorney" org="Peterson Waggoner & Perkins LLP" color="#6bbf4e" />
               <BoardMember name="Rennell Finke" org="Akron" color="#6bbf4e" />
-              <BoardMember name="Alan Fisher" org="Woodlawn Hospital" color="#6bbf4e" />
-              <BoardMember name="Orville Haney" org="Homes Land & Lakes Realty" color="#6bbf4e" />
-              <BoardMember name="Jana Vance" org="Rochester School Community Corporation" color="#6bbf4e" />
-              <BoardMember name="Lisa Reffett" org="Rochester Boat Company" color="#6bbf4e" />
-              <BoardMember name="Michael Rich" org="Rich & Co. GC and Construction" color="#6bbf4e" />
-              <BoardMember name="Jillian Smith" org="Fulton County Chamber of Commerce" color="#6bbf4e" />
+              <BoardMember name="Mike McCarter" org="Kewanna" color="#6bbf4e" />
+              <BoardMember name="Mark McCall" org="Beacon Credit Union" color="#6bbf4e" />
+              <BoardMember name="Randy Gundrum" org="Fulton County Council" color="#6bbf4e" />
             </Stack>
 
             {/* Ex Officio Section */}
             <SectionHeading color="#232883">Ex Officio</SectionHeading>
-            <Stack direction="column" spacing={6}>
+            <Stack direction="column" gap={6}>
               <BoardMember name="Brian Goodman" org="Modern Materials/Rochester City Council" color="#6bbf4e" />
               <BoardMember name="Randy Gundrum" org="Fulton County Council" color="#6bbf4e" />
               <BoardMember name="Mark McCall" org="Beacon Credit Union" color="#6bbf4e" />
