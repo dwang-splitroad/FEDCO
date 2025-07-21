@@ -18,11 +18,12 @@ function Navbar() {
       display={display}
       justify="space-between"
       position="sticky"
+      top={0}
+      zIndex={1000}
       color="white"
       align="center"
       bg="blue.800"
       w="100%"
-      top={0}
       px={8}
       py={2}
       boxShadow="md"
@@ -162,7 +163,7 @@ function Navbar() {
             <Menu.Positioner>
               <Menu.Content bg="white" borderColor="blue.200" minW="250px">
                 <Menu.Item value="bizgro-skills">
-                  <Link to="/small-biz/bizgro-skills">
+                  <Link to="/bizgro-skills">
                     <Text color="gray.800">Sharpen Skills with BizGro</Text>
                   </Link>
                 </Menu.Item>
@@ -322,24 +323,24 @@ function Navbar() {
             <Menu.Positioner>
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
                 <Menu.Item value="rochester">
-                  <Link to="/partners/rochester">
+                  <a href="https://rochester.in.us/" target="_blank" rel="noopener noreferrer">
                     <Text color="gray.800">Rochester</Text>
-                  </Link>
+                  </a>
                 </Menu.Item>
                 <Menu.Item value="fulton-county">
-                  <Link to="/partners/fulton-county">
+                  <a href="https://www.co.fulton.in.us/" target="_blank" rel="noopener noreferrer">
                     <Text color="gray.800">Fulton County</Text>
-                  </Link>
+                  </a>
                 </Menu.Item>
                 <Menu.Item value="arkon">
-                  <Link to="/partners/arkon">
+                  <a href="https://akronindiana.com/" target="_blank" rel="noopener noreferrer">
                     <Text color="gray.800">Arkon</Text>
-                  </Link>
+                  </a>
                 </Menu.Item>
                 <Menu.Item value="argos">
-                  <Link to="/partners/argos">
+                  <a href="https://www.townofargos.com/" target="_blank" rel="noopener noreferrer">
                     <Text color="gray.800">Argos</Text>
-                  </Link>
+                  </a>
                 </Menu.Item>
               </Menu.Content>
             </Menu.Positioner>
