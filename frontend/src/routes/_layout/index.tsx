@@ -9,7 +9,7 @@ import {
   VStack,
   HStack,
   Button,
-  Image
+  
 } from "@chakra-ui/react"
 import { createFileRoute } from "@tanstack/react-router"
 
