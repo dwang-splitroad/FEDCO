@@ -123,14 +123,17 @@ function StaffPage() {
                     Get in Touch
                   </Heading>
                   <Link 
-                    href="mailto:director@fultondevelopment.org" 
-                    color="#6bbf4e" 
-                    fontWeight="medium" 
-                    fontSize="lg"
-                    _hover={{ color: "#5aa93e", textDecoration: "underline" }}
-                    transition="all 0.2s"
+                    href="mailto:director@fultondevelopment.org"
                   >
-                    director@fultondevelopment.org
+                    <Text
+                      color="#6bbf4e"
+                      fontWeight="medium"
+                      fontSize="lg"
+                      _hover={{ color: "#5aa93e", textDecoration: "underline" }}
+                      transition="all 0.2s"
+                    >
+                      director@fultondevelopment.org
+                    </Text>
                   </Link>
                   <Text color="gray.600" fontSize="sm" mt={2}>
                     Click to send Michael an email
