@@ -5,7 +5,9 @@ import {
   Text,
   Box,
   Menu,
-  Portal
+  Portal,
+  Container,
+  Heading
 } from "@chakra-ui/react"
 import { Link } from "@tanstack/react-router"
 import { FiChevronDown } from "react-icons/fi"
@@ -54,6 +56,53 @@ function Navbar() {
             HOME
           </Text>
         </Link>
+
+        {/* ABOUT Dropdown */}
+        <Menu.Root>
+          <Menu.Trigger asChild>
+            <Flex
+              align="center"
+              gap={1}
+              bg="transparent"
+              color="white"
+              fontSize="sm"
+              fontWeight="medium"
+              _hover={{ color: "blue.200" }}
+              px={3}
+              py={2}
+              cursor="pointer"
+            >
+              <Text>ABOUT</Text>
+              <FiChevronDown size={14} />
+            </Flex>
+          </Menu.Trigger>
+          <Portal>
+            <Menu.Positioner>
+              <Menu.Content bg="white" borderColor="blue.200" minW="200px">
+                <Menu.Item value="staff">
+                  <Link to="/staff">
+                    <Text color="gray.800">Staff</Text>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item value="board">
+                  <Link to="/board">
+                    <Text color="gray.800">Board of Directors</Text>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item value="mission">
+                  <Link to="/mission">
+                    <Text color="gray.800">Mission</Text>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item value="contact">
+                  <Link to="/contact">
+                    <Text color="gray.800">Contact</Text>
+                  </Link>
+                </Menu.Item>
+              </Menu.Content>
+            </Menu.Positioner>
+          </Portal>
+        </Menu.Root>
 
         {/* Economic Development Dropdown */}
         <Menu.Root>
@@ -292,53 +341,6 @@ function Navbar() {
                 <Menu.Item value="argos">
                   <Link to="/partners/argos">
                     <Text color="gray.800">Argos</Text>
-                  </Link>
-                </Menu.Item>
-              </Menu.Content>
-            </Menu.Positioner>
-          </Portal>
-        </Menu.Root>
-
-        {/* ABOUT Dropdown */}
-        <Menu.Root>
-          <Menu.Trigger asChild>
-            <Flex
-              align="center"
-              gap={1}
-              bg="transparent"
-              color="white"
-              fontSize="sm"
-              fontWeight="medium"
-              _hover={{ color: "blue.200" }}
-              px={3}
-              py={2}
-              cursor="pointer"
-            >
-              <Text>ABOUT</Text>
-              <FiChevronDown size={14} />
-            </Flex>
-          </Menu.Trigger>
-          <Portal>
-            <Menu.Positioner>
-              <Menu.Content bg="white" borderColor="blue.200" minW="200px">
-                <Menu.Item value="staff">
-                  <Link to="/about/staff">
-                    <Text color="gray.800">Staff</Text>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item value="board">
-                  <Link to="/about/board">
-                    <Text color="gray.800">Board of Directors</Text>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item value="mission">
-                  <Link to="/about/mission">
-                    <Text color="gray.800">Mission</Text>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item value="contact">
-                  <Link to="/about/contact">
-                    <Text color="gray.800">Contact</Text>
                   </Link>
                 </Menu.Item>
               </Menu.Content>
