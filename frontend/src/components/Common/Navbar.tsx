@@ -52,56 +52,9 @@ function Navbar() {
             px={3}
             py={2}
           >
-            HOME
+            Home
           </Text>
         </Link>
-
-        {/* ABOUT Dropdown */}
-        <Menu.Root>
-          <Menu.Trigger asChild>
-            <Flex
-              align="center"
-              gap={1}
-              bg="transparent"
-              color="white"
-              fontSize="sm"
-              fontWeight="medium"
-              _hover={{ color: "blue.200" }}
-              px={3}
-              py={2}
-              cursor="pointer"
-            >
-              <Text>ABOUT</Text>
-              <FiChevronDown size={14} />
-            </Flex>
-          </Menu.Trigger>
-          <Portal>
-            <Menu.Positioner>
-              <Menu.Content bg="white" borderColor="blue.200" minW="200px">
-                <Menu.Item value="staff">
-                  <Link to="/staff">
-                    <Text color="gray.800">Staff</Text>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item value="board">
-                  <Link to="/board">
-                    <Text color="gray.800">Board of Directors</Text>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item value="mission">
-                  <Link to="/mission">
-                    <Text color="gray.800">Mission</Text>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item value="contact">
-                  <Link to="/contact">
-                    <Text color="gray.800">Contact</Text>
-                  </Link>
-                </Menu.Item>
-              </Menu.Content>
-            </Menu.Positioner>
-          </Portal>
-        </Menu.Root>
 
         {/* Economic Development Dropdown */}
         <Menu.Root>
@@ -126,14 +79,19 @@ function Navbar() {
             <Menu.Positioner>
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
                 <Menu.Item value="sites-buildings">
-                  <Link to="/economic-development/sites-buildings">
+                  <a href="https://properties.zoomprospector.com/statein?page=1&s%5BSortDirection%5D=true&s%5BradiusLat%5D=0&s%5Bradius%5D=0&s%5BGeoEntityList%5D=ae0ca671-24d9-4d82-861f-869b3f2961f0&s%5BradiusLng%5D=0&s%5BSortBy%5D=featured&s%5BSizeUnits%5D=1" target="_blank" rel="noopener noreferrer">
                     <Text color="gray.800">Sites & Buildings</Text>
-                  </Link>
+                  </a>
                 </Menu.Item>
                 <Menu.Item value="wage-survey">
                   <Link to="/economic-development/wage-survey">
                     <Text color="gray.800">Wage Survey</Text>
                   </Link>
+                </Menu.Item>
+                <Menu.Item value="labor-statistics">
+                  <a href="https://www.hoosierdata.in.gov" target="_blank" rel="noopener noreferrer">
+                    <Text color="gray.800">Labor Statistics</Text>
+                  </a>
                 </Menu.Item>
               </Menu.Content>
             </Menu.Positioner>
@@ -155,7 +113,7 @@ function Navbar() {
               py={2}
               cursor="pointer"
             >
-              <Text>SMALL BIZ</Text>
+              <Text>Small Biz</Text>
               <FiChevronDown size={14} />
             </Flex>
           </Menu.Trigger>
@@ -192,8 +150,8 @@ function Navbar() {
           </Portal>
         </Menu.Root>
 
-        {/* Workone (Simple Link) */}
-        <Link to="/workone">
+        {/* Workone (External Link) */}
+        <a href="https://www.in.gov/dwd/" target="_blank" rel="noopener noreferrer">
           <Text 
             fontSize="sm" 
             fontWeight="medium" 
@@ -204,7 +162,7 @@ function Navbar() {
           >
             Workone
           </Text>
-        </Link>
+        </a>
 
         {/* LIFE IN FULTON COUNTY Dropdown */}
         <Menu.Root>
@@ -221,7 +179,7 @@ function Navbar() {
               py={2}
               cursor="pointer"
             >
-              <Text>LIFE IN FULTON COUNTY</Text>
+              <Text>Life In Fulton County</Text>
               <FiChevronDown size={14} />
             </Flex>
           </Menu.Trigger>
@@ -253,6 +211,11 @@ function Navbar() {
                     <Text color="gray.800">Things to Do</Text>
                   </Link>
                 </Menu.Item>
+                <Menu.Item value="fulton-county-indiana">
+                  <a href="https://fultoncountyindiana.com" target="_blank" rel="noopener noreferrer">
+                    <Text color="gray.800">Fulton County Indiana Tourism</Text>
+                  </a>
+                </Menu.Item>
               </Menu.Content>
             </Menu.Positioner>
           </Portal>
@@ -273,7 +236,7 @@ function Navbar() {
               py={2}
               cursor="pointer"
             >
-              <Text>WHY FULTON COUNTY?</Text>
+              <Text>Why Fulton County?</Text>
               <FiChevronDown size={14} />
             </Flex>
           </Menu.Trigger>
@@ -337,10 +300,72 @@ function Navbar() {
                     <Text color="gray.800">Arkon</Text>
                   </a>
                 </Menu.Item>
-                <Menu.Item value="argos">
-                  <a href="https://www.townofargos.com/" target="_blank" rel="noopener noreferrer">
-                    <Text color="gray.800">Argos</Text>
+                <Menu.Item value="ieda">
+                  <a href="https://ieda.org" target="_blank" rel="noopener noreferrer">
+                    <Text color="gray.800">IEDA</Text>
                   </a>
+                </Menu.Item>
+                <Menu.Item value="iedc">
+                  <a href="https://iedc.in.gov" target="_blank" rel="noopener noreferrer">
+                    <Text color="gray.800">IEDC</Text>
+                  </a>
+                </Menu.Item>
+                <Menu.Item value="ncirpc">
+                  <a href="https://www.iar.cc/north-central-indiana-regional-palnning-council" target="_blank" rel="noopener noreferrer">
+                    <Text color="gray.800">NCIRPC</Text>
+                  </a>
+                </Menu.Item>
+                <Menu.Item value="kewanna">
+                  <a href="https://www.facebook.com/share/1CNHgtB9Vj" target="_blank" rel="noopener noreferrer">
+                    <Text color="gray.800">Kewanna</Text>
+                  </a>
+                </Menu.Item>
+              </Menu.Content>
+            </Menu.Positioner>
+          </Portal>
+        </Menu.Root>
+
+        {/* ABOUT Dropdown */}
+        <Menu.Root>
+          <Menu.Trigger asChild>
+            <Flex
+              align="center"
+              gap={1}
+              bg="transparent"
+              color="white"
+              fontSize="sm"
+              fontWeight="medium"
+              _hover={{ color: "blue.200" }}
+              px={3}
+              py={2}
+              cursor="pointer"
+            >
+              <Text>About</Text>
+              <FiChevronDown size={14} />
+            </Flex>
+          </Menu.Trigger>
+          <Portal>
+            <Menu.Positioner>
+              <Menu.Content bg="white" borderColor="blue.200" minW="200px">
+                <Menu.Item value="staff">
+                  <Link to="/staff">
+                    <Text color="gray.800">Staff</Text>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item value="board">
+                  <Link to="/board">
+                    <Text color="gray.800">Board of Directors</Text>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item value="mission">
+                  <Link to="/mission">
+                    <Text color="gray.800">Mission</Text>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item value="contact">
+                  <Link to="/contact">
+                    <Text color="gray.800">Contact</Text>
+                  </Link>
                 </Menu.Item>
               </Menu.Content>
             </Menu.Positioner>

@@ -1,0 +1,19 @@
+<mjml>
+  <mj-body background-color="#f4f4f4">
+    <mj-section background-color="#ffffff" padding="20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="bold" color="#232883">New Contact Form Submission</mj-text>
+        <mj-divider border-color="#232883" />
+        <mj-text font-size="16px">
+          <b>First Name:</b> {{ first_name }}<br />
+          <b>Last Name:</b> {{ last_name }}<br />
+          <b>Email:</b> {{ email }}<br />
+          <b>Phone:</b> {{ phone }}<br />
+          <b>Subject:</b> {{ subject }}<br />
+          <b>Message:</b><br />
+          {{ message }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml> 

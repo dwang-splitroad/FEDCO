@@ -121,3 +121,28 @@ def verify_password_reset_token(token: str) -> str | None:
         return str(decoded_token["sub"])
     except InvalidTokenError:
         return None
+
+
+def generate_contact_email(
+    *,
+    first_name: str,
+    last_name: str,
+    email: str,
+    phone: str,
+    subject: str,
+    message: str,
+) -> EmailData:
+    project_name = settings.PROJECT_NAME
+    email_subject = f"{project_name} - New Contact Form Submission: {subject}"
+    html_content = render_email_template(
+        template_name="contact.html",
+        context={
+            "first_name": first_name,
+            "last_name": last_name,
+            "email": email,
+            "phone": phone,
+            "subject": subject,
+            "message": message,
+        },
+    )
+    return EmailData(html_content=html_content, subject=email_subject)
