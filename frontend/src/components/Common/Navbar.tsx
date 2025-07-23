@@ -167,23 +167,23 @@ function Navbar() {
                     <Text color="gray.800">Sharpen Skills with BizGro</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="funding">
-                  <Link to="/small-biz/funding">
+                <Menu.Item value="money-for-your-biz">
+                  <Link to="/money-for-your-biz">
                     <Text color="gray.800">Money for your Biz</Text>
                   </Link>
                 </Menu.Item>
                 <Menu.Item value="events">
-                  <Link to="/small-biz/events">
+                  <Link to="/events">
                     <Text color="gray.800">Upcoming Biz Events</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="success-stories">
-                  <Link to="/small-biz/success-stories">
+                <Menu.Item value="storiesofbizgro">
+                  <Link to="/storiesofbizgro">
                     <Text color="gray.800">Stories of BizGro</Text>
                   </Link>
                 </Menu.Item>
                 <Menu.Item value="updates">
-                  <Link to="/small-biz/updates">
+                  <Link to="/updates">
                     <Text color="gray.800">Sign Up for Small Biz Updates</Text>
                   </Link>
                 </Menu.Item>
