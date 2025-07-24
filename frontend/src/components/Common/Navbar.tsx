@@ -79,9 +79,9 @@ function Navbar() {
             <Menu.Positioner>
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
                 <Menu.Item value="sites-buildings">
-                  <a href="https://properties.zoomprospector.com/statein?page=1&s%5BSortDirection%5D=true&s%5BradiusLat%5D=0&s%5Bradius%5D=0&s%5BGeoEntityList%5D=ae0ca671-24d9-4d82-861f-869b3f2961f0&s%5BradiusLng%5D=0&s%5BSortBy%5D=featured&s%5BSizeUnits%5D=1" target="_blank" rel="noopener noreferrer">
+                  <Link to="/economic-development/sites-buildings">
                     <Text color="gray.800">Sites & Buildings</Text>
-                  </a>
+                  </Link>
                 </Menu.Item>
                 <Menu.Item value="wage-survey">
                   <Link to="/economic-development/wage-survey">

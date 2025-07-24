@@ -27,6 +27,7 @@ import { Route as LayoutContactImport } from './routes/_layout/contact'
 import { Route as LayoutBoardImport } from './routes/_layout/board'
 import { Route as LayoutBizgroSkillsImport } from './routes/_layout/bizgro-skills'
 import { Route as LayoutAdminImport } from './routes/_layout/admin'
+import { Route as LayoutEconomicDevelopmentSitesBuildingsImport } from './routes/_layout/economic-development.sites-buildings'
 
 // Create/Update Routes
 
@@ -110,6 +111,12 @@ const LayoutAdminRoute = LayoutAdminImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
+const LayoutEconomicDevelopmentSitesBuildingsRoute =
+  LayoutEconomicDevelopmentSitesBuildingsImport.update({
+    path: '/economic-development/sites-buildings',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -178,6 +185,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutIndexImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/economic-development/sites-buildings': {
+      preLoaderRoute: typeof LayoutEconomicDevelopmentSitesBuildingsImport
+      parentRoute: typeof LayoutImport
+    }
   }
 }
 
@@ -196,6 +207,7 @@ export const routeTree = rootRoute.addChildren([
     LayoutStaffRoute,
     LayoutStoriesofbizgroRoute,
     LayoutIndexRoute,
+    LayoutEconomicDevelopmentSitesBuildingsRoute,
   ]),
   LoginRoute,
   RecoverPasswordRoute,
