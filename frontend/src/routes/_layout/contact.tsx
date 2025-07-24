@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Text, Flex, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, Flex } from "@chakra-ui/react";
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { useForm } from "react-hook-form"
 import { Button, Input, Textarea, Grid, GridItem } from "@chakra-ui/react"
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/_layout/contact")({
 function ContactPage() {
   const { state } = useRouter();
   const currentPath = state.location.pathname;
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm()
+  const { register, handleSubmit, reset, formState: { isSubmitting } } = useForm()
 
   const onSubmit = async (data: any) => {
     // Placeholder for webhook/email API call
