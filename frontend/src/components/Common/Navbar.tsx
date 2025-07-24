@@ -207,13 +207,8 @@ function Navbar() {
                   </Link>
                 </Menu.Item>
                 <Menu.Item value="things-to-do">
-                  <Link to="/life/things-to-do">
+                  <a href="https://fultoncountyindiana.com/" target="_blank" rel="noopener noreferrer">
                     <Text color="gray.800">Things to Do</Text>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item value="fulton-county-indiana">
-                  <a href="https://fultoncountyindiana.com" target="_blank" rel="noopener noreferrer">
-                    <Text color="gray.800">Fulton County Indiana Tourism</Text>
                   </a>
                 </Menu.Item>
               </Menu.Content>
