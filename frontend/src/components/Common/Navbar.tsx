@@ -93,6 +93,12 @@ function Navbar() {
                     <Text color="gray.800">Labor Statistics</Text>
                   </a>
                 </Menu.Item>
+                {/* Add Employment Rates below Labor Statistics */}
+                <Menu.Item value="employment-rates">
+                  <a href="https://www.in.gov/dwd/newsroom/employment-reports" target="_blank" rel="noopener noreferrer">
+                    <Text color="gray.800">Employment Rates</Text>
+                  </a>
+                </Menu.Item>
               </Menu.Content>
             </Menu.Positioner>
           </Portal>
