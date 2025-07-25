@@ -9,9 +9,12 @@ import {
 } from "@chakra-ui/react"
 import { Link } from "@tanstack/react-router"
 import { FiChevronDown } from "react-icons/fi"
+import { useState } from "react";
 
 function Navbar() {
   const display = useBreakpointValue({ base: "none", lg: "flex" })
+  // Add open state for each dropdown
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
 
   return (
     <Flex
@@ -57,7 +60,7 @@ function Navbar() {
         </Link>
 
         {/* Economic Development Dropdown */}
-        <Menu.Root>
+        <Menu.Root open={openMenu === "economic-development"} onOpenChange={(open) => setOpenMenu(open ? "economic-development" : null)}>
           <Menu.Trigger asChild>
             <Flex
               align="center"
@@ -70,13 +73,15 @@ function Navbar() {
               px={3}
               py={2}
               cursor="pointer"
+              onMouseEnter={() => setOpenMenu("economic-development")}
+              onMouseLeave={() => setOpenMenu(null)}
             >
               <Text>Economic Development</Text>
               <FiChevronDown size={14} />
             </Flex>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner>
+            <Menu.Positioner onMouseEnter={() => setOpenMenu("economic-development")} onMouseLeave={() => setOpenMenu(null)}>
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
                 <Menu.Item value="sites-buildings">
                   <Link to="/economic-development/sites-buildings">
@@ -105,7 +110,7 @@ function Navbar() {
         </Menu.Root>
 
         {/* SMALL BIZ Dropdown */}
-        <Menu.Root>
+        <Menu.Root open={openMenu === "small-biz"} onOpenChange={(open) => setOpenMenu(open ? "small-biz" : null)}>
           <Menu.Trigger asChild>
             <Flex
               align="center"
@@ -118,13 +123,15 @@ function Navbar() {
               px={3}
               py={2}
               cursor="pointer"
+              onMouseEnter={() => setOpenMenu("small-biz")}
+              onMouseLeave={() => setOpenMenu(null)}
             >
               <Text>Small Biz</Text>
               <FiChevronDown size={14} />
             </Flex>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner>
+            <Menu.Positioner onMouseEnter={() => setOpenMenu("small-biz")} onMouseLeave={() => setOpenMenu(null)}>
               <Menu.Content bg="white" borderColor="blue.200" minW="250px">
                 <Menu.Item value="bizgro-skills">
                   <Link to="/bizgro-skills">
@@ -171,7 +178,7 @@ function Navbar() {
         </a>
 
         {/* LIFE IN FULTON COUNTY Dropdown */}
-        <Menu.Root>
+        <Menu.Root open={openMenu === "life-in-fulton"} onOpenChange={(open) => setOpenMenu(open ? "life-in-fulton" : null)}>
           <Menu.Trigger asChild>
             <Flex
               align="center"
@@ -184,13 +191,15 @@ function Navbar() {
               px={3}
               py={2}
               cursor="pointer"
+              onMouseEnter={() => setOpenMenu("life-in-fulton")}
+              onMouseLeave={() => setOpenMenu(null)}
             >
               <Text>Life In Fulton County</Text>
               <FiChevronDown size={14} />
             </Flex>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner>
+            <Menu.Positioner onMouseEnter={() => setOpenMenu("life-in-fulton")} onMouseLeave={() => setOpenMenu(null)}>
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
                 <Menu.Item value="quick-facts">
                   <Link to="/life/quick-facts">
@@ -223,7 +232,7 @@ function Navbar() {
         </Menu.Root>
 
         {/* WHY FULTON COUNTY? Dropdown */}
-        <Menu.Root>
+        <Menu.Root open={openMenu === "why-fulton"} onOpenChange={(open) => setOpenMenu(open ? "why-fulton" : null)}>
           <Menu.Trigger asChild>
             <Flex
               align="center"
@@ -236,13 +245,15 @@ function Navbar() {
               px={3}
               py={2}
               cursor="pointer"
+              onMouseEnter={() => setOpenMenu("why-fulton")}
+              onMouseLeave={() => setOpenMenu(null)}
             >
               <Text>Why Fulton County?</Text>
               <FiChevronDown size={14} />
             </Flex>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner>
+            <Menu.Positioner onMouseEnter={() => setOpenMenu("why-fulton")} onMouseLeave={() => setOpenMenu(null)}>
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
                 <Menu.Item value="workforce">
                   <Link to="/why/workforce">
@@ -265,7 +276,7 @@ function Navbar() {
         </Menu.Root>
 
         {/* Partners Dropdown */}
-        <Menu.Root>
+        <Menu.Root open={openMenu === "partners"} onOpenChange={(open) => setOpenMenu(open ? "partners" : null)}>
           <Menu.Trigger asChild>
             <Flex
               align="center"
@@ -278,13 +289,15 @@ function Navbar() {
               px={3}
               py={2}
               cursor="pointer"
+              onMouseEnter={() => setOpenMenu("partners")}
+              onMouseLeave={() => setOpenMenu(null)}
             >
               <Text>Partners</Text>
               <FiChevronDown size={14} />
             </Flex>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner>
+            <Menu.Positioner onMouseEnter={() => setOpenMenu("partners")} onMouseLeave={() => setOpenMenu(null)}>
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
                 <Menu.Item value="rochester">
                   <a href="https://rochester.in.us/" target="_blank" rel="noopener noreferrer">
@@ -327,7 +340,7 @@ function Navbar() {
         </Menu.Root>
 
         {/* ABOUT Dropdown */}
-        <Menu.Root>
+        <Menu.Root open={openMenu === "about"} onOpenChange={(open) => setOpenMenu(open ? "about" : null)}>
           <Menu.Trigger asChild>
             <Flex
               align="center"
@@ -340,13 +353,15 @@ function Navbar() {
               px={3}
               py={2}
               cursor="pointer"
+              onMouseEnter={() => setOpenMenu("about")}
+              onMouseLeave={() => setOpenMenu(null)}
             >
               <Text>About</Text>
               <FiChevronDown size={14} />
             </Flex>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner>
+            <Menu.Positioner onMouseEnter={() => setOpenMenu("about")} onMouseLeave={() => setOpenMenu(null)}>
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
                 <Menu.Item value="staff">
                   <Link to="/staff">
