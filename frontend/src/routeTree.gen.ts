@@ -17,7 +17,9 @@ import { Route as RecoverPasswordImport } from './routes/recover-password'
 import { Route as LoginImport } from './routes/login'
 import { Route as LayoutImport } from './routes/_layout'
 import { Route as LayoutIndexImport } from './routes/_layout/index'
+import { Route as LayoutWorkforceImport } from './routes/_layout/workforce'
 import { Route as LayoutUtilitiesImport } from './routes/_layout/utilities'
+import { Route as LayoutTopEmployersImport } from './routes/_layout/top-employers'
 import { Route as LayoutStoriesofbizgroImport } from './routes/_layout/storiesofbizgro'
 import { Route as LayoutStaffImport } from './routes/_layout/staff'
 import { Route as LayoutSettingsImport } from './routes/_layout/settings'
@@ -65,8 +67,18 @@ const LayoutIndexRoute = LayoutIndexImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
+const LayoutWorkforceRoute = LayoutWorkforceImport.update({
+  path: '/workforce',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
 const LayoutUtilitiesRoute = LayoutUtilitiesImport.update({
   path: '/utilities',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutTopEmployersRoute = LayoutTopEmployersImport.update({
+  path: '/top-employers',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -217,8 +229,16 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutStoriesofbizgroImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/top-employers': {
+      preLoaderRoute: typeof LayoutTopEmployersImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/utilities': {
       preLoaderRoute: typeof LayoutUtilitiesImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/workforce': {
+      preLoaderRoute: typeof LayoutWorkforceImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/': {
@@ -249,7 +269,9 @@ export const routeTree = rootRoute.addChildren([
     LayoutSettingsRoute,
     LayoutStaffRoute,
     LayoutStoriesofbizgroRoute,
+    LayoutTopEmployersRoute,
     LayoutUtilitiesRoute,
+    LayoutWorkforceRoute,
     LayoutIndexRoute,
     LayoutEconomicDevelopmentSitesBuildingsRoute,
   ]),

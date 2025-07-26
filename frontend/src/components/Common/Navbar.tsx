@@ -248,7 +248,7 @@ function Navbar() {
               onMouseEnter={() => setOpenMenu("why-fulton")}
               onMouseLeave={() => setOpenMenu(null)}
             >
-              <Text>Why Fulton County?</Text>
+              <Text>Fulton County</Text>
               <FiChevronDown size={14} />
             </Flex>
           </Menu.Trigger>
@@ -256,17 +256,17 @@ function Navbar() {
             <Menu.Positioner onMouseEnter={() => setOpenMenu("why-fulton")} onMouseLeave={() => setOpenMenu(null)}>
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
                 <Menu.Item value="workforce">
-                  <Link to="/why/workforce">
+                  <Link to="/workforce">
                     <Text color="gray.800">Workforce</Text>
                   </Link>
                 </Menu.Item>
                 <Menu.Item value="top-employers">
-                  <Link to="/why/top-employers">
+                  <Link to="/top-employers">
                     <Text color="gray.800">Top Employers</Text>
                   </Link>
                 </Menu.Item>
                 <Menu.Item value="utilities">
-                  <Link to="/why/utilities">
+                  <Link to="/utilities">
                     <Text color="gray.800">Utilities</Text>
                   </Link>
                 </Menu.Item>

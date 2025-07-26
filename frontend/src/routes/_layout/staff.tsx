@@ -30,9 +30,7 @@ function StaffPage() {
           Our Staff
         </Heading>
       </Box>
-
-      {/* Main Content */}
-      <Container maxW="7xl" py={16}>
+      <Container maxW="7xl" py={0}>
         <Flex gap={16} align="flex-start">
           {/* Sidebar Navigation */}
           <Box minW="280px" bg="white" p={8} borderRadius="xl" boxShadow="lg" h="fit-content">
@@ -54,9 +52,8 @@ function StaffPage() {
               </Link>
             </Flex>
           </Box>
-
-          {/* Staff Profile Card */}
-          <Box flex={1} bg="white" borderRadius="xl" boxShadow="xl" overflow="hidden">
+          {/* Staff Profile Card in a single white box with padding */}
+          <Box flex={1} bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
             <Flex direction={{ base: "column", lg: "row" }} minH="500px">
               {/* Image Section */}
               <Box 
@@ -85,7 +82,6 @@ function StaffPage() {
                   </Text>
                 </Box>
               </Box>
-
               {/* Content Section */}
               <Flex direction="column" flex={1} p={10} justify="space-between">
                 <Box>
@@ -95,7 +91,6 @@ function StaffPage() {
                   <Heading as="h1" fontSize="3xl" color="#232883" fontWeight="bold" mb={8}>
                     MICHAEL C. LADD
                   </Heading>
-                  
                   <Flex direction="column" gap={6}>
                     <Box>
                       <Heading as="h3" fontSize="lg" color="#232883" mb={3}>
@@ -105,7 +100,6 @@ function StaffPage() {
                         Michael C. Ladd began his tenure as director of the Fulton Development Corporation on February 1, 2023.
                       </Text>
                     </Box>
-
                     <Box>
                       <Heading as="h3" fontSize="lg" color="#232883" mb={3}>
                         Experience & Background
@@ -116,7 +110,6 @@ function StaffPage() {
                     </Box>
                   </Flex>
                 </Box>
-
                 {/* Contact Section */}
                 <Box mt={8} p={6} bg="gray.50" borderRadius="lg">
                   <Heading as="h3" fontSize="md" color="#232883" mb={3}>
@@ -135,9 +128,6 @@ function StaffPage() {
                       director@fultondevelopment.org
                     </Text>
                   </Link>
-                  <Text color="gray.600" fontSize="sm" mt={2}>
-                    Click to send Michael an email
-                  </Text>
                 </Box>
               </Flex>
             </Flex>

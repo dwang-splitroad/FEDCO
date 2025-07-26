@@ -30,9 +30,7 @@ function BoardPage() {
           Board of Directors
         </Heading>
       </Box>
-
-      {/* Main Content */}
-      <Container maxW="7xl" py={16}>
+      <Container maxW="7xl" py={0}>
         <Flex gap={16} align="flex-start">
           {/* Sidebar Navigation */}
           <Box minW="280px" bg="white" p={8} borderRadius="xl" boxShadow="lg" h="fit-content">
@@ -54,8 +52,7 @@ function BoardPage() {
               </Link>
             </Flex>
           </Box>
-
-          {/* Board Content */}
+          {/* Board Content in a single white box with padding */}
           <Box flex={1} bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
             {/* Executive Board Section */}
             <SectionHeading color="#232883">Executive Board</SectionHeading>
@@ -65,7 +62,6 @@ function BoardPage() {
               <BoardMember name="Brian Johnson" role="Treasurer" org="Smith, Sawyer & Smith" color="#e07a22" />
               <BoardMember name="Kathy Rans" role="Secretary" org="Fulton County Chamber of Commerce" color="#e07a22" />
             </Stack>
-
             {/* Directors Section */}
             <SectionHeading color="#232883">Directors</SectionHeading>
             <Stack direction="column" gap={6} mb={14}>
@@ -75,7 +71,6 @@ function BoardPage() {
               <BoardMember name="Mark McCall" org="Beacon Credit Union" color="#6bbf4e" />
               <BoardMember name="Randy Gundrum" org="Fulton County Council" color="#6bbf4e" />
             </Stack>
-
             {/* Ex Officio Section */}
             <SectionHeading color="#232883">Ex Officio</SectionHeading>
             <Stack direction="column" gap={6}>
