@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Container, Heading, Text, VStack, Link as ChakraLink } from "@chakra-ui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 

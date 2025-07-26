@@ -1,6 +1,5 @@
-import React from "react";
 import { Box, Container, Heading, Text, VStack, Link as ChakraLink } from "@chakra-ui/react";
-import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 const lifeInFultonLinks = [
   { label: "Quick Facts", to: "/quick-facts" },

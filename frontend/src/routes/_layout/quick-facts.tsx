@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Container, Heading, Text, VStack, SimpleGrid, Link as ChakraLink } from "@chakra-ui/react";
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 
@@ -65,7 +64,6 @@ function Sidebar({ current }: { current: string }) {
 
 function QuickFactsPage() {
   const { state } = useRouter();
-  const currentPath = state.location.pathname;
   return (
     <Box bg="gray.50" minH="100vh" py={10}>
       <Container maxW="6xl" bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>

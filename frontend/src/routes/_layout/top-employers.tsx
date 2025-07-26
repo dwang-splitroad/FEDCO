@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
@@ -75,7 +74,7 @@ function TopEmployersPage() {
             <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#232883" fontWeight="bold" mb={6} letterSpacing="wide">
               Top Employers in Fulton County
             </Heading>
-            <VStack align="stretch" spacing={2}>
+            <VStack align="stretch" gap={2}>
               {employers.map(([name, desc]) => (
                 <Text key={name} fontSize="md" mb={1}>
                   <Box as="span" fontWeight="bold" color="#232883">{name}</Box>{desc ? <Box as="span" color="#232323"> {desc}</Box> : null}

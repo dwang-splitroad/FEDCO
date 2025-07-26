@@ -4,7 +4,6 @@ import {
   Text, 
   Flex,
   Grid,
-  GridItem,
   Heading,
   VStack,
   HStack,
