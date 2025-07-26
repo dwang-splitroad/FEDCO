@@ -17,6 +17,7 @@ import { Route as RecoverPasswordImport } from './routes/recover-password'
 import { Route as LoginImport } from './routes/login'
 import { Route as LayoutImport } from './routes/_layout'
 import { Route as LayoutIndexImport } from './routes/_layout/index'
+import { Route as LayoutUtilitiesImport } from './routes/_layout/utilities'
 import { Route as LayoutStoriesofbizgroImport } from './routes/_layout/storiesofbizgro'
 import { Route as LayoutStaffImport } from './routes/_layout/staff'
 import { Route as LayoutSettingsImport } from './routes/_layout/settings'
@@ -24,6 +25,8 @@ import { Route as LayoutQuickFactsImport } from './routes/_layout/quick-facts'
 import { Route as LayoutMoneyForYourBizImport } from './routes/_layout/money-for-your-biz'
 import { Route as LayoutMissionImport } from './routes/_layout/mission'
 import { Route as LayoutItemsImport } from './routes/_layout/items'
+import { Route as LayoutHealthcareImport } from './routes/_layout/healthcare'
+import { Route as LayoutEducationImport } from './routes/_layout/education'
 import { Route as LayoutContactImport } from './routes/_layout/contact'
 import { Route as LayoutBoardImport } from './routes/_layout/board'
 import { Route as LayoutBizgroSkillsImport } from './routes/_layout/bizgro-skills'
@@ -62,6 +65,11 @@ const LayoutIndexRoute = LayoutIndexImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
+const LayoutUtilitiesRoute = LayoutUtilitiesImport.update({
+  path: '/utilities',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
 const LayoutStoriesofbizgroRoute = LayoutStoriesofbizgroImport.update({
   path: '/storiesofbizgro',
   getParentRoute: () => LayoutRoute,
@@ -94,6 +102,16 @@ const LayoutMissionRoute = LayoutMissionImport.update({
 
 const LayoutItemsRoute = LayoutItemsImport.update({
   path: '/items',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutHealthcareRoute = LayoutHealthcareImport.update({
+  path: '/healthcare',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutEducationRoute = LayoutEducationImport.update({
+  path: '/education',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -163,6 +181,14 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutContactImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/education': {
+      preLoaderRoute: typeof LayoutEducationImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/healthcare': {
+      preLoaderRoute: typeof LayoutHealthcareImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/items': {
       preLoaderRoute: typeof LayoutItemsImport
       parentRoute: typeof LayoutImport
@@ -191,6 +217,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutStoriesofbizgroImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/utilities': {
+      preLoaderRoute: typeof LayoutUtilitiesImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/': {
       preLoaderRoute: typeof LayoutIndexImport
       parentRoute: typeof LayoutImport
@@ -210,6 +240,8 @@ export const routeTree = rootRoute.addChildren([
     LayoutBizgroSkillsRoute,
     LayoutBoardRoute,
     LayoutContactRoute,
+    LayoutEducationRoute,
+    LayoutHealthcareRoute,
     LayoutItemsRoute,
     LayoutMissionRoute,
     LayoutMoneyForYourBizRoute,
@@ -217,6 +249,7 @@ export const routeTree = rootRoute.addChildren([
     LayoutSettingsRoute,
     LayoutStaffRoute,
     LayoutStoriesofbizgroRoute,
+    LayoutUtilitiesRoute,
     LayoutIndexRoute,
     LayoutEconomicDevelopmentSitesBuildingsRoute,
   ]),

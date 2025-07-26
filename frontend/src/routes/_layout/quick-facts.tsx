@@ -8,9 +8,9 @@ function SectionDivider() {
 
 const lifeInFultonLinks = [
   { label: "Quick Facts", to: "/quick-facts" },
-  { label: "Healthcare", to: "/life/healthcare" },
-  { label: "Education", to: "/life/education" },
-  { label: "Utilities", to: "/life/utilities" },
+  { label: "Healthcare", to: "/healthcare" },
+  { label: "Education", to: "/education" },
+  { label: "Utilities", to: "/utilities" },
   { label: "Things to Do", href: "https://fultoncountyindiana.com/" },
 ];
 

@@ -207,17 +207,17 @@ function Navbar() {
                   </Link>
                 </Menu.Item>
                 <Menu.Item value="healthcare">
-                  <Link to="/life/healthcare">
+                  <Link to="/healthcare">
                     <Text color="gray.800">Healthcare</Text>
                   </Link>
                 </Menu.Item>
                 <Menu.Item value="education">
-                  <Link to="/life/education">
+                  <Link to="/education">
                     <Text color="gray.800">Education</Text>
                   </Link>
                 </Menu.Item>
                 <Menu.Item value="utilities">
-                  <Link to="/life/utilities">
+                  <Link to="/utilities">
                     <Text color="gray.800">Utilities</Text>
                   </Link>
                 </Menu.Item>
