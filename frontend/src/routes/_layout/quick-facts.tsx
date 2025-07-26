@@ -63,7 +63,6 @@ function Sidebar({ current }: { current: string }) {
 }
 
 function QuickFactsPage() {
-  const { state } = useRouter();
   return (
     <Box bg="gray.50" minH="100vh" py={10}>
       <Container maxW="6xl" bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
