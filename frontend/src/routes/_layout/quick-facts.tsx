@@ -1,5 +1,5 @@
 import { Box, Container, Heading, Text, VStack, SimpleGrid, Link as ChakraLink } from "@chakra-ui/react";
-import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 function SectionDivider() {
   return <Box w="100%" h="1px" bg="gray.200" my={4} />;
