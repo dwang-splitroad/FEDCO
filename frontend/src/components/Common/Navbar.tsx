@@ -202,7 +202,7 @@ function Navbar() {
             <Menu.Positioner onMouseEnter={() => setOpenMenu("life-in-fulton")} onMouseLeave={() => setOpenMenu(null)}>
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
                 <Menu.Item value="quick-facts">
-                  <Link to="/life/quick-facts">
+                  <Link to="/quick-facts">
                     <Text color="gray.800">Quick Facts</Text>
                   </Link>
                 </Menu.Item>

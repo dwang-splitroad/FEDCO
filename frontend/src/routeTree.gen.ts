@@ -20,6 +20,7 @@ import { Route as LayoutIndexImport } from './routes/_layout/index'
 import { Route as LayoutStoriesofbizgroImport } from './routes/_layout/storiesofbizgro'
 import { Route as LayoutStaffImport } from './routes/_layout/staff'
 import { Route as LayoutSettingsImport } from './routes/_layout/settings'
+import { Route as LayoutQuickFactsImport } from './routes/_layout/quick-facts'
 import { Route as LayoutMoneyForYourBizImport } from './routes/_layout/money-for-your-biz'
 import { Route as LayoutMissionImport } from './routes/_layout/mission'
 import { Route as LayoutItemsImport } from './routes/_layout/items'
@@ -73,6 +74,11 @@ const LayoutStaffRoute = LayoutStaffImport.update({
 
 const LayoutSettingsRoute = LayoutSettingsImport.update({
   path: '/settings',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutQuickFactsRoute = LayoutQuickFactsImport.update({
+  path: '/quick-facts',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -169,6 +175,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutMoneyForYourBizImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/quick-facts': {
+      preLoaderRoute: typeof LayoutQuickFactsImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/settings': {
       preLoaderRoute: typeof LayoutSettingsImport
       parentRoute: typeof LayoutImport
@@ -203,6 +213,7 @@ export const routeTree = rootRoute.addChildren([
     LayoutItemsRoute,
     LayoutMissionRoute,
     LayoutMoneyForYourBizRoute,
+    LayoutQuickFactsRoute,
     LayoutSettingsRoute,
     LayoutStaffRoute,
     LayoutStoriesofbizgroRoute,

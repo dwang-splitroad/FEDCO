@@ -55,8 +55,9 @@ function StoriesOfBizgroPage() {
             {/* Article 1: Newby Services */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
               <Box mb={2}><Text fontSize="sm" color="gray.500">August 29, 2022</Text></Box>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Newby Services</Heading>
               {/* Header/Feature Image */}
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Newby+Services.png" alt="Newby Services Header" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12 }} /></Box>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Newby+Services.png" alt="Newby Services Header" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
               <Text color="gray.700" mb={4}>Having the work experience and valuable skill sets in an industrial trade makes a person very valuable and marketable in today’s society. After spending years working for a commercial electrical cooperative and feeling the desire to build something that gave him pride and ownership, Rusty Newby “jumped” into an entrepreneurial endeavor he never thought was possible. Newby Services offers repairs, new installs and upgrades for commercial and agricultural clients, service & repair to private power lines, underground trenching and electrical contracting.</Text>
               {/* Portrait Image (Full Width) */}
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_9213.jpg" alt="Rusty Newby Portrait" style={{ width: "100%", maxHeight: 340, objectFit: "cover", borderRadius: 12 }} /></Box>
@@ -99,11 +100,12 @@ function StoriesOfBizgroPage() {
             {/* Article 2: Rochester Boat Company */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
               <Box mb={2}><Text fontSize="sm" color="gray.500">August 22, 2022</Text></Box>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Rochester Boat Company</Heading>
               {/* Rochester Boat Company logo/image right below date, full width */}
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Rochester+Boat+Company.png" alt="Rochester Boat Company Logo" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12, background: '#fff' }} /></Box>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Rochester+Boat+Company.png" alt="Rochester Boat Company Logo" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12, background: '#fff' }} /></Box>
               <Text color="gray.700" mb={4}>After purchasing a home on beautiful Lake Manitou, Shane and Lisa Reffett quickly realized the lack of lakefront services available to the community. In 2008, they decided to start providing their own dock and lift service, eventually branching out to other friends and family. Fast forward to fourteen employees later, Rochester Boat Company was established, now offering a variety of services to the local lake community including dock & lift: sales, service, installation, winter storage, sales & service: pontoons & boats. They are a proud OEM dealership for Crest, Suzuki and ShoreSation.</Text>
               {/* First image (full width) */}
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_9109.jpg" alt="Rochester Boat Company Building" style={{ width: "100%", maxHeight: 340, objectFit: "cover", borderRadius: 12 }} /></Box>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_9109.jpg" alt="Rochester Boat Company Building" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
               <Text color="gray.700" mb={4}>Like most successful businesses starting out, Rochester Boat Company experienced their own set of unique challenges from learning how the backend of a business worked, finding & keeping good help along with growing pains. The Reffetts turned to BizGro by FEDCO’s BizGro business resources for help. Shane is a graduate of the NxLevel Business Planning and Management Course, a [now] five week program offered each fall and spring. Sharing about the class, Reffett stated, <i>“The NxLevel class definitely opened my eyes that there is a lot more to running a business than going out and just doing the work. There are financials, insurance, and a credit to establish, etc.”</i> The Reffetts credit the BizGro program with learning that their business had a unique set of insurance challenges and needs beyond the first business package the average insurance agency will sell.</Text>
               <Text color="gray.700" mb={4}>In addition, while taking the class, the Reffetts also learned how to receive a line of credit and received support and encouragement while expanding into a Suzuki and Crest Dealership. Shane really enjoyed how the business planning portion of the class helped him organize all aspects of the business. <i>“You can’t do it on your own. You need help. Each week of [The NxLevel class] builds off the other. It’s all put together in the end and gives you a clear path.”</i></Text>
               {/* OBS_9093.jpg now here */}
@@ -120,9 +122,9 @@ function StoriesOfBizgroPage() {
             {/* Article 3: Kline Performance Equine */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
               <Box mb={2}><Text fontSize="sm" color="gray.500">August 15, 2022</Text></Box>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Kline Performance Equine</Heading>
               {/* Main header image */}
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Rochester+Bagel_Kline+Performance+Equine_Blog+Header@300x.png" alt="Kline Performance Equine Header" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12 }} /></Box>
-              <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Kline Performance Equine</Heading>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Rochester+Bagel_Kline+Performance+Equine_Blog+Header@300x.png" alt="Kline Performance Equine Header" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
               <Text color="gray.700" mb={4}>Growing up with Tim’s Body Shop literally in her backyard, Lanae Kline was destined to be a successful entrepreneur like her dad. Horses have also been a huge part of Kline’s life. If you want to see her eyes sparkle, just ask her about them. With an interest in a unique service within the livestock industry, Kline put herself through training and certification in hand massage and Pulsed Electro-Magnetic Field (PEMF) therapy. Through word of mouth within the community and her strong customer service abilities, Kline found herself picking up more and more clients which led to the start of Kline Performance Equine. Now, Kline has combined her love for livestock and people, traveling all over to farms and livestock shows, delivering a non-invasive therapy that enhances metabolism, reduces stress, increases blood flow, improves overall health and aids in overcoming injuries. These benefits have proven to be a valuable asset to livestock in the show and performance industry.</Text>
               {/* OBS_8874.jpg (full width) */}
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_8874.jpg" alt="Kline Performance Equine" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12 }} /></Box>
@@ -143,61 +145,124 @@ function StoriesOfBizgroPage() {
               <Text color="gray.700" fontWeight="bold">If you are interested in utilizing her services, call or text: (574) 551-0077</Text>
             </Box>
 
-            {/* Article 4: Rochester Bagel & Coffee */}
+            {/* Article 4: Rochester Bagel & Coffee (August 8, 2022) */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
               <Box mb={2}><Text fontSize="sm" color="gray.500">August 8, 2022</Text></Box>
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Rochester+Bagel_Rochester+Bagel_Blog+Header@300x.png" alt="Rochester Bagel & Coffee" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12 }} /></Box>
-              <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Rochester Bagel & Coffee</Heading>
-              <Text color="gray.700" mb={4}>[Add full story content here based on the website. Placeholder for now.]</Text>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Rochester Bagel & Coffee House</Heading>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Rochester+Bagel_Rochester+Bagel_Blog+Header@300x.png" alt="Rochester Bagel & Coffee" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.700" mb={4}>When the original Rochester Bagel & Coffee House came up for sale, Pia Cannedy found herself in an unexpected business agreement with her three school-aged children. Begging her to buy the local business, Cannedy agreed as long as they would help put in the work.</Text>
+              <Text color="gray.700" mb={4}>Driving through Rochester, Indiana’s main stretch, you’ll pass by Rochester Bagel & Coffee House, yearning to stop by and read a book under the charming red umbrellas sprinkled around their newly-built patio. Now offering something for everyone, Rochester Bagel & Coffee House serves homemade, fresh bagels and spreads, baked goods including cinnamon rolls and scones, breakfast and lunch items along with specialty coffee drinks and jet teas.</Text>
+              <Text color="gray.700" mb={4}>After purchasing the business, one of the largest challenges and questions Cannedy faced was: How to pull revenue in to keep the doors open in a small town? It was then, when she turned to BizGro by FEDCO’s many resources to help overcome that challenge and other obstacles. By attending the NxLevel Business Planning & Management Course, Cannedy learned how to put together a business plan that allowed her dreams to become a reality.</Text>
+              {/* Horizontal grid 1:1:1 */}
+              <Flex gap={2} mb={4}>
+                <Box flex={1}><img src="/images/storiesofbizgro/article pictures/OBS_8982.jpg" alt="Bagel Shop 1" style={{ width: "100%", height: "auto", maxHeight: 180, objectFit: "cover", borderRadius: 8 }} /></Box>
+                <Box flex={1}><img src="/images/storiesofbizgro/article pictures/OBS_8994.jpg" alt="Bagel Shop 2" style={{ width: "100%", height: "auto", maxHeight: 180, objectFit: "cover", borderRadius: 8 }} /></Box>
+                <Box flex={1}><img src="/images/storiesofbizgro/article pictures/OBS_8996.jpg" alt="Bagel Shop 3" style={{ width: "100%", height: "auto", maxHeight: 180, objectFit: "cover", borderRadius: 8 }} /></Box>
+              </Flex>
+              <Text color="gray.700" mb={4}>Now making up a majority of the revenue, transitioning lunch into the business plan was one of the successful ideas that came out of the business planning portion of the course. “I actually got to bring lunch items for taste-testing to the class,” Cannedy excitedly shared when talking about her network of fellow entrepreneurs who took the course alongside her. “It was unique to have a table of professionals making up a variety of business owners in different seasons. You got to put your ideas out there. Everyone had an opinion and you could take it or leave it. You weren't left on your own.”</Text>
+              <Text color="gray.700" mb={4}>Another value-added business decision Cannedy made with the help of the BizGro by FEDCO programming was the outdoor patio space. “The patio was out of my comfort zone but the  best decision that was ever made,” Cannedy said.</Text>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_8962-2.jpg" alt="Bagel Shop Patio 1" style={{ width: "100%", height: "auto", maxHeight: 340, objectFit: "cover", borderRadius: 12 }} /></Box>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_8966-2.jpg" alt="Bagel Shop Patio 2" style={{ width: "100%", height: "auto", maxHeight: 340, objectFit: "cover", borderRadius: 12 }} /></Box>
+              <Text color="gray.700" mb={4}>Now, as Cannedy’s kids have gotten older and are starting to take more active roles in the business, she looks forward to putting them through the NxLevel course someday. “I just think it’s a very important program - it’s very vast for any business person. I grew up in California and I’ve never seen any program like it. I came in with a lot more confidence than I probably would have had on my own. Where else would you find that?”</Text>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_9055.jpg" alt="Bagel Shop Family" style={{ width: "100%", height: "auto", maxHeight: 340, objectFit: "cover", borderRadius: 12 }} /></Box>
+              <Text color="gray.700" mb={4}>When asked what advice she’d give a beginning entrepreneur, Cannedy stated:</Text>
+              <Text color="gray.700" fontStyle="italic" mb={4}>
+                “If you never take that chance, you will never find that success. You have to get over the fear and set it aside.”
+              </Text>
+              <Text color="gray.700" mb={2}>Stay up to date with what’s going on at Rochester Bagel & Coffee House!</Text>
+              <Text color="gray.700" mb={1}><b>Like on Facebook:</b> <a href="https://www.facebook.com/RochesterBagel" style={{ color: "#6bbf4e", fontWeight: "bold" }} target="_blank" rel="noopener noreferrer">@RochesterBagel</a></Text>
+              <Text color="gray.700" mb={1}><b>Follow on Instagram:</b> <a href="https://www.instagram.com/thebagelshoproc" style={{ color: "#6bbf4e", fontWeight: "bold" }} target="_blank" rel="noopener noreferrer">@thebagelshoproc</a></Text>
+              <Text color="gray.700" mb={1}><b>Visit their website:</b> <a href="https://www.rochesterbagel.com" style={{ color: "#6bbf4e", fontWeight: "bold" }} target="_blank" rel="noopener noreferrer">www.rochesterbagel.com</a></Text>
+              <Text color="gray.700" mb={1}><b>Call:</b> (574) 223-4100</Text>
+            </Box>
+                {/* Article 5: Hoffman Body Shop & Graphics */}
+              <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
+              <Box mb={2}><Text fontSize="sm" color="gray.500">October 27, 2017</Text></Box>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Hoffman Body Shop & Graphics</Heading>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7591.jpg" alt="Left to right, Adam, Kim and Aaron Martin of Hoffman Body Shop and Graphics." style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.600" fontSize="sm" mb={4}>Left to right, Adam, Kim and Aaron Martin of Hoffman Body Shop and Graphics.</Text>
+              <Heading as="h3" fontSize={{ base: "xl", md: "2xl" }} color="#232323" fontWeight="bold" mb={3}>He Does a (Car) Body Good</Heading>
+              <Text color="gray.700" mb={4}>In 2012 Adam Martin gave life to the "graphics" part of Hoffman Body Shop and Graphics. Adam’s parents have owned Akron-based Hoffman Body Shop since 1997 and have grown it into a very successful small business.</Text>
+              <Text color="gray.700" mb={4}>Adam wanted to make his own mark on the business and decided graphics was a good place to start. He carved out a small office space in the existing shop, bought a large format printer and cutter, and got to work! His services include graphic design and logo creation, graphics application for various products including ad specialties, clothing, and of course anything auto related; (think cool graphics on cars, motorcycles, race cars, trucks, trailers, semis, and even school buses!). Adam now has two printers, two employees and he occupies a much larger place in the shop. Working alongside his family, he serves customers all over Indiana.</Text>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7551.jpg" alt="Adam at work in the shop" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.700" mb={4}>Adam completed FEDCO's Business Planning Class and borrowed start up money from the low interest loan program. Adam proves there are always more opportunities out there and even successful existing businesses can identify new markets and expand their services.</Text>
+            </Box>
+            {/* Article 6: Jarrety’s Place */}
+            <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
+              <Box mb={2}><Text fontSize="sm" color="gray.500">October 27, 2017</Text></Box>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Jarrety’s Place</Heading>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7511.jpg" alt="Jarrety’s Place" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.700" mb={4}>Dawn Peterson opened Jarrety’s Gourmet Sandwiches and Catering in 2006. Located right in the heart of Downtown Rochester, Jarrety’s offers a coffee bar, sandwich shop and full-service catering.</Text>
+              <Text color="gray.700" mb={4}>The restaurant quickly became THE place to go for food, outstanding customer service, and a positive atmosphere. Business was so good, in fact, they needed more space. In 2016, Dawn decided to double the size (and then some) of Jarrety’s, expanding it by 5800 square feet into the adjacent storefront and more than doubled the size of the kitchen. In addition to a larger kitchen for expanded catering, there is more restaurant space, a bar, and a large meeting area.</Text>
+              <Text color="gray.700" mb={4}>Dawn has used FEDCO’s small business services along the way, including low interest loans, training funds, SBDC counseling, and she also completed FEDCO’s business planning class.</Text>
+              <Text color="gray.700" mb={4}>Jarrety’s was also the winner of the 2014 FEDCO Business Plan Competition, as an existing business. We asked Dawn what advice she has for others who want to start a business….”When someone tells you no, keep going!” and she has.</Text>
             </Box>
 
-            {/* Article 5: Jarrety’s Gourmet Sandwiches and Catering */}
+            {/* Article 7: Manitou Marina */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">2017</Text></Box>
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7511.jpg" alt="Jarrety’s Gourmet Sandwiches and Catering" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12 }} /></Box>
-              <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Jarrety’s Gourmet Sandwiches and Catering</Heading>
-              <Text color="gray.700" mb={4}>[Add full story content here based on the website. Placeholder for now.]</Text>
+              <Box mb={2}><Text fontSize="sm" color="gray.500">August 22, 2017</Text></Box>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Manitou Marina</Heading>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7256.jpg" alt="Mason and Aereka Heyde, owners of Manitou Marina" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.600" fontSize="sm" mb={4}>Mason and Aereka Heyde, owners of Manitou Marina</Text>
+              <Heading as="h3" fontSize={{ base: "lg", md: "xl" }} color="#232323" fontWeight="bold" mb={3} textTransform="uppercase">They say one of the secrets of a successful business idea is to offer a product or service that solves a problem.</Heading>
+              <Text color="gray.700" mb={4}>Mason and Aereka Heyde did just that. 660 homes sit along the banks of Lake Manitou in Rochester but there was no place on the lake to conveniently purchase gas for boats and watercraft. Mason had toyed with the idea for some time, then in spring of 2017, launched Manitou Marina.</Text>
+              <Text color="gray.700" mb={4}>Located on Lake Manitou, Manitou Marina will be the only fueling station that is accessible by boat to lake dwellers. The first summer has proven to be a success with plans of expansion in the future.</Text>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7215.jpg" alt="Manitou Marina" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.700" mb={4}>Mason’s thoughts about the FEDCO program; “The business planning class was great; it really helped with cash flow and overall financials….and the loan program, you can’t really beat that!”, referring to the low interest loans. Mason and Aereka’s advice to new business owners “plan to spend more time than you think you will working on the business and working more hands on too.”</Text>
             </Box>
 
-            {/* Article 6: Manitou Marina */}
+            {/* Article 8: Miss Pamela’s – The Plus-Size Bridal Salon */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">2017</Text></Box>
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7215.jpg" alt="Manitou Marina" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12 }} /></Box>
-              <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Manitou Marina</Heading>
-              <Text color="gray.700" mb={4}>[Add full story content here based on the website. Placeholder for now.]</Text>
+              <Box mb={2}><Text fontSize="sm" color="gray.500">August 12, 2017</Text></Box>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Miss Pamela’s – The Plus - Size Bridal Salon</Heading>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7319.jpg" alt="Pamela Inwood, owner, Miss Pamela’s – The Plus - Size Bridal Salon" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.600" fontSize="sm" mb={4}>Pamela Inwood, owner, Miss Pamela’s – The Plus - Size Bridal Salon</Text>
+              <Heading as="h3" fontSize={{ base: "lg", md: "xl" }} color="#232323" fontWeight="bold" mb={3} textTransform="uppercase">We're so glad we had this time together.</Heading>
+              <Text color="gray.700" mb={4}>Pamela Inwood, originally from Chicago, became intrigued by the bridal industry in the mid-90s after taking what she refers to as a “left turn” in her career. Miss Pamela opened her bridal salon on Main Street in Rochester in 2008. After close observation of the market she transitioned the store to accommodate the plus size bride offering plus size bridal gowns, bridesmaid dresses, veils, jewelry, and a variety of other wedding related services. Miss P is even licensed to perform weddings in Indiana. Talk about a one stop shop!</Text>
+              <Text color="gray.700" mb={4}>She eventually expanded into a bigger (and beautiful) location at 723 Main Street in Rochester. Being the ONLY plus size bridal salon in Indiana allows Miss Pamela’s to attract brides from hundreds of miles away. The salon is a destination and is known for its outstanding customer service, attention to detail, and personal attention to each and every bride.</Text>
+              <Text color="gray.700" mb={4}>Miss Pamela has taken advantage of FEDCO’s loan program, technical assistance program, and Small Business Development Center (SBDC) counseling services. When asked her thoughts about FEDCO’s program, her response, “The loan program saved my store. The low interest, short pay off… and the process is easy. Very easy.” Advice to new business owners? “Never Give up!” Thanks for your example, Miss P!</Text>
+              <Text color="gray.700" mb={4}>Miss Pamela officially retired in January of 2018; she’s off to ride an elephant or visit Europe, maybe have an overnight with the penguins in Antarctica! We wish her happiness and fun in her retirement and thank her for her impact and example in our community.</Text>
             </Box>
 
-            {/* Article 7: Miss Pamela’s – The Plus-Size Bridal Salon */}
+            {/* Article 9: Northern Traders */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">2017</Text></Box>
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7369.jpg" alt="Miss Pamela’s – The Plus-Size Bridal Salon" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12 }} /></Box>
-              <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Miss Pamela’s – The Plus-Size Bridal Salon</Heading>
-              <Text color="gray.700" mb={4}>[Add full story content here based on the website. Placeholder for now.]</Text>
-            </Box>
-
-            {/* Article 8: Northern Traders */}
-            <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">2017</Text></Box>
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7083.jpg" alt="Northern Traders" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12 }} /></Box>
-              <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Northern Traders</Heading>
-              <Text color="gray.700" mb={4}>[Add full story content here based on the website. Placeholder for now.]</Text>
+              <Box mb={2}><Text fontSize="sm" color="gray.500">August 1, 2017</Text></Box>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Northern Traders</Heading>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7131.jpg" alt="Northern Traders owners, Alan and Sandra Bailey…and Roger." style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.600" fontSize="sm" mb={4}>Northern Traders owners, Alan and Sandra Bailey…and Roger.</Text>
+              <Heading as="h3" fontSize={{ base: "lg", md: "xl" }} color="#232323" fontWeight="bold" mb={3} textTransform="uppercase">Treasures abound in this business.</Heading>
+              <Text color="gray.700" mb={4}>Alan and Sandra Bailey transitioned a struggling furniture business into a bustling antique mall and flea market in 2013. Capitalizing on a love of antique treasure hunting, they set out offer Fulton County the finest in antique and flea market items….and they succeeded.</Text>
+              <Text color="gray.700" mb={4}>Today Northern Traders has grown to accommodate over 100 vendor booths and they have a list of vendors waiting to get their products into the store. Through their vendors and their own finds, Northern Traders offers unique items (ask Sandra about camel saddles and a gold tooth some time) and attract customers from over 100 miles away. Their sweet dog, Roger has also become a part of the business and attracts his own fans to the store.</Text>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7083.jpg" alt="Northern Traders" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.700" mb={4}>Sandra and Alan have utilized FEDCO’s resources of the NxLevel Business Planning Class and the loan fund along the way. “It’s difficult to say how much the FEDCO program has helped us, says Sandra. It saved our business and we wouldn’t be here today without the help from FEDCO. I’m so glad we did it.” When asked what advice she has for other business owners, Sandy emphasizes the importance of business planning. “The planning process really helped us decide where to spend our money and how to evaluate risks."</Text>
             </Box>
 
             {/* Article 9: Glitter Grooming */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">2017</Text></Box>
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7427.jpg" alt="Glitter Grooming" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12 }} /></Box>
-              <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Glitter Grooming</Heading>
-              <Text color="gray.700" mb={4}>[Add full story content here based on the website. Placeholder for now.]</Text>
+              <Box mb={2}><Text fontSize="sm" color="gray.500">July 16, 2017</Text></Box>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Glitter Grooming</Heading>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7369.jpg" alt="Julie Zellers, owner of Glitter Grooming... and her 'assistant' Snoopy." style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.600" fontSize="sm" mb={4}>Julie Zellers, owner of Glitter Grooming... and her "assistant" Snoopy.</Text>
+              <Heading as="h3" fontSize={{ base: "lg", md: "xl" }} color="#232323" fontWeight="bold" mb={3} textTransform="uppercase">Making Fulton County beautiful, one pooch at a time.</Heading>
+              <Text color="gray.700" mb={4}>Julie Zellers, with support from her husband Jeff, started Glitter Grooming in 2014, offering “trendy” dog grooming services and pet products for pet owners in Fulton and surrounding counties.</Text>
+              <Text color="gray.700" mb={4}>Glitter Grooming was a success from the start and Julie approached FEDCO to learn more about managing her growing business. She completed the NxLevel Business Planning Class, then became a loan client when Glitter Grooming needed to expand into a larger building and add more services including doggie daycare and dog boarding. Over 500 customers have used Glitter’s services and the list continues to grow.</Text>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7427.jpg" alt="Glitter Grooming" style={{ width: "100%", height: "auto", maxHeight: 600, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Text color="gray.700" mb={4}>Julie describes the FEDCO business development program as “fantastic” and advises that small businesses “take advantage of everything FEDCO has to offer.” She especially values the counseling from the Small Business Development Center (SBDC). “Tracie Davis from the SBDC has been great. She has helped us through the expansion, where to start, requirements for retail sales; anything we needed.”</Text>
             </Box>
 
             {/* Article 10: Enid’s Cleaning Service */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">2017</Text></Box>
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/DSC08531-Edit.jpg" alt="Enid’s Cleaning Service" style={{ width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 12 }} /></Box>
-              <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Enid’s Cleaning Service</Heading>
-              <Text color="gray.700" mb={4}>[Add full story content here based on the website. Placeholder for now.]</Text>
+              <Box mb={2}><Text fontSize="sm" color="gray.500">June 30, 2017</Text></Box>
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Enid’s Cleaning Service</Heading>
+              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/DSC08531-Edit.jpg" alt="Enid’s Cleaning Service" style={{ width: "100%", height: "auto", maxHeight: 600, objectFit: "contain", borderRadius: 12 }} /></Box>
+              <Heading as="h3" fontSize={{ base: "lg", md: "xl" }} color="#232323" fontWeight="bold" mb={3} textTransform="uppercase">She’s serious about cleaning and we’re glad!</Heading>
+              <Text color="gray.700" mb={4}>Enid Tate started Enid’s Cleaning Service (ECS) in 1993 with the goal of offering affordable residential and commercial cleaning services to the people of Fulton County. The business has grown steadily since that time and employs 18 people, serves customers in 8 Indiana counties, and offers specialized cleaning services such as professional carpet cleaning, dry cleaning, and a line of environmentally safe cleaning products.</Text>
+              <Text color="gray.700" mb={4}>ECS has earned various prestigious cleaning certifications and has won national awards for innovative approaches to all things cleaning. We’re proud that Enid launched her business from Fulton County and has used some of FEDCOs services along the way, including the technical assistance program to advance her skills, the NxLevel Business Planning course, and by attending seminars FEDCO offers on business related topics.</Text>
+              <Text color="gray.700" mb={4}>Enid’s advice for new business owners? “Take the NXLevel course and plan, plan, plan! Plan for times of growth and slow times especially. Take baby steps forward in business always, that way if it doesn't work out, it won't set you back too far to recover from it. “</Text>
             </Box>
+
+
+           
           </Box>
         </Box>
       </Container>

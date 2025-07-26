@@ -34,25 +34,25 @@ function Sidebar({ current }: { current: string }) {
         </Link>
       ))}
       {/* Labor Statistics */}
-      <ChakraLink
-        href="https://www.hoosierdata.in.gov"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ width: "100%" }}
-      >
-        <Text
-          fontSize="xs"
-          fontWeight="bold"
-          letterSpacing="wider"
-          color="#6bbf4e"
-          _hover={{ color: "#232883" }}
-          textTransform="uppercase"
-          transition="color 0.2s"
-          py={0.5}
+        <ChakraLink
+          href="https://www.hoosierdata.in.gov"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ width: "100%" }}
         >
-          Labor Statistics
-        </Text>
-      </ChakraLink>
+          <Text
+            fontSize="xs"
+            fontWeight="bold"
+            letterSpacing="wider"
+            color="#6bbf4e"
+            _hover={{ color: "#232883" }}
+            textTransform="uppercase"
+            transition="color 0.2s"
+            py={0.5}
+          >
+            Labor Statistics
+          </Text>
+        </ChakraLink>
       {/* Employment Rates below Labor Statistics, with correct spacing */}
       <ChakraLink
         href="https://www.in.gov/dwd/newsroom/employment-reports"
