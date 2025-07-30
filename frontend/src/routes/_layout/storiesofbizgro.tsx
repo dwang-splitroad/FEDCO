@@ -54,7 +54,6 @@ function StoriesOfBizgroPage() {
 
             {/* Article 1: Newby Services */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">August 29, 2022</Text></Box>
               <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Newby Services</Heading>
               {/* Header/Feature Image */}
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Newby+Services.png" alt="Newby Services Header" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
@@ -99,7 +98,6 @@ function StoriesOfBizgroPage() {
 
             {/* Article 2: Rochester Boat Company */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">August 22, 2022</Text></Box>
               <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Rochester Boat Company</Heading>
               {/* Rochester Boat Company logo/image right below date, full width */}
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Rochester+Boat+Company.png" alt="Rochester Boat Company Logo" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12, background: '#fff' }} /></Box>
@@ -121,7 +119,6 @@ function StoriesOfBizgroPage() {
 
             {/* Article 3: Kline Performance Equine */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">August 15, 2022</Text></Box>
               <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Kline Performance Equine</Heading>
               {/* Main header image */}
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Rochester+Bagel_Kline+Performance+Equine_Blog+Header@300x.png" alt="Kline Performance Equine Header" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
@@ -147,7 +144,6 @@ function StoriesOfBizgroPage() {
 
             {/* Article 4: Rochester Bagel & Coffee (August 8, 2022) */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">August 8, 2022</Text></Box>
               <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Stories of BizGro: Rochester Bagel & Coffee House</Heading>
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/Rochester+Bagel_Rochester+Bagel_Blog+Header@300x.png" alt="Rochester Bagel & Coffee" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
               <Text color="gray.700" mb={4}>When the original Rochester Bagel & Coffee House came up for sale, Pia Cannedy found herself in an unexpected business agreement with her three school-aged children. Begging her to buy the local business, Cannedy agreed as long as they would help put in the work.</Text>
@@ -177,7 +173,6 @@ function StoriesOfBizgroPage() {
             </Box>
                 {/* Article 5: Hoffman Body Shop & Graphics */}
               <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">October 27, 2017</Text></Box>
               <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Hoffman Body Shop & Graphics</Heading>
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7591.jpg" alt="Left to right, Adam, Kim and Aaron Martin of Hoffman Body Shop and Graphics." style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
               <Text color="gray.600" fontSize="sm" mb={4}>Left to right, Adam, Kim and Aaron Martin of Hoffman Body Shop and Graphics.</Text>
@@ -189,7 +184,6 @@ function StoriesOfBizgroPage() {
             </Box>
             {/* Article 6: Jarrety’s Place */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">October 27, 2017</Text></Box>
               <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Jarrety’s Place</Heading>
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7511.jpg" alt="Jarrety’s Place" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
               <Text color="gray.700" mb={4}>Dawn Peterson opened Jarrety’s Gourmet Sandwiches and Catering in 2006. Located right in the heart of Downtown Rochester, Jarrety’s offers a coffee bar, sandwich shop and full-service catering.</Text>
@@ -200,7 +194,6 @@ function StoriesOfBizgroPage() {
 
             {/* Article 7: Manitou Marina */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">August 22, 2017</Text></Box>
               <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Manitou Marina</Heading>
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7256.jpg" alt="Mason and Aereka Heyde, owners of Manitou Marina" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
               <Text color="gray.600" fontSize="sm" mb={4}>Mason and Aereka Heyde, owners of Manitou Marina</Text>
@@ -211,22 +204,8 @@ function StoriesOfBizgroPage() {
               <Text color="gray.700" mb={4}>Mason’s thoughts about the FEDCO program; “The business planning class was great; it really helped with cash flow and overall financials….and the loan program, you can’t really beat that!”, referring to the low interest loans. Mason and Aereka’s advice to new business owners “plan to spend more time than you think you will working on the business and working more hands on too.”</Text>
             </Box>
 
-            {/* Article 8: Miss Pamela’s – The Plus-Size Bridal Salon */}
+            {/* Article 8: Northern Traders */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">August 12, 2017</Text></Box>
-              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Miss Pamela’s – The Plus - Size Bridal Salon</Heading>
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7319.jpg" alt="Pamela Inwood, owner, Miss Pamela’s – The Plus - Size Bridal Salon" style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
-              <Text color="gray.600" fontSize="sm" mb={4}>Pamela Inwood, owner, Miss Pamela’s – The Plus - Size Bridal Salon</Text>
-              <Heading as="h3" fontSize={{ base: "lg", md: "xl" }} color="#232323" fontWeight="bold" mb={3} textTransform="uppercase">We're so glad we had this time together.</Heading>
-              <Text color="gray.700" mb={4}>Pamela Inwood, originally from Chicago, became intrigued by the bridal industry in the mid-90s after taking what she refers to as a “left turn” in her career. Miss Pamela opened her bridal salon on Main Street in Rochester in 2008. After close observation of the market she transitioned the store to accommodate the plus size bride offering plus size bridal gowns, bridesmaid dresses, veils, jewelry, and a variety of other wedding related services. Miss P is even licensed to perform weddings in Indiana. Talk about a one stop shop!</Text>
-              <Text color="gray.700" mb={4}>She eventually expanded into a bigger (and beautiful) location at 723 Main Street in Rochester. Being the ONLY plus size bridal salon in Indiana allows Miss Pamela’s to attract brides from hundreds of miles away. The salon is a destination and is known for its outstanding customer service, attention to detail, and personal attention to each and every bride.</Text>
-              <Text color="gray.700" mb={4}>Miss Pamela has taken advantage of FEDCO’s loan program, technical assistance program, and Small Business Development Center (SBDC) counseling services. When asked her thoughts about FEDCO’s program, her response, “The loan program saved my store. The low interest, short pay off… and the process is easy. Very easy.” Advice to new business owners? “Never Give up!” Thanks for your example, Miss P!</Text>
-              <Text color="gray.700" mb={4}>Miss Pamela officially retired in January of 2018; she’s off to ride an elephant or visit Europe, maybe have an overnight with the penguins in Antarctica! We wish her happiness and fun in her retirement and thank her for her impact and example in our community.</Text>
-            </Box>
-
-            {/* Article 9: Northern Traders */}
-            <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">August 1, 2017</Text></Box>
               <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Northern Traders</Heading>
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7131.jpg" alt="Northern Traders owners, Alan and Sandra Bailey…and Roger." style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
               <Text color="gray.600" fontSize="sm" mb={4}>Northern Traders owners, Alan and Sandra Bailey…and Roger.</Text>
@@ -239,7 +218,6 @@ function StoriesOfBizgroPage() {
 
             {/* Article 9: Glitter Grooming */}
             <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">July 16, 2017</Text></Box>
               <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Glitter Grooming</Heading>
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7369.jpg" alt="Julie Zellers, owner of Glitter Grooming... and her 'assistant' Snoopy." style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "contain", borderRadius: 12 }} /></Box>
               <Text color="gray.600" fontSize="sm" mb={4}>Julie Zellers, owner of Glitter Grooming... and her "assistant" Snoopy.</Text>
@@ -248,17 +226,6 @@ function StoriesOfBizgroPage() {
               <Text color="gray.700" mb={4}>Glitter Grooming was a success from the start and Julie approached FEDCO to learn more about managing her growing business. She completed the NxLevel Business Planning Class, then became a loan client when Glitter Grooming needed to expand into a larger building and add more services including doggie daycare and dog boarding. Over 500 customers have used Glitter’s services and the list continues to grow.</Text>
               <Box mb={4}><img src="/images/storiesofbizgro/article pictures/OBS_7427.jpg" alt="Glitter Grooming" style={{ width: "100%", height: "auto", maxHeight: 600, objectFit: "contain", borderRadius: 12 }} /></Box>
               <Text color="gray.700" mb={4}>Julie describes the FEDCO business development program as “fantastic” and advises that small businesses “take advantage of everything FEDCO has to offer.” She especially values the counseling from the Small Business Development Center (SBDC). “Tracie Davis from the SBDC has been great. She has helped us through the expansion, where to start, requirements for retail sales; anything we needed.”</Text>
-            </Box>
-
-            {/* Article 10: Enid’s Cleaning Service */}
-            <Box bg="gray.50" borderRadius="lg" boxShadow="md" p={{ base: 4, md: 8 }} mb={8} maxW="2xl">
-              <Box mb={2}><Text fontSize="sm" color="gray.500">June 30, 2017</Text></Box>
-              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" mb={3}>Enid’s Cleaning Service</Heading>
-              <Box mb={4}><img src="/images/storiesofbizgro/article pictures/DSC08531-Edit.jpg" alt="Enid’s Cleaning Service" style={{ width: "100%", height: "auto", maxHeight: 600, objectFit: "contain", borderRadius: 12 }} /></Box>
-              <Heading as="h3" fontSize={{ base: "lg", md: "xl" }} color="#232323" fontWeight="bold" mb={3} textTransform="uppercase">She’s serious about cleaning and we’re glad!</Heading>
-              <Text color="gray.700" mb={4}>Enid Tate started Enid’s Cleaning Service (ECS) in 1993 with the goal of offering affordable residential and commercial cleaning services to the people of Fulton County. The business has grown steadily since that time and employs 18 people, serves customers in 8 Indiana counties, and offers specialized cleaning services such as professional carpet cleaning, dry cleaning, and a line of environmentally safe cleaning products.</Text>
-              <Text color="gray.700" mb={4}>ECS has earned various prestigious cleaning certifications and has won national awards for innovative approaches to all things cleaning. We’re proud that Enid launched her business from Fulton County and has used some of FEDCOs services along the way, including the technical assistance program to advance her skills, the NxLevel Business Planning course, and by attending seminars FEDCO offers on business related topics.</Text>
-              <Text color="gray.700" mb={4}>Enid’s advice for new business owners? “Take the NXLevel course and plan, plan, plan! Plan for times of growth and slow times especially. Take baby steps forward in business always, that way if it doesn't work out, it won't set you back too far to recover from it. “</Text>
             </Box>
 
 

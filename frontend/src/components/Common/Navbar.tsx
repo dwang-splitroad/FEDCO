@@ -309,9 +309,14 @@ function Navbar() {
                     <Text color="gray.800">Fulton County</Text>
                   </a>
                 </Menu.Item>
-                <Menu.Item value="arkon">
+                <Menu.Item value="akron">
                   <a href="https://akronindiana.com/" target="_blank" rel="noopener noreferrer">
-                    <Text color="gray.800">Arkon</Text>
+                    <Text color="gray.800">Akron</Text>
+                  </a>
+                </Menu.Item>
+                <Menu.Item value="kewanna">
+                  <a href="https://www.facebook.com/share/1CNHgtB9Vj" target="_blank" rel="noopener noreferrer">
+                    <Text color="gray.800">Kewanna</Text>
                   </a>
                 </Menu.Item>
                 <Menu.Item value="ieda">
@@ -327,11 +332,6 @@ function Navbar() {
                 <Menu.Item value="ncirpc">
                   <a href="https://www.iar.cc/north-central-indiana-regional-palnning-council" target="_blank" rel="noopener noreferrer">
                     <Text color="gray.800">NCIRPC</Text>
-                  </a>
-                </Menu.Item>
-                <Menu.Item value="kewanna">
-                  <a href="https://www.facebook.com/share/1CNHgtB9Vj" target="_blank" rel="noopener noreferrer">
-                    <Text color="gray.800">Kewanna</Text>
                   </a>
                 </Menu.Item>
               </Menu.Content>

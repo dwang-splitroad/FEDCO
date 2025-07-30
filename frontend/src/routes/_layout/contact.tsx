@@ -13,14 +13,54 @@ function ContactPage() {
   const { register, handleSubmit, reset, formState: { isSubmitting } } = useForm()
 
   const onSubmit = async (data: any) => {
-    // Placeholder for webhook/email API call
-    await fetch("/api/contact-webhook", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
-    reset()
-    alert("Thank you for contacting us! We will be in touch soon.")
+    try {
+      // Create FormData object for Web3Forms
+      const formData = new FormData();
+      formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY"); // Replace with your actual key
+      formData.append("from_name", `${data.firstName} ${data.lastName}`);
+      formData.append("email", data.email);
+      formData.append("phone", data.phone);
+      formData.append("subject", `FEDCO Website Contact: ${data.subject}`);
+      formData.append("message", `
+New contact form submission from FEDCO website:
+
+Name: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Phone: ${data.phone}
+Subject: ${data.subject}
+
+Message:
+${data.message}
+
+---
+This message was sent from the FEDCO website contact form.
+Please forward to director@fultondevelopment.org
+      `);
+      
+      // Optional: Add honeypot for spam protection
+      formData.append("botcheck", "");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      const result = await response.json();
+      
+      if (result.success) {
+        reset();
+        alert("Thank you for contacting us! We will be in touch soon.");
+      } else {
+        throw new Error(result.message || 'Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert("Sorry, there was an error sending your message. Please try again or call us directly at 574 223 0701.");
+    }
   }
 
   return (
