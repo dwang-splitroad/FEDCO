@@ -9,6 +9,7 @@ const smallBizLinks = [
   { label: "Sharpen Skills with BizGro", to: "/bizgro-skills" },
   { label: "Money for Your Biz", to: "/money-for-your-biz" },
   { label: "Stories of BizGro", to: "/storiesofbizgro" },
+  { label: "Sign Up for Small Biz Updates", to: "/small-biz-updates" },
 ];
 
 function Sidebar({ current }: { current: string }) {
@@ -44,7 +45,7 @@ function BizgroSkillsPage() {
         <Box display={{ md: "flex" }}>
           {/* Sidebar */}
           <Box minW="220px" mr={{ md: 12 }} mb={{ base: 8, md: 0 }}>
-            <Sidebar current="Sharpen Skills with BizGro" />
+            <Sidebar current="Sign Up for Small Biz Updates" />
           </Box>
           {/* Main Content */}
           <Box flex={1}>
@@ -76,8 +77,14 @@ function BizgroSkillsPage() {
             <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
               Business Counseling
             </Heading>
-            <Text color="gray.700" mb={6}>
+            <Text color="gray.700" mb={4}>
               FREE, monthly, one on one business counseling with an experienced counselor from the Indiana Small Business Development Center. The counselors offer expert advice on a wide range of topics to new or existing business owners. Meetings by appointment only.
+            </Text>
+            <Text mb={6} display="block">
+              <span style={{ fontStyle: 'italic' }}>
+                To schedule your appointment with the Indiana Small Business Development Center visit the
+              </span>{' '}
+              <a href="https://www.isbdc.org/locations/north-central-indiana-sbdc" target="_blank" rel="noopener noreferrer" style={{ color: '#6bbf4e', textDecoration: 'underline' }}>ISBDC website</a>. Click on, <span style={{ color: 'black', textDecoration: 'none', fontStyle: 'normal' }}>Let’s Work Together</span> on the top right or call (574) 520-4126.
             </Text>
             <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
               Local Seminars

@@ -9,6 +9,7 @@ const smallBizLinks = [
   { label: "Sharpen Skills with BizGro", to: "/bizgro-skills" },
   { label: "Money for Your Biz", to: "/money-for-your-biz" },
   { label: "Stories of BizGro", to: "/storiesofbizgro" },
+  { label: "Sign Up for Small Biz Updates", to: "/small-biz-updates" },
 ];
 
 function Sidebar({ current }: { current: string }) {

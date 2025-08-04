@@ -143,10 +143,10 @@ function Navbar() {
                     <Text color="gray.800">Money for your Biz</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="events">
-                  <Link to="/events">
+                <Menu.Item value="biz-events">
+                  <a href="https://www.facebook.com/fedco46975#" target="_blank" rel="noopener noreferrer">
                     <Text color="gray.800">Upcoming Biz Events</Text>
-                  </Link>
+                  </a>
                 </Menu.Item>
                 <Menu.Item value="storiesofbizgro">
                   <Link to="/storiesofbizgro">
@@ -154,7 +154,7 @@ function Navbar() {
                   </Link>
                 </Menu.Item>
                 <Menu.Item value="updates">
-                  <Link to="/updates">
+                  <Link to="/small-biz-updates">
                     <Text color="gray.800">Sign Up for Small Biz Updates</Text>
                   </Link>
                 </Menu.Item>
