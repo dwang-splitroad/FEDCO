@@ -2,9 +2,7 @@ import {
   Box, 
   Heading, 
   Text, 
-  VStack, 
-  Image, 
-  Link as ChakraLink 
+  Image 
 } from "@chakra-ui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 

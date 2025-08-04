@@ -1,5 +1,5 @@
 import { Box, Heading, Text, VStack, Link as ChakraLink } from "@chakra-ui/react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_layout/economic-development/sites-buildings")({
   component: SitesBuildingsPage,
