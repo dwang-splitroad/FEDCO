@@ -17,7 +17,7 @@ function SmallBizUpdatesPage() {
 
   return (
     <Box bg="gray.50" minH="100vh" py={10}>
-      <Container maxW="2xl" bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
+      <Box maxW="2xl" bg="gray.50" p={{ base: 6, md: 12 }} mx="auto">
         <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" textAlign="center" mb={2}>
           SIGN UP
         </Heading>
@@ -47,12 +47,12 @@ function SmallBizUpdatesPage() {
           </Text>
           <Input {...register("cell", { required: false })} placeholder="Cell #" mb={8} />
           <Flex justify="flex-start">
-            <Button type="submit" colorScheme="orange" size="lg" w="56" isLoading={isSubmitting} fontWeight="normal" letterSpacing={2}>
+            <Button type="submit" colorScheme="orange" size="lg" w="56" loading={isSubmitting} fontWeight="normal" letterSpacing={2}>
               SIGN ME UP!
             </Button>
           </Flex>
         </form>
-      </Container>
+      </Box>
     </Box>
   );
 } 

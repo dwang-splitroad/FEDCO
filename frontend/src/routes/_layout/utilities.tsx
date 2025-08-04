@@ -1,128 +1,82 @@
-import { Box, Container, Heading, Text, VStack, Link as ChakraLink } from "@chakra-ui/react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Box, Heading, Text, Link as ChakraLink } from "@chakra-ui/react";
+import { createFileRoute } from "@tanstack/react-router";
 
-const lifeInFultonLinks = [
-  { label: "Quick Facts", to: "/quick-facts" },
-  { label: "Healthcare", to: "/healthcare" },
-  { label: "Education", to: "/education" },
-  { label: "Utilities", to: "/utilities" },
-  { label: "Things to Do", href: "https://fultoncountyindiana.com/" },
-];
-
-function Sidebar({ current }: { current: string }) {
-  return (
-    <VStack align="flex-start" gap={2} minW="220px" mt={2} mb={8}>
-      <Text fontWeight="bold" fontSize="sm" color="#232883" letterSpacing="wider" mb={2}>
-        LIFE IN FULTON COUNTY
-      </Text>
-      {lifeInFultonLinks.map((link) =>
-        link.to ? (
-          <Link to={link.to} key={link.to} style={{ width: "100%" }}>
-            <Text
-              fontSize="xs"
-              fontWeight="bold"
-              letterSpacing="wider"
-              color={link.label === current ? "#e07a22" : "#6bbf4e"}
-              _hover={{ color: link.label === current ? "#e07a22" : "#232883" }}
-              textTransform="uppercase"
-              transition="color 0.2s"
-              py={0.5}
-            >
-              {link.label}
-            </Text>
-          </Link>
-        ) : (
-          <ChakraLink
-            href={link.href}
-            key={link.label}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ width: "100%" }}
-          >
-            <Text
-              fontSize="xs"
-              fontWeight="bold"
-              letterSpacing="wider"
-              color="#6bbf4e"
-              _hover={{ color: "#232883" }}
-              textTransform="uppercase"
-              transition="color 0.2s"
-              py={0.5}
-            >
-              {link.label}
-            </Text>
-          </ChakraLink>
-        )
-      )}
-    </VStack>
-  );
-}
+export const Route = createFileRoute("/_layout/utilities")({
+  component: UtilitiesPage,
+});
 
 function UtilitiesPage() {
   return (
     <Box bg="gray.50" minH="100vh" py={10}>
-      <Container maxW="6xl" bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
-        <Box display={{ md: "flex" }}>
-          {/* Sidebar */}
-          <Box minW="220px" mr={{ md: 12 }} mb={{ base: 8, md: 0 }}>
-            <Sidebar current={"Utilities"} />
-          </Box>
-          {/* Main Content */}
-          <Box flex={1}>
-            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#232883" fontWeight="bold" mb={6}>
-              Utilities
-            </Heading>
-            <Heading as="h2" fontSize="lg" color="#e07a22" fontWeight="bold" mb={2} mt={4}>
-              Water & Sewer
-            </Heading>
-            <Text fontWeight="bold" mt={2}>Rochester Water Department</Text>
-            <ChakraLink href="https://www.rochester.in.us" color="#6bbf4e" target="_blank" rel="noopener noreferrer">www.rochester.in.us</ChakraLink>
-            <Text mb={0}>320 Main Street, Rochester, IN 46975</Text>
-            <Text mb={4}>574-223-3412</Text>
-            <Text fontWeight="bold" mt={2}>Henry Township Water Department</Text>
-            <Text mb={0}>322 N Virgil, Akron, IN 46910</Text>
-            <Text mb={4}>(574) 893-4174</Text>
-
-            <Heading as="h2" fontSize="lg" color="#e07a22" fontWeight="bold" mb={2} mt={6}>
-              Gas/Electric
-            </Heading>
-            <Text fontWeight="bold" mt={2}>Fulton County REMC</Text>
-            <ChakraLink href="https://www.fultoncountyremc.coop" color="#6bbf4e" target="_blank" rel="noopener noreferrer">www.fultoncountyremc.coop</ChakraLink>
-            <Text mb={0}>1448 W State Road 14</Text>
-            <Text mb={0}>Rochester, IN 46975</Text>
-            <Text mb={4}>574-223-3156</Text>
-            <Text fontWeight="bold" mt={2}>NIPSCO</Text>
-            <ChakraLink href="https://www.nipsco.com" color="#6bbf4e" target="_blank" rel="noopener noreferrer">www.nipsco.com</ChakraLink>
-            <Text mb={0}>801 E 86th Ave</Text>
-            <Text mb={0}>Merrillville, IN 46410</Text>
-            <Text mb={4}>800-4-NIPSCO</Text>
-            <Text fontWeight="bold" mt={2}>Duke Energy</Text>
-            <ChakraLink href="https://www.duke-energy.com" color="#6bbf4e" target="_blank" rel="noopener noreferrer">www.duke-energy.com</ChakraLink>
-            <Text mb={0}>1000 E Main St</Text>
-            <Text mb={4}>Plainfield, IN 46168</Text>
-            <Text mb={4}>800-521-2232</Text>
-
-            <Heading as="h2" fontSize="lg" color="#e07a22" fontWeight="bold" mb={2} mt={6}>
-              Fiber/Satellite
-            </Heading>
-            <Text fontWeight="bold" mt={2}>RTC Communications</Text>
-            <ChakraLink href="https://www.rtc1.com" color="#6bbf4e" target="_blank" rel="noopener noreferrer">www.rtc1.com</ChakraLink>
-            <Text mb={0}>117 W 8th St</Text>
-            <Text mb={0}>Rochester, IN 46975</Text>
-            <Text mb={4}>574-223-2191</Text>
-            <Text fontWeight="bold" mt={2}>Comcast</Text>
-            <ChakraLink href="https://business.comcast.com" color="#6bbf4e" target="_blank" rel="noopener noreferrer">www.business.comcast.com</ChakraLink>
-            <Text mb={4}>866-647-6516</Text>
-            <Text fontWeight="bold" mt={2}>Frontier Communications</Text>
-            <ChakraLink href="https://www.frontier.com" color="#6bbf4e" target="_blank" rel="noopener noreferrer">www.frontier.com</ChakraLink>
-            <Text mb={4}>877-334-8257</Text>
-          </Box>
+      <Box bg="gray.50" p={{ base: 6, md: 12 }}>
+        {/* Main Content - Full Width */}
+        <Box>
+          <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#232883" fontWeight="bold" mb={6}>
+            Utilities
+          </Heading>
+          <Text color="gray.700" mb={6} fontSize="lg">
+            Fulton County offers reliable utility services to support your business operations with competitive rates and excellent service.
+          </Text>
+          
+          <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
+            Electric Service
+          </Heading>
+          <Text color="gray.700" mb={4}>
+            Fulton County is served by reliable electric cooperatives and municipal utilities that provide competitive rates for businesses of all sizes.
+          </Text>
+          <Text color="gray.700" mb={6}>
+            <ChakraLink
+              href="https://www.nremc.com"
+              color="#6bbf4e"
+              fontWeight="bold"
+              target="_blank"
+              rel="noopener noreferrer"
+              _hover={{ textDecoration: "underline", color: "#232883" }}
+            >
+              Northern Indiana Public Service Company (NIPSCO)
+            </ChakraLink>{' '}
+            and{' '}
+            <ChakraLink
+              href="https://www.nremc.com"
+              color="#6bbf4e"
+              fontWeight="bold"
+              target="_blank"
+              rel="noopener noreferrer"
+              _hover={{ textDecoration: "underline", color: "#232883" }}
+            >
+              Noble REMC
+            </ChakraLink>{' '}
+            serve the area with dependable power infrastructure.
+          </Text>
+          
+          <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
+            Natural Gas
+          </Heading>
+          <Text color="gray.700" mb={6}>
+            Natural gas service is available throughout Fulton County for heating, manufacturing, and other business needs at competitive rates.
+          </Text>
+          
+          <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
+            Water & Sewer
+          </Heading>
+          <Text color="gray.700" mb={4}>
+            Municipal water and sewer services are available in incorporated areas, with well and septic options available for rural locations.
+          </Text>
+          <Text color="gray.700" mb={6}>
+            The City of Rochester and other municipalities provide reliable water and wastewater treatment services to support business operations.
+          </Text>
+          
+          <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
+            Telecommunications
+          </Heading>
+          <Text color="gray.700" mb={4}>
+            High-speed internet and telecommunications services are available from multiple providers, ensuring your business stays connected.
+          </Text>
+          <Text color="gray.700" mb={0}>
+            Fiber optic networks and broadband services provide the connectivity needed for modern business operations in Fulton County.
+          </Text>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
-}
-
-export const Route = createFileRoute("/_layout/utilities")({
-  component: UtilitiesPage,
-}); 
+} 

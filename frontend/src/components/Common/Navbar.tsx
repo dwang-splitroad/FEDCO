@@ -5,16 +5,36 @@ import {
   Text,
   Box,
   Menu,
-  Portal
+  Portal,
+  Button,
+  Flex as ChakraFlex
 } from "@chakra-ui/react"
 import { Link } from "@tanstack/react-router"
 import { FiChevronDown } from "react-icons/fi"
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Navbar() {
   const display = useBreakpointValue({ base: "none", lg: "flex" })
   // Add open state for each dropdown
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  // Add refs for close timeouts
+  const closeTimeoutRef = useRef<{ [key: string]: NodeJS.Timeout | null }>({});
+
+  // Helper to open menu and clear close timeout
+  const handleMenuOpen = (menu: string) => {
+    if (closeTimeoutRef.current[menu]) {
+      clearTimeout(closeTimeoutRef.current[menu]!);
+      closeTimeoutRef.current[menu] = null;
+    }
+    setOpenMenu(menu);
+  };
+
+  // Helper to close menu with delay
+  const handleMenuClose = (menu: string) => {
+    closeTimeoutRef.current[menu] = setTimeout(() => {
+      setOpenMenu((current) => (current === menu ? null : current));
+    }, 250);
+  };
 
   return (
     <Flex
@@ -34,12 +54,11 @@ function Navbar() {
       {/* Logo Section */}
       <Link to="/">
         <Box>
-          <Text fontSize="xl" fontWeight="bold" color="white">
-            FEDCO
-          </Text>
-          <Text fontSize="sm" color="blue.100">
-            Fulton Economic Development
-          </Text>
+          <img
+            src="/images/storiesofbizgro/article pictures/FEDCO+Logo_White@300x-8.png"
+            alt="FEDCO - Fulton Economic Development Corp Logo"
+            style={{ height: '64px', width: 'auto', display: 'block' }}
+          />
         </Box>
       </Link>
 
@@ -47,60 +66,56 @@ function Navbar() {
       <HStack gap={6} align="center">
         {/* HOME */}
         <Link to="/">
-          <Text 
-            fontSize="sm" 
-            fontWeight="medium" 
-            color="white" 
-            _hover={{ color: "blue.200" }}
-            px={3}
-            py={2}
-          >
+          <Button variant="ghost" bg="transparent" _hover={{ bg: "transparent", color: "blue.200" }} px={3} py={2} fontSize="sm" fontWeight="medium" color="white">
             Home
-          </Text>
+          </Button>
         </Link>
 
         {/* Economic Development Dropdown */}
         <Menu.Root open={openMenu === "economic-development"} onOpenChange={(open) => setOpenMenu(open ? "economic-development" : null)}>
           <Menu.Trigger asChild>
-            <Flex
-              align="center"
-              gap={1}
+            <Button
+              variant="ghost"
               bg="transparent"
               color="white"
               fontSize="sm"
               fontWeight="medium"
-              _hover={{ color: "blue.200" }}
+              _hover={{ bg: "transparent", color: "blue.200" }}
               px={3}
               py={2}
-              cursor="pointer"
-              onMouseEnter={() => setOpenMenu("economic-development")}
-              onMouseLeave={() => setOpenMenu(null)}
+              onMouseEnter={() => handleMenuOpen("economic-development")}
+              onMouseLeave={() => handleMenuClose("economic-development")}
             >
-              <Text>Economic Development</Text>
-              <FiChevronDown size={14} />
-            </Flex>
+              <ChakraFlex align="center" gap={1}>
+                <Text>Economic Development</Text>
+                <FiChevronDown size={14} />
+              </ChakraFlex>
+            </Button>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner onMouseEnter={() => setOpenMenu("economic-development")} onMouseLeave={() => setOpenMenu(null)}>
+            <Menu.Positioner
+              onMouseEnter={() => handleMenuOpen("economic-development")}
+              onMouseLeave={() => handleMenuClose("economic-development")}
+            >
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
-                <Menu.Item value="sites-buildings">
-                  <Link to="/economic-development/sites-buildings">
+                <Menu.Item value="sites-buildings" asChild>
+                  <Link to="/economic-development/sites-buildings" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Sites & Buildings</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="wage-survey">
-                  <Link to="/economic-development/wage-survey">
+                <Menu.Item value="wage-survey" asChild>
+                  <Link to="/economic-development/wage-survey" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Wage Survey</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="labor-statistics">
-                  <a href="https://www.hoosierdata.in.gov" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="labor-statistics" asChild>
+                  <a href="https://www.hoosierdata.in.gov" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Labor Statistics</Text>
                   </a>
                 </Menu.Item>
                 {/* Add Employment Rates below Labor Statistics */}
-                <Menu.Item value="employment-rates">
-                  <a href="https://www.in.gov/dwd/newsroom/employment-reports" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="employment-rates" asChild>
+                  <a href="https://www.in.gov/dwd/newsroom/employment-reports" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Employment Rates</Text>
                   </a>
                 </Menu.Item>
@@ -112,49 +127,52 @@ function Navbar() {
         {/* SMALL BIZ Dropdown */}
         <Menu.Root open={openMenu === "small-biz"} onOpenChange={(open) => setOpenMenu(open ? "small-biz" : null)}>
           <Menu.Trigger asChild>
-            <Flex
-              align="center"
-              gap={1}
+            <Button
+              variant="ghost"
               bg="transparent"
               color="white"
               fontSize="sm"
               fontWeight="medium"
-              _hover={{ color: "blue.200" }}
+              _hover={{ bg: "transparent", color: "blue.200" }}
               px={3}
               py={2}
-              cursor="pointer"
-              onMouseEnter={() => setOpenMenu("small-biz")}
-              onMouseLeave={() => setOpenMenu(null)}
+              onMouseEnter={() => handleMenuOpen("small-biz")}
+              onMouseLeave={() => handleMenuClose("small-biz")}
             >
-              <Text>Small Biz</Text>
-              <FiChevronDown size={14} />
-            </Flex>
+              <ChakraFlex align="center" gap={1}>
+                <Text>Small Biz</Text>
+                <FiChevronDown size={14} />
+              </ChakraFlex>
+            </Button>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner onMouseEnter={() => setOpenMenu("small-biz")} onMouseLeave={() => setOpenMenu(null)}>
+            <Menu.Positioner
+              onMouseEnter={() => handleMenuOpen("small-biz")}
+              onMouseLeave={() => handleMenuClose("small-biz")}
+            >
               <Menu.Content bg="white" borderColor="blue.200" minW="250px">
-                <Menu.Item value="bizgro-skills">
-                  <Link to="/bizgro-skills">
+                <Menu.Item value="bizgro-skills" asChild>
+                  <Link to="/bizgro-skills" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Sharpen Skills with BizGro</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="money-for-your-biz">
-                  <Link to="/money-for-your-biz">
+                <Menu.Item value="money-for-your-biz" asChild>
+                  <Link to="/money-for-your-biz" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Money for your Biz</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="biz-events">
-                  <a href="https://www.facebook.com/fedco46975#" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="biz-events" asChild>
+                  <a href="https://www.facebook.com/fedco46975#" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Upcoming Biz Events</Text>
                   </a>
                 </Menu.Item>
-                <Menu.Item value="storiesofbizgro">
-                  <Link to="/storiesofbizgro">
+                <Menu.Item value="storiesofbizgro" asChild>
+                  <Link to="/storiesofbizgro" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Stories of BizGro</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="updates">
-                  <Link to="/small-biz-updates">
+                <Menu.Item value="updates" asChild>
+                  <Link to="/small-biz-updates" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Sign Up for Small Biz Updates</Text>
                   </Link>
                 </Menu.Item>
@@ -164,65 +182,75 @@ function Navbar() {
         </Menu.Root>
 
         {/* Workone (External Link) */}
-        <a href="https://www.in.gov/dwd/" target="_blank" rel="noopener noreferrer">
-          <Text 
-            fontSize="sm" 
-            fontWeight="medium" 
-            color="white" 
-            _hover={{ color: "blue.200" }}
+        <a
+          href="https://www.in.gov/dwd/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
+        >
+          <Button
+            variant="ghost"
+            bg="transparent"
+            fontSize="sm"
+            fontWeight="medium"
+            color="white"
+            _hover={{ bg: "transparent", color: "blue.200" }}
             px={3}
             py={2}
           >
             Workone
-          </Text>
+          </Button>
         </a>
 
         {/* LIFE IN FULTON COUNTY Dropdown */}
         <Menu.Root open={openMenu === "life-in-fulton"} onOpenChange={(open) => setOpenMenu(open ? "life-in-fulton" : null)}>
           <Menu.Trigger asChild>
-            <Flex
-              align="center"
-              gap={1}
+            <Button
+              variant="ghost"
               bg="transparent"
               color="white"
               fontSize="sm"
               fontWeight="medium"
-              _hover={{ color: "blue.200" }}
+              _hover={{ bg: "transparent", color: "blue.200" }}
               px={3}
               py={2}
-              cursor="pointer"
-              onMouseEnter={() => setOpenMenu("life-in-fulton")}
-              onMouseLeave={() => setOpenMenu(null)}
+              onMouseEnter={() => handleMenuOpen("life-in-fulton")}
+              onMouseLeave={() => handleMenuClose("life-in-fulton")}
             >
-              <Text>Life In Fulton County</Text>
-              <FiChevronDown size={14} />
-            </Flex>
+              <ChakraFlex align="center" gap={1}>
+                <Text>Life In Fulton County</Text>
+                <FiChevronDown size={14} />
+              </ChakraFlex>
+            </Button>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner onMouseEnter={() => setOpenMenu("life-in-fulton")} onMouseLeave={() => setOpenMenu(null)}>
+            <Menu.Positioner
+              onMouseEnter={() => handleMenuOpen("life-in-fulton")}
+              onMouseLeave={() => handleMenuClose("life-in-fulton")}
+            >
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
-                <Menu.Item value="quick-facts">
-                  <Link to="/quick-facts">
+                <Menu.Item value="quick-facts" asChild>
+                  <Link to="/quick-facts" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Quick Facts</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="healthcare">
-                  <Link to="/healthcare">
+                <Menu.Item value="healthcare" asChild>
+                  <Link to="/healthcare" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Healthcare</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="education">
-                  <Link to="/education">
+                <Menu.Item value="education" asChild>
+                  <Link to="/education" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Education</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="utilities">
-                  <Link to="/utilities">
+                <Menu.Item value="utilities" asChild>
+                  <Link to="/utilities" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Utilities</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="things-to-do">
-                  <a href="https://fultoncountyindiana.com/" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="things-to-do" asChild>
+                  <a href="https://fultoncountyindiana.com/" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Things to Do</Text>
                   </a>
                 </Menu.Item>
@@ -234,39 +262,42 @@ function Navbar() {
         {/* WHY FULTON COUNTY? Dropdown */}
         <Menu.Root open={openMenu === "why-fulton"} onOpenChange={(open) => setOpenMenu(open ? "why-fulton" : null)}>
           <Menu.Trigger asChild>
-            <Flex
-              align="center"
-              gap={1}
+            <Button
+              variant="ghost"
               bg="transparent"
               color="white"
               fontSize="sm"
               fontWeight="medium"
-              _hover={{ color: "blue.200" }}
+              _hover={{ bg: "transparent", color: "blue.200" }}
               px={3}
               py={2}
-              cursor="pointer"
-              onMouseEnter={() => setOpenMenu("why-fulton")}
-              onMouseLeave={() => setOpenMenu(null)}
+              onMouseEnter={() => handleMenuOpen("why-fulton")}
+              onMouseLeave={() => handleMenuClose("why-fulton")}
             >
-              <Text>Fulton County</Text>
-              <FiChevronDown size={14} />
-            </Flex>
+              <ChakraFlex align="center" gap={1}>
+                <Text>Fulton County</Text>
+                <FiChevronDown size={14} />
+              </ChakraFlex>
+            </Button>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner onMouseEnter={() => setOpenMenu("why-fulton")} onMouseLeave={() => setOpenMenu(null)}>
+            <Menu.Positioner
+              onMouseEnter={() => handleMenuOpen("why-fulton")}
+              onMouseLeave={() => handleMenuClose("why-fulton")}
+            >
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
-                <Menu.Item value="workforce">
-                  <Link to="/workforce">
+                <Menu.Item value="workforce" asChild>
+                  <Link to="/workforce" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Workforce</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="top-employers">
-                  <Link to="/top-employers">
+                <Menu.Item value="top-employers" asChild>
+                  <Link to="/top-employers" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Top Employers</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="utilities">
-                  <Link to="/utilities">
+                <Menu.Item value="utilities" asChild>
+                  <Link to="/utilities" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Utilities</Text>
                   </Link>
                 </Menu.Item>
@@ -278,59 +309,62 @@ function Navbar() {
         {/* Partners Dropdown */}
         <Menu.Root open={openMenu === "partners"} onOpenChange={(open) => setOpenMenu(open ? "partners" : null)}>
           <Menu.Trigger asChild>
-            <Flex
-              align="center"
-              gap={1}
+            <Button
+              variant="ghost"
               bg="transparent"
               color="white"
               fontSize="sm"
               fontWeight="medium"
-              _hover={{ color: "blue.200" }}
+              _hover={{ bg: "transparent", color: "blue.200" }}
               px={3}
               py={2}
-              cursor="pointer"
-              onMouseEnter={() => setOpenMenu("partners")}
-              onMouseLeave={() => setOpenMenu(null)}
+              onMouseEnter={() => handleMenuOpen("partners")}
+              onMouseLeave={() => handleMenuClose("partners")}
             >
-              <Text>Partners</Text>
-              <FiChevronDown size={14} />
-            </Flex>
+              <ChakraFlex align="center" gap={1}>
+                <Text>Partners</Text>
+                <FiChevronDown size={14} />
+              </ChakraFlex>
+            </Button>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner onMouseEnter={() => setOpenMenu("partners")} onMouseLeave={() => setOpenMenu(null)}>
+            <Menu.Positioner
+              onMouseEnter={() => handleMenuOpen("partners")}
+              onMouseLeave={() => handleMenuClose("partners")}
+            >
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
-                <Menu.Item value="rochester">
-                  <a href="https://rochester.in.us/" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="rochester" asChild>
+                  <a href="https://rochester.in.us/" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Rochester</Text>
                   </a>
                 </Menu.Item>
-                <Menu.Item value="fulton-county">
-                  <a href="https://www.co.fulton.in.us/" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="fulton-county" asChild>
+                  <a href="https://www.co.fulton.in.us/" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Fulton County</Text>
                   </a>
                 </Menu.Item>
-                <Menu.Item value="akron">
-                  <a href="https://akronindiana.com/" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="akron" asChild>
+                  <a href="https://akronindiana.com/" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Akron</Text>
                   </a>
                 </Menu.Item>
-                <Menu.Item value="kewanna">
-                  <a href="https://www.facebook.com/share/1CNHgtB9Vj" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="kewanna" asChild>
+                  <a href="https://www.facebook.com/share/1CNHgtB9Vj" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Kewanna</Text>
                   </a>
                 </Menu.Item>
-                <Menu.Item value="ieda">
-                  <a href="https://ieda.org" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="ieda" asChild>
+                  <a href="https://ieda.org" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">IEDA</Text>
                   </a>
                 </Menu.Item>
-                <Menu.Item value="iedc">
-                  <a href="https://iedc.in.gov" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="iedc" asChild>
+                  <a href="https://iedc.in.gov" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">IEDC</Text>
                   </a>
                 </Menu.Item>
-                <Menu.Item value="ncirpc">
-                  <a href="https://www.iar.cc/north-central-indiana-regional-palnning-council" target="_blank" rel="noopener noreferrer">
+                <Menu.Item value="ncirpc" asChild>
+                  <a href="https://www.iar.cc/north-central-indiana-regional-palnning-council" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">NCIRPC</Text>
                   </a>
                 </Menu.Item>
@@ -342,44 +376,47 @@ function Navbar() {
         {/* ABOUT Dropdown */}
         <Menu.Root open={openMenu === "about"} onOpenChange={(open) => setOpenMenu(open ? "about" : null)}>
           <Menu.Trigger asChild>
-            <Flex
-              align="center"
-              gap={1}
+            <Button
+              variant="ghost"
               bg="transparent"
               color="white"
               fontSize="sm"
               fontWeight="medium"
-              _hover={{ color: "blue.200" }}
+              _hover={{ bg: "transparent", color: "blue.200" }}
               px={3}
               py={2}
-              cursor="pointer"
-              onMouseEnter={() => setOpenMenu("about")}
-              onMouseLeave={() => setOpenMenu(null)}
+              onMouseEnter={() => handleMenuOpen("about")}
+              onMouseLeave={() => handleMenuClose("about")}
             >
-              <Text>About</Text>
-              <FiChevronDown size={14} />
-            </Flex>
+              <ChakraFlex align="center" gap={1}>
+                <Text>About</Text>
+                <FiChevronDown size={14} />
+              </ChakraFlex>
+            </Button>
           </Menu.Trigger>
           <Portal>
-            <Menu.Positioner onMouseEnter={() => setOpenMenu("about")} onMouseLeave={() => setOpenMenu(null)}>
+            <Menu.Positioner
+              onMouseEnter={() => handleMenuOpen("about")}
+              onMouseLeave={() => handleMenuClose("about")}
+            >
               <Menu.Content bg="white" borderColor="blue.200" minW="200px">
-                <Menu.Item value="staff">
-                  <Link to="/staff">
+                <Menu.Item value="staff" asChild>
+                  <Link to="/staff" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Staff</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="board">
-                  <Link to="/board">
+                <Menu.Item value="board" asChild>
+                  <Link to="/board" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Board of Directors</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="mission">
-                  <Link to="/mission">
+                <Menu.Item value="mission" asChild>
+                  <Link to="/mission" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Mission</Text>
                   </Link>
                 </Menu.Item>
-                <Menu.Item value="contact">
-                  <Link to="/contact">
+                <Menu.Item value="contact" asChild>
+                  <Link to="/contact" style={{ cursor: 'pointer' }}>
                     <Text color="gray.800">Contact</Text>
                   </Link>
                 </Menu.Item>
