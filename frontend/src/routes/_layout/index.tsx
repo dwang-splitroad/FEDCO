@@ -1,11 +1,7 @@
 import { 
   Box, 
-  Container, 
   Text, 
-  Flex,
-  Grid,
   Heading,
-  VStack,
   HStack,
   Button,
   
@@ -50,7 +46,7 @@ function Homepage() {
           bg="rgba(255,255,255,0.3)"
           zIndex={0}
         />
-        <Container maxW="6xl" position="relative" zIndex={1}>
+        <Box maxW="6xl" position="relative" zIndex={1}>
           <HStack gap={4} justify="center">
             <Button 
               size="lg" 
@@ -78,7 +74,7 @@ function Homepage() {
               Learn About Our Community
             </Button>
           </HStack>
-        </Container>
+        </Box>
       </Box>
 
       {/* Heading below header image */}
@@ -95,7 +91,7 @@ function Homepage() {
 
       {/* Body Section below header */}
       <Box bg="gray.100" color="gray.800" py={12} px={8} textAlign="center">
-        <Container maxW="4xl">
+        <Box maxW="4xl">
           <Text fontSize={{ base: "lg", md: "xl" }} lineHeight="tall" color="gray.700" mb={4}>
             <Text as="span" fontWeight="bold">Fulton County</Text> is centrally located between Chicago and Indianapolis. 
             The region boasts a dedicated workforce, a vibrant agriculture industry and strong manufacturing base. 
@@ -106,7 +102,7 @@ function Homepage() {
             FEDCO works closely with city/county government, schools, and local businesses to create an environment that supports success. 
             We look forward to working with you!
           </Text>
-        </Container>
+        </Box>
       </Box>
     </>
   )

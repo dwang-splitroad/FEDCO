@@ -1,4 +1,13 @@
-import { Box, Button, Container, Flex, Grid, GridItem, Heading, Input, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Input,
+  Text
+} from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 import { useForm } from "react-hook-form";
 
@@ -9,7 +18,7 @@ export const Route = createFileRoute("/_layout/small-biz-updates")({
 function SmallBizUpdatesPage() {
   const { register, handleSubmit, reset, formState: { isSubmitting } } = useForm();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = () => {
     // No backend integration, just reset form and show alert
     reset();
     alert("Thank you for signing up! You'll receive updates soon.");

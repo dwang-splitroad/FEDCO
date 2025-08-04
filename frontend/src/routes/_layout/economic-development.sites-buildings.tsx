@@ -1,80 +1,9 @@
-import { Box, Container, Heading, Text, VStack, Link as ChakraLink } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, Link as ChakraLink } from "@chakra-ui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_layout/economic-development/sites-buildings")({
   component: SitesBuildingsPage,
 });
-
-const economicDevLinks = [
-  { label: "Sites & Buildings", to: "/economic-development/sites-buildings" },
-  { label: "Wage Survey", to: "/economic-development/wage-survey" },
-];
-
-function Sidebar({ current }: { current: string }) {
-  return (
-    <VStack align="flex-start" gap={2} minW="220px" mt={2} mb={8}>
-      <Text fontWeight="bold" fontSize="sm" color="#232883" letterSpacing="wider" mb={2}>
-        ECONOMIC DEVELOPMENT
-      </Text>
-      {economicDevLinks.map((link) => (
-        <Link to={link.to} key={link.to} style={{ width: "100%" }}>
-          <Text
-            fontSize="xs"
-            fontWeight="bold"
-            letterSpacing="wider"
-            color={link.label === current ? "#e07a22" : "#6bbf4e"}
-            _hover={{ color: link.label === current ? "#e07a22" : "#232883" }}
-            textTransform="uppercase"
-            transition="color 0.2s"
-            py={0.5}
-          >
-            {link.label}
-          </Text>
-        </Link>
-      ))}
-      {/* Labor Statistics */}
-        <ChakraLink
-          href="https://www.hoosierdata.in.gov"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ width: "100%" }}
-        >
-          <Text
-            fontSize="xs"
-            fontWeight="bold"
-            letterSpacing="wider"
-            color="#6bbf4e"
-            _hover={{ color: "#232883" }}
-            textTransform="uppercase"
-            transition="color 0.2s"
-            py={0.5}
-          >
-            Labor Statistics
-          </Text>
-        </ChakraLink>
-      {/* Employment Rates below Labor Statistics, with correct spacing */}
-      <ChakraLink
-        href="https://www.in.gov/dwd/newsroom/employment-reports"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ width: "100%" }}
-      >
-        <Text
-          fontSize="xs"
-          fontWeight="bold"
-          letterSpacing="wider"
-          color="#6bbf4e"
-          _hover={{ color: "#232883" }}
-          textTransform="uppercase"
-          transition="color 0.2s"
-          py={0.5}
-        >
-          Employment Rates
-        </Text>
-      </ChakraLink>
-    </VStack>
-  );
-}
 
 function SitesBuildingsPage() {
   return (

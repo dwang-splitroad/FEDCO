@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Link as ChakraLink, SimpleGrid, VStack, HStack, Icon } from "@chakra-ui/react";
+import { Box, Heading, Text, Link as ChakraLink, SimpleGrid, VStack, HStack } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_layout/utilities")({

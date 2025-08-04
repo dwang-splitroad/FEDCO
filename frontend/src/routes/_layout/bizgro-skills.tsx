@@ -1,4 +1,11 @@
-import { Box, Container, Heading, Text, Image } from "@chakra-ui/react";
+import { 
+  Box, 
+  Heading, 
+  Text, 
+  VStack, 
+  Image, 
+  Link as ChakraLink 
+} from "@chakra-ui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_layout/bizgro-skills")({
