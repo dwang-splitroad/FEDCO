@@ -31,24 +31,33 @@ function StaffPage() {
         </Heading>
       </Box>
       <Container maxW="7xl" py={0}>
-        <Flex gap={16} align="flex-start">
+        <Flex direction={{ base: "column", lg: "row" }} gap={{ base: 6, lg: 16 }} align="flex-start">
           {/* Sidebar Navigation */}
-          <Box minW="280px" bg="white" p={8} borderRadius="xl" boxShadow="lg" h="fit-content">
+          <Box 
+            minW={{ lg: "280px" }} 
+            w={{ base: "100%", lg: "280px" }}
+            bg="white" 
+            p={8} 
+            borderRadius="xl" 
+            boxShadow="lg" 
+            h="fit-content"
+            mb={{ base: 6, lg: 0 }}
+          >
             <Heading as="h2" fontSize="xl" color="#232883" mb={6} fontWeight="bold">
               ABOUT
             </Heading>
             <Flex direction="column" gap={4} fontWeight="bold" fontSize="1.1rem">
               <Link to="/staff">
-                <Text color={currentPath === "/staff" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>STAFF</Text>
+                <Text color={currentPath === "/staff" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Staff</Text>
               </Link>
               <Link to="/board">
-                <Text color={currentPath === "/board" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>BOARD OF DIRECTORS</Text>
+                <Text color={currentPath === "/board" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Board of Directors</Text>
               </Link>
               <Link to="/mission">
-                <Text color={currentPath === "/mission" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>MISSION</Text>
+                <Text color={currentPath === "/mission" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Mission</Text>
               </Link>
               <Link to="/contact">
-                <Text color={currentPath === "/contact" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>CONTACT</Text>
+                <Text color={currentPath === "/contact" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Contact</Text>
               </Link>
             </Flex>
           </Box>

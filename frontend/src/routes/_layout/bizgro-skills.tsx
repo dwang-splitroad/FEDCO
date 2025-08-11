@@ -2,7 +2,8 @@ import {
   Box, 
   Heading, 
   Text, 
-  Image 
+  Image,
+  Flex
 } from "@chakra-ui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
@@ -66,13 +67,37 @@ function BizgroSkillsPage() {
           <Heading as="h2" fontSize="lg" color="#232883" fontWeight="bold" mb={2} mt={8}>
             CONTACT
           </Heading>
-          <Text color="gray.700" mb={1}>
-            For more information about any of FEDCO's resources for small business, please contact Amy Beechy, Director of Entrepreneurial Programs:
-          </Text>
-          <Box color="gray.700" fontSize="md" mb={2}>
-            <Text><b>Phone:</b> (574) 709-7955</Text>
-            <Text><b>Email:</b> <a href="mailto:amy@projectmattersllc.com" style={{ color: "#232883", fontWeight: "bold", textDecoration: "underline" }}>amy@projectmattersllc.com</a></Text>
-          </Box>
+          
+          {/* Contact Section with Image and Info Side by Side */}
+          <Flex 
+            direction={{ base: "column", md: "row" }} 
+            align={{ base: "center", md: "flex-start" }} 
+            gap={6} 
+            mt={4}
+          >
+            {/* Amy Photo - Professional Headshot */}
+            <Image
+              src="/images/Amyheadshothead2Red2023.jpg"
+              alt="Amy Beechy, Director of Entrepreneurial Programs"
+              w={{ base: "220px", md: "200px" }}
+              h={{ base: "220px", md: "200px" }}
+              borderRadius="full"
+              objectFit="cover"
+              boxShadow="lg"
+              flexShrink={0}
+            />
+            
+            {/* Contact Info */}
+            <Box flex={1} textAlign={{ base: "center", md: "left" }}>
+              <Text color="gray.700" mb={3} fontSize="md">
+                For more information about any of FEDCO's resources for small business, please contact Amy Beechy, Director of Entrepreneurial Programs:
+              </Text>
+              <Box color="gray.700" fontSize="md" mb={2}>
+                <Text mb={1}><b>Phone:</b> (574) 709-7955</Text>
+                <Text><b>Email:</b> <a href="mailto:amy@projectmattersllc.com" style={{ color: "#232883", fontWeight: "bold", textDecoration: "underline" }}>amy@projectmattersllc.com</a></Text>
+              </Box>
+            </Box>
+          </Flex>
         </Box>
       </Box>
     </Box>
