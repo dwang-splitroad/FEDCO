@@ -80,7 +80,9 @@ function SitesBuildingsPage() {
                 View Full Property Database →
               </ChakraLink>
               <ChakraLink
-                href="/economic-development/wage-survey"
+                href="https://www.bls.gov/regions/midwest/news-release/countyemploymentandwages_indiana.htm"
+                target="_blank"
+                rel="noopener noreferrer"
                 color="#6bbf4e"
                 fontWeight="bold"
                 _hover={{ textDecoration: "underline", color: "#232883" }}

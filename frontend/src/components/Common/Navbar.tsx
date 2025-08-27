@@ -150,9 +150,9 @@ function Navbar() {
                       </Link>
                     </Menu.Item>
                     <Menu.Item value="wage-survey" asChild>
-                      <Link to="/economic-development/wage-survey" style={{ cursor: 'pointer' }}>
+                      <a href="https://www.bls.gov/regions/midwest/news-release/countyemploymentandwages_indiana.htm" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                         <Text color="gray.800">Wage Survey</Text>
-                      </Link>
+                      </a>
                     </Menu.Item>
                     <Menu.Item value="labor-statistics" asChild>
                       <a href="https://www.hoosierdata.in.gov" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
