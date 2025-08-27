@@ -51,7 +51,7 @@ function StoriesOfBizgroPage() {
           <Box mt={8} mb={12} maxW="2xl">
             <Text color="gray.700" fontSize="md" mb={3}>
               If you were inspired by Rusty's story and would like more information on BizGro's resources, visit{' '}
-              <a href="/bizgro-skills" style={{ color: '#6bbf4e', textDecoration: 'underline' }}>BizGro by FEDCO's Website</a>.
+              <a href="/business-assistance" style={{ color: '#6bbf4e', textDecoration: 'underline' }}>Business Assistance at FEDCO</a>.
             </Text>
             <Text color="gray.700" fontSize="md" mb={3}>
               To sign up or find out details for the NxLevel Business Planning & Management Course, contact Amy Beechy at 574-709-7955 or{' '}

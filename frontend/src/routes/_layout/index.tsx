@@ -7,6 +7,7 @@ import {
   
 } from "@chakra-ui/react"
 import { createFileRoute } from "@tanstack/react-router"
+import { Link } from "@tanstack/react-router"
 
 export const Route = createFileRoute("/_layout/")({
   component: Homepage,
@@ -48,6 +49,7 @@ function Homepage() {
         />
         <Box maxW="6xl" position="relative" zIndex={1}>
           <HStack gap={4} justify="center">
+            <Link to="/business-assistance">
             <Button 
               size="lg" 
               bg="green.600" 
@@ -58,8 +60,9 @@ function Homepage() {
               px={10}
               py={7}
             >
-              Start Your Business Journey
+              How We Help Small Business
             </Button>
+            </Link>
             <Button 
               size="lg" 
               variant="outline" 

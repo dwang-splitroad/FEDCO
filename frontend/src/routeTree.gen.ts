@@ -22,17 +22,15 @@ import { Route as LayoutUtilitiesImport } from './routes/_layout/utilities'
 import { Route as LayoutTopEmployersImport } from './routes/_layout/top-employers'
 import { Route as LayoutStoriesofbizgroImport } from './routes/_layout/storiesofbizgro'
 import { Route as LayoutStaffImport } from './routes/_layout/staff'
-import { Route as LayoutSmallBizUpdatesImport } from './routes/_layout/small-biz-updates'
 import { Route as LayoutSettingsImport } from './routes/_layout/settings'
 import { Route as LayoutQuickFactsImport } from './routes/_layout/quick-facts'
-import { Route as LayoutMoneyForYourBizImport } from './routes/_layout/money-for-your-biz'
 import { Route as LayoutMissionImport } from './routes/_layout/mission'
 import { Route as LayoutItemsImport } from './routes/_layout/items'
 import { Route as LayoutHealthcareImport } from './routes/_layout/healthcare'
 import { Route as LayoutEducationImport } from './routes/_layout/education'
 import { Route as LayoutContactImport } from './routes/_layout/contact'
+import { Route as LayoutBusinessAssistanceImport } from './routes/_layout/business-assistance'
 import { Route as LayoutBoardImport } from './routes/_layout/board'
-import { Route as LayoutBizgroSkillsImport } from './routes/_layout/bizgro-skills'
 import { Route as LayoutAdminImport } from './routes/_layout/admin'
 import { Route as LayoutEconomicDevelopmentSitesBuildingsImport } from './routes/_layout/economic-development.sites-buildings'
 
@@ -93,11 +91,6 @@ const LayoutStaffRoute = LayoutStaffImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
-const LayoutSmallBizUpdatesRoute = LayoutSmallBizUpdatesImport.update({
-  path: '/small-biz-updates',
-  getParentRoute: () => LayoutRoute,
-} as any)
-
 const LayoutSettingsRoute = LayoutSettingsImport.update({
   path: '/settings',
   getParentRoute: () => LayoutRoute,
@@ -105,11 +98,6 @@ const LayoutSettingsRoute = LayoutSettingsImport.update({
 
 const LayoutQuickFactsRoute = LayoutQuickFactsImport.update({
   path: '/quick-facts',
-  getParentRoute: () => LayoutRoute,
-} as any)
-
-const LayoutMoneyForYourBizRoute = LayoutMoneyForYourBizImport.update({
-  path: '/money-for-your-biz',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -138,13 +126,13 @@ const LayoutContactRoute = LayoutContactImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
-const LayoutBoardRoute = LayoutBoardImport.update({
-  path: '/board',
+const LayoutBusinessAssistanceRoute = LayoutBusinessAssistanceImport.update({
+  path: '/business-assistance',
   getParentRoute: () => LayoutRoute,
 } as any)
 
-const LayoutBizgroSkillsRoute = LayoutBizgroSkillsImport.update({
-  path: '/bizgro-skills',
+const LayoutBoardRoute = LayoutBoardImport.update({
+  path: '/board',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -187,12 +175,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutAdminImport
       parentRoute: typeof LayoutImport
     }
-    '/_layout/bizgro-skills': {
-      preLoaderRoute: typeof LayoutBizgroSkillsImport
-      parentRoute: typeof LayoutImport
-    }
     '/_layout/board': {
       preLoaderRoute: typeof LayoutBoardImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/business-assistance': {
+      preLoaderRoute: typeof LayoutBusinessAssistanceImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/contact': {
@@ -215,20 +203,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutMissionImport
       parentRoute: typeof LayoutImport
     }
-    '/_layout/money-for-your-biz': {
-      preLoaderRoute: typeof LayoutMoneyForYourBizImport
-      parentRoute: typeof LayoutImport
-    }
     '/_layout/quick-facts': {
       preLoaderRoute: typeof LayoutQuickFactsImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/settings': {
       preLoaderRoute: typeof LayoutSettingsImport
-      parentRoute: typeof LayoutImport
-    }
-    '/_layout/small-biz-updates': {
-      preLoaderRoute: typeof LayoutSmallBizUpdatesImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/staff': {
@@ -267,17 +247,15 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren([
   LayoutRoute.addChildren([
     LayoutAdminRoute,
-    LayoutBizgroSkillsRoute,
     LayoutBoardRoute,
+    LayoutBusinessAssistanceRoute,
     LayoutContactRoute,
     LayoutEducationRoute,
     LayoutHealthcareRoute,
     LayoutItemsRoute,
     LayoutMissionRoute,
-    LayoutMoneyForYourBizRoute,
     LayoutQuickFactsRoute,
     LayoutSettingsRoute,
-    LayoutSmallBizUpdatesRoute,
     LayoutStaffRoute,
     LayoutStoriesofbizgroRoute,
     LayoutTopEmployersRoute,

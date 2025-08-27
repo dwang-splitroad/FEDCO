@@ -57,11 +57,8 @@ function Navbar() {
       <Link to="/contact" onClick={toggleMobileMenu}>
         <Text color="white" fontSize="lg" py={2}>Contact</Text>
       </Link>
-      <Link to="/bizgro-skills" onClick={toggleMobileMenu}>
-        <Text color="white" fontSize="lg" py={2}>Sharpen Skills</Text>
-      </Link>
-      <Link to="/money-for-your-biz" onClick={toggleMobileMenu}>
-        <Text color="white" fontSize="lg" py={2}>Money for Business</Text>
+      <Link to="/business-assistance" onClick={toggleMobileMenu}>
+        <Text color="white" fontSize="lg" py={2}>Business Assistance</Text>
       </Link>
       <Link to="/storiesofbizgro" onClick={toggleMobileMenu}>
         <Text color="white" fontSize="lg" py={2}>Stories of BizGro</Text>
@@ -197,16 +194,11 @@ function Navbar() {
                   onMouseLeave={() => handleMenuClose("small-biz")}
                 >
                   <Menu.Content bg="white" borderColor="blue.200" minW="250px">
-                    <Menu.Item value="bizgro-skills" asChild>
-                      <Link to="/bizgro-skills" style={{ cursor: 'pointer' }}>
-                        <Text color="gray.800">Sharpen Skills with BizGro</Text>
-                      </Link>
-                    </Menu.Item>
-                    <Menu.Item value="money-for-your-biz" asChild>
-                      <Link to="/money-for-your-biz" style={{ cursor: 'pointer' }}>
-                        <Text color="gray.800">Money for your Biz</Text>
-                      </Link>
-                    </Menu.Item>
+                                     <Menu.Item value="business-assistance" asChild>
+                   <Link to="/business-assistance" style={{ cursor: 'pointer' }}>
+                     <Text color="gray.800">Business Assistance</Text>
+                   </Link>
+                 </Menu.Item>
                     <Menu.Item value="biz-events" asChild>
                       <a href="https://www.facebook.com/fedco46975#" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                         <Text color="gray.800">Upcoming Biz Events</Text>
@@ -217,11 +209,11 @@ function Navbar() {
                         <Text color="gray.800">Stories of BizGro</Text>
                       </Link>
                     </Menu.Item>
-                    <Menu.Item value="updates" asChild>
-                      <Link to="/small-biz-updates" style={{ cursor: 'pointer' }}>
-                        <Text color="gray.800">Sign Up for Small Biz Updates</Text>
-                      </Link>
-                    </Menu.Item>
+                                     <Menu.Item value="updates" asChild>
+                   <Link to="/business-assistance" style={{ cursor: 'pointer' }}>
+                     <Text color="gray.800">Small Biz Updates</Text>
+                   </Link>
+                 </Menu.Item>
                   </Menu.Content>
                 </Menu.Positioner>
               </Portal>
