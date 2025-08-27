@@ -99,7 +99,14 @@ function Navbar() {
             <img
               src="/images/storiesofbizgro/article pictures/FEDCO+Logo_White@300x-8.png"
               alt="FEDCO - Fulton Economic Development Corp Logo"
-              style={{ height: '64px', width: 'auto', display: 'block' }}
+              style={{ 
+                height: '64px', 
+                maxHeight: '64px',
+                width: 'auto', 
+                maxWidth: '280px',
+                display: 'block',
+                objectFit: 'contain'
+              }}
             />
           </Box>
         </Link>
