@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Link as ChakraLink, SimpleGrid, VStack, HStack, Container, Flex } from "@chakra-ui/react";
+import { Box, Heading, Text, Link as ChakraLink, VStack, Container, Flex } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_layout/utilities")({
@@ -15,7 +15,7 @@ function UtilitiesPage() {
         <Text color="gray.700" mb={8}>
           Fulton County offers reliable utility services to support your business operations with competitive rates and excellent service.
         </Text>
-        <VStack spacing={8} align="stretch">
+        <VStack gap={8} align="stretch">
           <Box>
             <Heading as="h2" fontSize="xl" color="#ffc107" fontWeight="bold">
               <Flex align="center">

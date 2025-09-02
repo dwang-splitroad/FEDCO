@@ -48,7 +48,7 @@ function UpdatesPage() {
                 </Text>
                 <Input {...register("cell", { required: false })} placeholder="Cell #" mb={8} />
                 <Flex justify="flex-start">
-                  <Button type="submit" colorScheme="orange" size="lg" w="56" loading={isSubmitting} fontWeight="normal" letterSpacing={2}>
+                  <Button type="submit" bg="#649b42" color="white" _hover={{ bg: "#5a8a3a" }} size="lg" w="56" loading={isSubmitting} fontWeight="normal" letterSpacing={2}>
                     SIGN ME UP!
                   </Button>
                 </Flex>

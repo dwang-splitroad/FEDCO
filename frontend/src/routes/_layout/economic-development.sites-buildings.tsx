@@ -13,7 +13,7 @@ function SitesBuildingsPage() {
         <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#273776" fontWeight="bold" mb={6}>
           Sites & Buildings
         </Heading>
-        <VStack spacing={8} align="stretch">
+        <VStack gap={8} align="stretch">
           <Box>
             <Heading as="h2" fontSize="xl" color="#ffc107" fontWeight="bold" mb={3}>
               Available Properties
@@ -21,10 +21,10 @@ function SitesBuildingsPage() {
             <Text color="gray.700" mb={4}>
               Fulton County has a number of sites and buildings available for development. We are committed to helping you find the perfect location for your business.
             </Text>
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+            <SimpleGrid columns={{ base: 1, md: 2 }} gap={6}>
               <Box>
                 <Text fontWeight="bold">Search Indiana Economic Development Corporation (IEDC) Database:</Text>
-                <ChakraLink href="https://www.iedc.in.gov/relocation-expansion/site-selection/" color="#649b42" isExternal _hover={{ textDecoration: "underline", color: "#273776" }}>
+                <ChakraLink href="https://www.iedc.in.gov/relocation-expansion/site-selection/" color="#649b42" target="_blank" rel="noopener noreferrer" _hover={{ textDecoration: "underline", color: "#273776" }}>
                   Indiana Site & Building Database
                 </ChakraLink>
               </Box>
@@ -46,9 +46,11 @@ function SitesBuildingsPage() {
             <Text color="gray.700" mb={4}>
               Fulton County is home to a number of major employers in a variety of industries, including manufacturing, healthcare, and education.
             </Text>
-            <ChakraLink as={Link} to="/top-employers" color="#649b42" fontWeight="bold" _hover={{ textDecoration: "underline", color: "#273776" }}>
-              View Top Employers in Fulton County
-            </ChakraLink>
+            <Link to="/top-employers" style={{ textDecoration: "none" }}>
+              <Text as="span" color="#649b42" fontWeight="bold" style={{ textDecoration: "underline" }}>
+                View Top Employers in Fulton County
+              </Text>
+            </Link>
           </Box>
         </VStack>
       </Container>

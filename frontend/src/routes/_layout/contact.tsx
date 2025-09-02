@@ -1,5 +1,5 @@
-import { Box, Container, Heading, Text, Flex, VStack, SimpleGrid } from "@chakra-ui/react";
-import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
+import { Box, Container, Heading, Text, VStack, SimpleGrid } from "@chakra-ui/react";
+import { createFileRoute } from "@tanstack/react-router";
 import { useForm } from "react-hook-form"
 import { Button, Input, Textarea, Grid, GridItem } from "@chakra-ui/react"
 
@@ -8,8 +8,6 @@ export const Route = createFileRoute("/_layout/contact")({
 });
 
 function ContactPage() {
-  const { state } = useRouter();
-  const currentPath = state.location.pathname;
   const { register, handleSubmit, reset, formState: { isSubmitting } } = useForm()
 
   const onSubmit = async (data: any) => {
@@ -65,82 +63,30 @@ Please forward to director@fultondevelopment.org
 
   return (
     <Box bg="gray.50" minH="100vh">
-      {/* Hero Section */}
-      <Box
-        h="200px"
-        bg="linear-gradient(135deg, #273776 0%, #1a1f5c 100%)"
-        position="relative"
-      >
-        <Container maxW="7xl" h="100%">
-          <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold" textAlign="center" color="white">
+      {/* Header bar inside container */}
+      <Container maxW="3xl" py={10}>
+        <Box
+          bg="#273776"
+          color="white"
+          py={{ base: 8, md: 12 }}
+          boxShadow="md"
+          borderRadius="xl"
+          mb={{ base: 8, md: 10 }}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold" textAlign="center">
             Contact Us
           </Heading>
-        </Container>
-      </Box>
-      <Container maxW="7xl" py={0}>
-        <Flex direction={{ base: "column", lg: "row" }} gap={{ base: 6, lg: 16 }} align="flex-start">
-          {/* Sidebar Navigation */}
-          <Box 
-            minW={{ lg: "280px" }} 
-            w={{ base: "100%", lg: "280px" }}
-            bg="white" 
-            p={8} 
-            borderRadius="xl" 
-            boxShadow="lg" 
-            h="fit-content"
-            mb={{ base: 6, lg: 0 }}
-          >
-            <Heading as="h2" fontSize="xl" color="#273776" mb={6} fontWeight="bold">
-              ABOUT
-            </Heading>
-            <VStack align="stretch" spacing={4} fontWeight="bold" fontSize="1.1rem">
-              <Link to="/staff">
-                <Text color={currentPath === "/staff" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Staff</Text>
-              </Link>
-              <Link to="/board">
-                <Text color={currentPath === "/board" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Board of Directors</Text>
-              </Link>
-              <Link to="/mission">
-                <Text color={currentPath === "/mission" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Mission</Text>
-              </Link>
-              <Link to="/contact">
-                <Text color={currentPath === "/contact" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Contact</Text>
-              </Link>
-            </VStack>
-          </Box>
-
-          {/* Contact Content */}
-          <Box flex="1" ml={{ lg: 8 }} mt={{ base: 8, lg: 0 }}>
-            <Box bg="white" borderRadius="xl" boxShadow="xl" p={8}>
-              <Heading as="h2" fontSize="xl" color="#273776" mb={6} fontWeight="bold">
-                About Our Team
-              </Heading>
-              <VStack align="stretch" spacing={4}>
-                <Link to="/staff">
-                  <Text color={currentPath === "/staff" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Staff</Text>
-                </Link>
-                <Link to="/board">
-                  <Text color={currentPath === "/board" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Board of Directors</Text>
-                </Link>
-                <Link to="/mission">
-                  <Text color={currentPath === "/mission" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Mission</Text>
-                </Link>
-                <Link to="/contact">
-                  <Text color={currentPath === "/contact" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Contact</Text>
-                </Link>
-              </VStack>
-            </Box>
-          </Box>
-        </Flex>
-      </Container>
-      {/* Main Content */}
-      <Container maxW="7xl" py={10}>
-        <VStack spacing={12} align="stretch">
+        </Box>
+        {/* Main Content */}
+        <VStack gap={12} align="stretch">
           <Box bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
             <Heading as="h2" fontSize="2xl" color="#273776" mb={6} fontWeight="bold" letterSpacing="wide">
               Contact Information
             </Heading>
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+            <SimpleGrid columns={{ base: 1, md: 2 }} gap={8}>
               <GridItem>
                 <Heading as="h2" fontSize="2xl" color="#273776" mb={6} fontWeight="bold" letterSpacing="wide">
                   OUR OFFICE
@@ -192,7 +138,7 @@ Please forward to director@fultondevelopment.org
               <Input {...register("subject", { required: true })} placeholder="Subject" mb={4} />
               <Text fontSize="sm" fontWeight="bold">Message</Text>
               <Textarea {...register("message", { required: true })} placeholder="Message" mb={4} />
-              <Button type="submit" colorScheme="orange" w="40" loading={isSubmitting}>SUBMIT</Button>
+              <Button type="submit" bg="#649b42" color="white" _hover={{ bg: "#5a8a3a" }} w="40" loading={isSubmitting}>SUBMIT</Button>
             </form>
           </Box>
         </VStack>

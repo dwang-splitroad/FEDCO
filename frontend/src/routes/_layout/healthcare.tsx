@@ -12,7 +12,7 @@ function HealthcarePage() {
         <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#273776" fontWeight="bold" mb={6}>
           Healthcare in Fulton County
         </Heading>
-        <VStack spacing={8} align="stretch">
+        <VStack gap={8} align="stretch">
           <Box>
             <Heading as="h2" fontSize="xl" color="#ffc107" fontWeight="bold" mb={3}>
               Woodlawn Hospital
@@ -20,7 +20,7 @@ function HealthcarePage() {
             <Text color="gray.700" mb={2}>
               Woodlawn Hospital has been serving the residents of Fulton County and surrounding areas since 1905. It is a critical access hospital that provides a wide range of services, including emergency care, surgery, and obstetrics.
             </Text>
-            <ChakraLink href="https://www.woodlawnhealth.com/" color="#649b42" isExternal _hover={{ textDecoration: "underline", color: "#273776" }}>
+            <ChakraLink href="https://www.woodlawnhealth.com/" color="#649b42" target="_blank" rel="noopener noreferrer" _hover={{ textDecoration: "underline", color: "#273776" }}>
               Visit Woodlawn Hospital Website
             </ChakraLink>
           </Box>

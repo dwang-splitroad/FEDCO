@@ -1,10 +1,6 @@
 import { Box, Heading, Text, VStack, SimpleGrid, HStack, Flex, Container } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 
-function SectionDivider() {
-  return <Box w="100%" h="1px" bg="gray.200" my={4} />;
-}
-
 // Simple bar chart component
 function SimpleBarChart({ data, title }: { data: { label: string; value: number; color?: string }[]; title?: string }) {
   const maxValue = Math.max(...data.map(d => d.value));
@@ -73,7 +69,7 @@ function QuickFactsPage() {
         <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#273776" fontWeight="bold" mb={6} textAlign="center">
           Quick Facts about Fulton County
         </Heading>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} gap={8}>
           <Box>
             <Heading as="h2" size="md" color="#ffc107" mb={4}>Demographics</Heading>
             <SimplePieChart data={[
