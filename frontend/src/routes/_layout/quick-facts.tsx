@@ -1,4 +1,4 @@
-import { Box, Heading, Text, VStack, SimpleGrid, HStack, Flex, Container } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, SimpleGrid, HStack, Container } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 
 // Simple pie chart representation
