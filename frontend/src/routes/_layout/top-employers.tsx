@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, VStack, Flex } from "@chakra-ui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 const whyFultonLinks = [
@@ -10,7 +10,7 @@ const whyFultonLinks = [
 function Sidebar({ current }: { current: string }) {
   return (
     <VStack align="flex-start" gap={2} minW="220px" mt={2} mb={8}>
-      <Text fontWeight="bold" fontSize="sm" color="#232883" letterSpacing="wider" mb={2}>
+      <Text fontWeight="bold" fontSize="sm" color="#273776" letterSpacing="wider" mb={2}>
         FULTON COUNTY
       </Text>
       {whyFultonLinks.map((link) => (
@@ -19,8 +19,8 @@ function Sidebar({ current }: { current: string }) {
             fontSize="xs"
             fontWeight="bold"
             letterSpacing="wider"
-            color={link.label === current ? "#e07a22" : "#6bbf4e"}
-            _hover={{ color: link.label === current ? "#e07a22" : "#232883" }}
+            color={link.label === current ? "#ffc107" : "#649b42"}
+            _hover={{ color: link.label === current ? "#ffc107" : "#273776" }}
             textTransform="uppercase"
             transition="color 0.2s"
             py={0.5}
@@ -62,27 +62,23 @@ const employers = [
 
 function TopEmployersPage() {
   return (
-    <Box bg="gray.50" minH="100vh" py={10}>
-      <Container maxW="6xl" bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
-        <Box display={{ md: "flex" }}>
-          {/* Sidebar */}
-          <Box minW="220px" mr={{ md: 12 }} mb={{ base: 8, md: 0 }}>
-            <Sidebar current={"Top Employers"} />
-          </Box>
-          {/* Main Content */}
-          <Box flex={1}>
-            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#232883" fontWeight="bold" mb={6} letterSpacing="wide">
-              Top Employers in Fulton County
+    <Box bg="gray.50" minH="100vh">
+      <Container maxW="7xl" py={10}>
+        <Flex direction={{ base: "column", lg: "row" }} gap={8}>
+          <Sidebar current="Top Employers" />
+          <Box flex="1">
+            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#273776" fontWeight="bold" mb={6} letterSpacing="wide">
+              Top Employers
             </Heading>
             <VStack align="stretch" gap={2}>
               {employers.map(([name, desc]) => (
-                <Text key={name} fontSize="md" mb={1}>
-                  <Box as="span" fontWeight="bold" color="#232883">{name}</Box>{desc ? <Box as="span" color="#232323"> {desc}</Box> : null}
+                <Text fontSize="md" color="gray.700">
+                  <Box as="span" fontWeight="bold" color="#273776">{name}</Box>{desc ? <Box as="span" color="#232323"> {desc}</Box> : null}
                 </Text>
               ))}
             </VStack>
           </Box>
-        </Box>
+        </Flex>
       </Container>
     </Box>
   );

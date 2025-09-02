@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Text, Image, Flex } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, Image, Flex, VStack, Link as ChakraLink } from "@chakra-ui/react";
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_layout/staff")({
@@ -13,135 +13,75 @@ function StaffPage() {
     <Box bg="gray.50" minH="100vh">
       {/* Hero Section - compact, centered, with shadow */}
       <Box
-        bg="linear-gradient(135deg, #232883 0%, #1a1f5c 100%)"
-        color="white"
-        py={6}
-        boxShadow="md"
-        borderRadius="xl"
-        maxW="900px"
-        mx="auto"
-        mt={{ base: 6, md: 8 }}
-        mb={{ base: 8, md: 10 }}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
+        h="200px"
+        bg="linear-gradient(135deg, #273776 0%, #1a1f5c 100%)"
+        position="relative"
       >
-        <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold" textAlign="center">
+        <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold" textAlign="center" color="white">
           Our Staff
         </Heading>
       </Box>
-      <Container maxW="7xl" py={0}>
-        <Flex direction={{ base: "column", lg: "row" }} gap={{ base: 6, lg: 16 }} align="flex-start">
-          {/* Sidebar Navigation */}
-          <Box 
-            minW={{ lg: "280px" }} 
-            w={{ base: "100%", lg: "280px" }}
-            bg="white" 
-            p={8} 
-            borderRadius="xl" 
-            boxShadow="lg" 
-            h="fit-content"
-            mb={{ base: 6, lg: 0 }}
-          >
-            <Heading as="h2" fontSize="xl" color="#232883" mb={6} fontWeight="bold">
-              ABOUT
-            </Heading>
-            <Flex direction="column" gap={4} fontWeight="bold" fontSize="1.1rem">
-              <Link to="/staff">
-                <Text color={currentPath === "/staff" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Staff</Text>
-              </Link>
-              <Link to="/board">
-                <Text color={currentPath === "/board" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Board of Directors</Text>
-              </Link>
-              <Link to="/mission">
-                <Text color={currentPath === "/mission" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Mission</Text>
-              </Link>
-              <Link to="/contact">
-                <Text color={currentPath === "/contact" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Contact</Text>
-              </Link>
-            </Flex>
-          </Box>
-          {/* Staff Profile Card in a single white box with padding */}
-          <Box flex={1} bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
-            <Flex direction={{ base: "column", lg: "row" }} minH="500px">
-              {/* Image Section */}
-              <Box 
-                w={{ base: "100%", lg: "280px" }} 
-                h={{ base: "220px", lg: "360px" }}
-                position="relative"
-                bg="gray.100"
-              >
-                <Image
-                  src="/images/michaelladd.jpg"
-                  alt="Michael C. Ladd"
-                  w="100%"
-                  h="100%"
-                  objectFit="cover"
-                />
-                <Box 
-                  position="absolute" 
-                  bottom={0} 
-                  left={0} 
-                  right={0} 
-                  bg="linear-gradient(transparent, rgba(0,0,0,0.6))" 
-                  p={6}
-                >
-                  <Text color="white" fontSize="sm" fontWeight="medium">
-                    Director, Fulton Economic Development Corporation
-                  </Text>
-                </Box>
-              </Box>
-              {/* Content Section */}
-              <Flex direction="column" flex={1} p={10} justify="space-between">
+      <Container maxW="7xl" py={10}>
+        <Box bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
+          <VStack spacing={8} align="stretch">
+            <Box>
+              <Text fontSize="sm" color="#ffc107" fontWeight="bold" mb={3} letterSpacing="wide">
+                HELPING FULTON COUNTY GROW
+              </Text>
+              <Heading as="h1" fontSize="3xl" color="#273776" fontWeight="bold" mb={8}>
+                Meet Our Staff
+              </Heading>
+              <VStack spacing={8} align="stretch">
                 <Box>
-                  <Text fontSize="sm" color="#e07a22" fontWeight="bold" mb={3} letterSpacing="wide">
-                    DIRECTOR
+                  <Heading as="h3" fontSize="lg" color="#273776" mb={3}>
+                    Tiffany R. Phillips - Executive Director
+                  </Heading>
+                  <Text color="gray.700" mb={4}>
+                    Tiffany R. Phillips is the Executive Director of the Fulton Development Corporation. She brings a wealth of experience in community development, economic growth, and strategic planning. Tiffany is dedicated to fostering a vibrant and thriving community in Fulton County.
                   </Text>
-                  <Heading as="h1" fontSize="3xl" color="#232883" fontWeight="bold" mb={8}>
-                    MICHAEL C. LADD
-                  </Heading>
-                  <Flex direction="column" gap={6}>
-                    <Box>
-                      <Heading as="h3" fontSize="lg" color="#232883" mb={3}>
-                        About Michael
-                      </Heading>
-                      <Text color="gray.700" fontSize="lg" lineHeight="tall">
-                        Michael C. Ladd began his tenure as director of the Fulton Development Corporation on February 1, 2023.
-                      </Text>
-                    </Box>
-                    <Box>
-                      <Heading as="h3" fontSize="lg" color="#232883" mb={3}>
-                        Experience & Background
-                      </Heading>
-                      <Text color="gray.700" fontSize="lg" lineHeight="tall">
-                        His background includes <Text as="span" fontWeight="bold" color="#e07a22">35+ years in nonprofit management</Text> in various positions. His experience is comprehensive, including chambers of commerce, Main Street and Urban Enterprise Zones. He brings with him extensive experience in legislative matters, coupled with an economic development background.
-                      </Text>
-                    </Box>
-                  </Flex>
                 </Box>
-                {/* Contact Section */}
-                <Box mt={8} p={6} bg="gray.50" borderRadius="lg">
-                  <Heading as="h3" fontSize="md" color="#232883" mb={3}>
-                    Get in Touch
+                <Box>
+                  <Heading as="h3" fontSize="lg" color="#273776" mb={3}>
+                    Michael Ladd - Director of Special Projects
                   </Heading>
-                  <Link 
-                    href="mailto:director@fultondevelopment.org"
-                  >
-                    <Text
-                      color="#6bbf4e"
-                      fontWeight="medium"
-                      fontSize="lg"
-                      _hover={{ color: "#5aa93e", textDecoration: "underline" }}
-                      transition="all 0.2s"
-                    >
-                      director@fultondevelopment.org
-                    </Text>
-                  </Link>
+                  <Text color="gray.700" mb={4}>
+                    His background includes <Text as="span" fontWeight="bold" color="#ffc107">35+ years in nonprofit management</Text> in various positions. His experience is comprehensive, including chambers of commerce, Main Street and Urban Enterprise Zones. He brings with him extensive experience in organizational development, downtown revitalization, economic development, fundraising and grant writing. Contact Mike if you have a special project that needs a kick start!
+                  </Text>
                 </Box>
-              </Flex>
-            </Flex>
-          </Box>
-        </Flex>
+                <Box>
+                  <Heading as="h3" fontSize="md" color="#273776" mb={3}>
+                    Amy Beechy - Director of Entreprenurial Programs
+                  </Heading>
+                  <Text color="gray.700">
+                    With a background in small business ownership, marketing and community development, Amy provides expertise in entrepreneurial programs. Contact Amy for information on the Business Plan Course or for small business assistance. She can be reached at (574) 835-0348 or by email.
+                  </Text>
+                  <Text color="gray.700" mt={2}>
+                    Email: <ChakraLink href="mailto:amy@projectmattersllc.com" color="#649b42" fontWeight="bold">amy@projectmattersllc.com</ChakraLink>
+                  </Text>
+                </Box>
+              </VStack>
+            </Box>
+            {/* Contact Section */}
+            <Box mt={8} p={6} bg="gray.50" borderRadius="lg">
+              <Heading as="h3" fontSize="md" color="#232883" mb={3}>
+                Get in Touch
+              </Heading>
+              <Link 
+                href="mailto:director@fultondevelopment.org"
+              >
+                <Text
+                  color="#6bbf4e"
+                  fontWeight="medium"
+                  fontSize="lg"
+                  _hover={{ color: "#5aa93e", textDecoration: "underline" }}
+                  transition="all 0.2s"
+                >
+                  director@fultondevelopment.org
+                </Text>
+              </Link>
+            </Box>
+          </VStack>
+        </Box>
       </Container>
     </Box>
   );

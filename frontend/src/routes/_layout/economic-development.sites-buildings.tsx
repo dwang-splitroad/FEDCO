@@ -1,5 +1,6 @@
-import { Box, Heading, Text, VStack, Link as ChakraLink } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, Link as ChakraLink, Container, SimpleGrid } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_layout/economic-development/sites-buildings")({
   component: SitesBuildingsPage,
@@ -8,101 +9,49 @@ export const Route = createFileRoute("/_layout/economic-development/sites-buildi
 function SitesBuildingsPage() {
   return (
     <Box bg="gray.50" minH="100vh" py={10}>
-      <Box bg="gray.50" p={{ base: 6, md: 12 }}>
-        {/* Main Content - Full Width */}
-        <Box>
-          <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#232883" fontWeight="bold" mb={6}>
-            Sites & Buildings
-          </Heading>
-          <Text color="gray.700" mb={6} fontSize="lg">
-            Explore available commercial and industrial properties in Fulton County, Indiana. Find the perfect location for your business with our comprehensive property search tool.
-          </Text>
-          
-          <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
-            Property Search
-          </Heading>
-          <Text color="gray.700" mb={6}>
-            Use the interactive map and listings below to search for available sites and buildings. You can filter by property type, size, location, and other criteria to find properties that meet your specific business needs.
-          </Text>
-
-          {/* ZoomProspector iframe - Full page width */}
-          <Box 
-            mb={6}
-            overflow="hidden"
-            minH="1000px"
-            bg="white"
-            position="relative"
-            w="100%"
-          >
-            <iframe
-              src="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured"
-              width="100%"
-              height="1000"
-              style={{ border: 0, width: "100%", height: "1000px" }}
-              allowFullScreen
-              loading="lazy"
-              title="ZoomProspector Property Search for Fulton County, Indiana"
-            />
-          </Box>
-
-          <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
-            Need Assistance?
-          </Heading>
-          <Text color="gray.700" mb={4}>
-            Our economic development team is here to help you find the right property for your business. We can provide additional information about available sites, zoning requirements, utilities, and incentive programs.
-          </Text>
-          <Text color="gray.700" mb={6}>
-            For personalized assistance with your site selection, please{" "}
-            <ChakraLink
-              href="/contact"
-              color="#6bbf4e"
-              fontWeight="bold"
-              _hover={{ textDecoration: "underline", color: "#232883" }}
-            >
-              contact our team
-            </ChakraLink>
-            {" "}or browse our full property database using the link below.
-          </Text>
-
-          <Box bg="gray.50" p={6} borderRadius="lg" mb={6}>
-            <Heading as="h3" fontSize="lg" color="#232883" fontWeight="bold" mb={3}>
-              Additional Resources
+      <Container maxW="6xl" bg="white" p={8} borderRadius="xl" boxShadow="xl">
+        <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#273776" fontWeight="bold" mb={6}>
+          Sites & Buildings
+        </Heading>
+        <VStack spacing={8} align="stretch">
+          <Box>
+            <Heading as="h2" fontSize="xl" color="#ffc107" fontWeight="bold" mb={3}>
+              Available Properties
             </Heading>
-            <VStack align="flex-start" gap={2}>
-              <ChakraLink
-                href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured"
-                target="_blank"
-                rel="noopener noreferrer"
-                color="#6bbf4e"
-                fontWeight="bold"
-                _hover={{ textDecoration: "underline", color: "#232883" }}
-              >
-                View Full Property Database →
-              </ChakraLink>
-              <ChakraLink
-                href="https://www.bls.gov/regions/midwest/news-release/countyemploymentandwages_indiana.htm"
-                target="_blank"
-                rel="noopener noreferrer"
-                color="#6bbf4e"
-                fontWeight="bold"
-                _hover={{ textDecoration: "underline", color: "#232883" }}
-              >
-                Wage & Labor Market Data →
-              </ChakraLink>
-              <ChakraLink
-                href="https://www.hoosierdata.in.gov"
-                target="_blank"
-                rel="noopener noreferrer"
-                color="#6bbf4e"
-                fontWeight="bold"
-                _hover={{ textDecoration: "underline", color: "#232883" }}
-              >
-                Indiana Labor Statistics →
-              </ChakraLink>
-            </VStack>
+            <Text color="gray.700" mb={4}>
+              Fulton County has a number of sites and buildings available for development. We are committed to helping you find the perfect location for your business.
+            </Text>
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+              <Box>
+                <Text fontWeight="bold">Search Indiana Economic Development Corporation (IEDC) Database:</Text>
+                <ChakraLink href="https://www.iedc.in.gov/relocation-expansion/site-selection/" color="#649b42" isExternal _hover={{ textDecoration: "underline", color: "#273776" }}>
+                  Indiana Site & Building Database
+                </ChakraLink>
+              </Box>
+              <Box>
+                <Heading as="h3" fontSize="lg" color="#273776" fontWeight="bold" mb={3}>
+                  For more information, contact:
+                </Heading>
+                <Text fontWeight="bold">Tiffany Phillips, Executive Director</Text>
+                <ChakraLink href="mailto:tiffany@fultondevelopment.org" color="#649b42" _hover={{ textDecoration: "underline", color: "#273776" }}>tiffany@fultondevelopment.org</ChakraLink>
+                <br />
+                <ChakraLink href="tel:574-223-3326" color="#649b42" _hover={{ textDecoration: "underline", color: "#273776" }}>(574) 223-3326</ChakraLink>
+              </Box>
+            </SimpleGrid>
           </Box>
-        </Box>
-      </Box>
+          <Box>
+            <Heading as="h2" fontSize="xl" color="#ffc107" fontWeight="bold" mb={3}>
+              Major Employers
+            </Heading>
+            <Text color="gray.700" mb={4}>
+              Fulton County is home to a number of major employers in a variety of industries, including manufacturing, healthcare, and education.
+            </Text>
+            <ChakraLink as={Link} to="/top-employers" color="#649b42" fontWeight="bold" _hover={{ textDecoration: "underline", color: "#273776" }}>
+              View Top Employers in Fulton County
+            </ChakraLink>
+          </Box>
+        </VStack>
+      </Container>
     </Box>
   );
 } 

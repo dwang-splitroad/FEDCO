@@ -19,6 +19,7 @@ import { Route as LayoutImport } from './routes/_layout'
 import { Route as LayoutIndexImport } from './routes/_layout/index'
 import { Route as LayoutWorkforceImport } from './routes/_layout/workforce'
 import { Route as LayoutUtilitiesImport } from './routes/_layout/utilities'
+import { Route as LayoutUpdatesImport } from './routes/_layout/updates'
 import { Route as LayoutTopEmployersImport } from './routes/_layout/top-employers'
 import { Route as LayoutStoriesofbizgroImport } from './routes/_layout/storiesofbizgro'
 import { Route as LayoutStaffImport } from './routes/_layout/staff'
@@ -73,6 +74,11 @@ const LayoutWorkforceRoute = LayoutWorkforceImport.update({
 
 const LayoutUtilitiesRoute = LayoutUtilitiesImport.update({
   path: '/utilities',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutUpdatesRoute = LayoutUpdatesImport.update({
+  path: '/updates',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -223,6 +229,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutTopEmployersImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/updates': {
+      preLoaderRoute: typeof LayoutUpdatesImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/utilities': {
       preLoaderRoute: typeof LayoutUtilitiesImport
       parentRoute: typeof LayoutImport
@@ -259,6 +269,7 @@ export const routeTree = rootRoute.addChildren([
     LayoutStaffRoute,
     LayoutStoriesofbizgroRoute,
     LayoutTopEmployersRoute,
+    LayoutUpdatesRoute,
     LayoutUtilitiesRoute,
     LayoutWorkforceRoute,
     LayoutIndexRoute,

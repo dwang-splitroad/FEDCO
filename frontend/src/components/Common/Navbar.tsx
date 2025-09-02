@@ -44,7 +44,7 @@ function Navbar() {
 
   // Mobile Menu Items Component
   const MobileMenuItems = () => (
-    <VStack gap={4} align="stretch" p={4} bg="blue.800">
+    <VStack gap={4} align="stretch" p={4} bg="#273776">
       <Link to="/mission" onClick={toggleMobileMenu}>
         <Text color="white" fontSize="lg" py={2}>Mission</Text>
       </Link>
@@ -87,7 +87,7 @@ function Navbar() {
         zIndex={1000}
         color="white"
         align="center"
-        bg="blue.800"
+        bg="#273776"
         w="100%"
         px={{ base: 4, md: 8 }}
         py={4}
@@ -116,7 +116,7 @@ function Navbar() {
           <HStack gap={6}>
             {/* HOME */}
             <Link to="/">
-              <Button variant="ghost" bg="transparent" _hover={{ bg: "transparent", color: "blue.200" }} px={3} py={2} fontSize="sm" fontWeight="medium" color="white">
+              <Button variant="ghost" bg="transparent" _hover={{ bg: "transparent", color: "white" }} px={3} py={2} fontSize="sm" fontWeight="medium" color="white">
                 Home
               </Button>
             </Link>
@@ -130,7 +130,7 @@ function Navbar() {
                   color="white"
                   fontSize="sm"
                   fontWeight="medium"
-                  _hover={{ bg: "transparent", color: "blue.200" }}
+                  _hover={{ bg: "transparent", color: "white" }}
                   px={3}
                   py={2}
                   onMouseEnter={() => handleMenuOpen("economic-development")}
@@ -147,7 +147,7 @@ function Navbar() {
                   onMouseEnter={() => handleMenuOpen("economic-development")}
                   onMouseLeave={() => handleMenuClose("economic-development")}
                 >
-                  <Menu.Content bg="white" borderColor="blue.200" minW="200px">
+                  <Menu.Content bg="white" borderColor="#273776" minW="200px">
                     <Menu.Item value="sites-buildings" asChild>
                       <Link to="/economic-development/sites-buildings" style={{ cursor: 'pointer' }}>
                         <Text color="gray.800">Sites & Buildings</Text>
@@ -183,7 +183,7 @@ function Navbar() {
                   color="white"
                   fontSize="sm"
                   fontWeight="medium"
-                  _hover={{ bg: "transparent", color: "blue.200" }}
+                  _hover={{ bg: "transparent", color: "white" }}
                   px={3}
                   py={2}
                   onMouseEnter={() => handleMenuOpen("small-biz")}
@@ -200,7 +200,7 @@ function Navbar() {
                   onMouseEnter={() => handleMenuOpen("small-biz")}
                   onMouseLeave={() => handleMenuClose("small-biz")}
                 >
-                  <Menu.Content bg="white" borderColor="blue.200" minW="250px">
+                  <Menu.Content bg="white" borderColor="#273776" minW="250px">
                                      <Menu.Item value="business-assistance" asChild>
                    <Link to="/business-assistance" style={{ cursor: 'pointer' }}>
                      <Text color="gray.800">Business Assistance</Text>
@@ -217,8 +217,8 @@ function Navbar() {
                       </Link>
                     </Menu.Item>
                                      <Menu.Item value="updates" asChild>
-                   <Link to="/business-assistance" style={{ cursor: 'pointer' }}>
-                     <Text color="gray.800">Small Biz Updates</Text>
+                   <Link to="/updates" style={{ cursor: 'pointer' }}>
+                     <Text color="gray.800">Sign up for Updates</Text>
                    </Link>
                  </Menu.Item>
                   </Menu.Content>
@@ -239,7 +239,7 @@ function Navbar() {
                 fontSize="sm"
                 fontWeight="medium"
                 color="white"
-                _hover={{ bg: "transparent", color: "blue.200" }}
+                _hover={{ bg: "transparent", color: "white" }}
                 px={3}
                 py={2}
               >
@@ -256,7 +256,7 @@ function Navbar() {
                   color="white"
                   fontSize="sm"
                   fontWeight="medium"
-                  _hover={{ bg: "transparent", color: "blue.200" }}
+                  _hover={{ bg: "transparent", color: "white" }}
                   px={3}
                   py={2}
                   onMouseEnter={() => handleMenuOpen("life-in-fulton")}
@@ -273,7 +273,7 @@ function Navbar() {
                   onMouseEnter={() => handleMenuOpen("life-in-fulton")}
                   onMouseLeave={() => handleMenuClose("life-in-fulton")}
                 >
-                  <Menu.Content bg="white" borderColor="blue.200" minW="200px">
+                  <Menu.Content bg="white" borderColor="#273776" minW="200px">
                     <Menu.Item value="quick-facts" asChild>
                       <Link to="/quick-facts" style={{ cursor: 'pointer' }}>
                         <Text color="gray.800">Quick Facts</Text>
@@ -313,7 +313,7 @@ function Navbar() {
                   color="white"
                   fontSize="sm"
                   fontWeight="medium"
-                  _hover={{ bg: "transparent", color: "blue.200" }}
+                  _hover={{ bg: "transparent", color: "white" }}
                   px={3}
                   py={2}
                   onMouseEnter={() => handleMenuOpen("why-fulton")}
@@ -330,7 +330,7 @@ function Navbar() {
                   onMouseEnter={() => handleMenuOpen("why-fulton")}
                   onMouseLeave={() => handleMenuClose("why-fulton")}
                 >
-                  <Menu.Content bg="white" borderColor="blue.200" minW="200px">
+                  <Menu.Content bg="white" borderColor="#273776" minW="200px">
                     <Menu.Item value="workforce" asChild>
                       <Link to="/workforce" style={{ cursor: 'pointer' }}>
                         <Text color="gray.800">Workforce</Text>
@@ -360,7 +360,7 @@ function Navbar() {
                   color="white"
                   fontSize="sm"
                   fontWeight="medium"
-                  _hover={{ bg: "transparent", color: "blue.200" }}
+                  _hover={{ bg: "transparent", color: "white" }}
                   px={3}
                   py={2}
                   onMouseEnter={() => handleMenuOpen("partners")}
@@ -377,7 +377,7 @@ function Navbar() {
                   onMouseEnter={() => handleMenuOpen("partners")}
                   onMouseLeave={() => handleMenuClose("partners")}
                 >
-                  <Menu.Content bg="white" borderColor="blue.200" minW="200px">
+                  <Menu.Content bg="white" borderColor="#273776" minW="200px">
                     <Menu.Item value="rochester" asChild>
                       <a href="https://rochester.in.us/" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
                         <Text color="gray.800">Rochester</Text>
@@ -427,7 +427,7 @@ function Navbar() {
                   color="white"
                   fontSize="sm"
                   fontWeight="medium"
-                  _hover={{ bg: "transparent", color: "blue.200" }}
+                  _hover={{ bg: "transparent", color: "white" }}
                   px={3}
                   py={2}
                   onMouseEnter={() => handleMenuOpen("about")}
@@ -444,7 +444,7 @@ function Navbar() {
                   onMouseEnter={() => handleMenuOpen("about")}
                   onMouseLeave={() => handleMenuClose("about")}
                 >
-                  <Menu.Content bg="white" borderColor="blue.200" minW="200px">
+                  <Menu.Content bg="white" borderColor="#273776" minW="200px">
                     <Menu.Item value="staff" asChild>
                       <Link to="/staff" style={{ cursor: 'pointer' }}>
                         <Text color="gray.800">Staff</Text>
@@ -487,14 +487,14 @@ function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <Box
-          bg="blue.800"
+          bg="#273776"
           w="100%"
           position="absolute"
           top="100%"
           left={0}
           zIndex={999}
           borderBottom="1px"
-          borderColor="blue.700"
+          borderColor="#273776"
           display={{ lg: "none" }}
         >
           <MobileMenuItems />

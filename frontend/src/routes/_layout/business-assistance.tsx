@@ -9,8 +9,7 @@ import {
   GridItem,
   Button,
   Input,
-  Container,
-  VStack
+  Container
 } from "@chakra-ui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useForm } from "react-hook-form";
@@ -30,51 +29,13 @@ function BusinessAssistancePage() {
     <Box bg="gray.50" minH="100vh" py={10}>
       {/* Full Width Container for Sidebar + Centered Content */}
       <Container maxW="7xl" py={0}>
-        <Flex direction={{ base: "column", lg: "row" }} gap={{ base: 6, lg: 8 }} align="flex-start">
+        <Flex direction={{ base: "column", lg: "row" }} gap={{ base: 6, lg: 8 }} align="flex-start" justify="center">
           
-          {/* Sticky Sidebar - Quick Links */}
-          <Box 
-            minW={{ lg: "250px" }} 
-            w={{ base: "100%", lg: "250px" }}
-            bg="white" 
-            p={6} 
-            borderRadius="xl" 
-            boxShadow="lg" 
-            position={{ lg: "sticky" }}
-            top={{ lg: "100px" }}
-            h="fit-content"
-            mb={{ base: 6, lg: 0 }}
-          >
-            <Heading as="h3" fontSize="lg" color="#232883" fontWeight="bold" mb={4}>
-              Quick Links
-            </Heading>
-            <VStack align="stretch" gap={3}>
-              <Link to="#courses" style={{ color: '#6bbf4e', fontWeight: 'bold', textDecoration: 'none' }}>
-                Business Courses
-              </Link>
-              <Link to="#counseling" style={{ color: '#6bbf4e', fontWeight: 'bold', textDecoration: 'none' }}>
-                Business Counseling
-              </Link>
-              <Link to="#funding" style={{ color: '#6bbf4e', fontWeight: 'bold', textDecoration: 'none' }}>
-                Funding & Loans
-              </Link>
-              <Link to="#signup" style={{ color: '#6bbf4e', fontWeight: 'bold', textDecoration: 'none' }}>
-                Get Updates
-              </Link>
-              <ChakraLink href="https://www.facebook.com/fedco46975#" target="_blank" rel="noopener noreferrer" color="#6bbf4e" fontWeight="bold" _hover={{ textDecoration: "underline", color: "#232883" }}>
-                Upcoming Events
-              </ChakraLink>
-              <Link to="/storiesofbizgro" style={{ color: '#6bbf4e', fontWeight: 'bold', textDecoration: 'none' }}>
-                Success Stories
-              </Link>
-            </VStack>
-          </Box>
-
           {/* Centered Content Area (Hero + Main Content) */}
-          <Box flex={1} maxW="900px">
+          <Box flex={1} maxW="900px" w="100%" mx="auto">
             {/* Hero */}
             <Box
-              bg="linear-gradient(135deg, #232883 0%, #1a1f5c 100%)"
+              bg="#273776"
               color="white"
               py={{ base: 8, md: 12 }}
               boxShadow="md"
@@ -94,7 +55,7 @@ function BusinessAssistancePage() {
               
               {/* Section: Education & Counseling (from BizGro Skills) */}
               <Box id="courses">
-                <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
+                <Heading as="h2" fontSize="xl" color="#ffc107" fontWeight="bold" mb={3}>
                   NxLevel Business Planning & Management Course
                 </Heading>
                 <Text color="gray.700" mb={4}>
@@ -106,7 +67,7 @@ function BusinessAssistancePage() {
               </Box>
 
               <Box id="counseling">
-                <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
+                <Heading as="h2" fontSize="xl" color="#ffc107" fontWeight="bold" mb={3}>
                   Business Counseling
                 </Heading>
                 <Text color="gray.700" mb={4}>
@@ -116,17 +77,17 @@ function BusinessAssistancePage() {
                   <span style={{ fontStyle: 'italic' }}>
                     To schedule your appointment with the Indiana Small Business Development Center visit the
                   </span>{' '}
-                  <a href="https://www.isbdc.org/locations/north-central-indiana-sbdc" target="_blank" rel="noopener noreferrer" style={{ color: '#6bbf4e', textDecoration: 'underline' }}>ISBDC website</a>. Click on, <span style={{ color: 'black', textDecoration: 'none', fontStyle: 'normal' }}>Let's Work Together</span> on the top right or call (574) 520-4126.
+                  <a href="https://www.isbdc.org/locations/north-central-indiana-sbdc" target="_blank" rel="noopener noreferrer" style={{ color: '#649b42', textDecoration: 'underline' }}>ISBDC website</a>. Click on, <span style={{ color: 'black', textDecoration: 'none', fontStyle: 'normal' }}>Let's Work Together</span> on the top right or call (574) 520-4126.
                 </Text>
 
-                <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
+                <Heading as="h2" fontSize="xl" color="#ffc107" fontWeight="bold" mb={3}>
                   Local Seminars
                 </Heading>
                 <Text color="gray.700" mb={2}>
                   FEDCO regularly offers seminars on business related topics. Past topics have included QuickBooks, customer service, marketing, retail development, restaurant management, and social media.
                 </Text>
                 <Text color="gray.700" mb={6}>
-                  <Link to="/events" className="main-link">
+                  <Link to="/events" className="main-link" style={{ color: '#649b42' }}>
                     Check out upcoming biz events for current seminars.
                   </Link>
                 </Text>
@@ -134,14 +95,14 @@ function BusinessAssistancePage() {
 
               {/* Section: Funding (from Money For Your Biz) */}
               <Box id="funding">
-                <Heading as="h2" fontSize="xl" color="#e07a22" fontWeight="bold" mb={3}>
+                <Heading as="h2" fontSize="xl" color="#ffc107" fontWeight="bold" mb={3}>
                   Funding and Financial Support
                 </Heading>
                 <Text color="gray.700" mb={4}>
                   You have options; <b>especially</b> in Fulton County.
                 </Text>
 
-                <Heading as="h3" fontSize="lg" color="#232883" fontWeight="bold" mb={2}>
+                <Heading as="h3" fontSize="lg" color="#273776" fontWeight="bold" mb={2}>
                   FEDCO's Loan Program
                 </Heading>
                 <Text color="gray.700" mb={4}>
@@ -154,24 +115,24 @@ function BusinessAssistancePage() {
                   Existing business (2 years or older) may apply directly.
                 </Text>
 
-                <Heading as="h3" fontSize="lg" color="#232883" fontWeight="bold" mb={2}>
+                <Heading as="h3" fontSize="lg" color="#273776" fontWeight="bold" mb={2}>
                   SBA Loans
                 </Heading>
                 <Text color="gray.700" mb={4}>
                   Small Business Administration supported loans. SBA does not actually make direct loans; instead, it provides loan guarantees to entrepreneurs, promising the bank/lender to pay back a certain percentage of your loan if you are unable to. Banks participate in the SBA program as regular, certified or preferred lenders.{' '}
                   <ChakraLink
                     href="https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders"
-                    color="#6bbf4e"
+                    color="#649b42"
                     fontWeight="bold"
                     target="_blank"
                     rel="noopener noreferrer"
-                    _hover={{ textDecoration: "underline", color: "#232883" }}
+                    _hover={{ textDecoration: "underline", color: "#273776" }}
                   >
                     Click here to find the best lender for your needs.
                   </ChakraLink>
                 </Text>
 
-                <Heading as="h3" fontSize="lg" color="#232883" fontWeight="bold" mb={2}>
+                <Heading as="h3" fontSize="lg" color="#273776" fontWeight="bold" mb={2}>
                   Training Funds
                 </Heading>
                 <Text color="gray.700" mb={4}>
@@ -183,7 +144,7 @@ function BusinessAssistancePage() {
               </Box>
 
               {/* Contact */}
-              <Heading as="h2" fontSize="lg" color="#232883" fontWeight="bold" mb={2} mt={8}>
+              <Heading as="h2" fontSize="lg" color="#273776" fontWeight="bold" mb={2} mt={8}>
                 Contact
               </Heading>
               <Flex 
@@ -209,16 +170,16 @@ function BusinessAssistancePage() {
                   </Text>
                   <Box color="gray.700" fontSize="md" mb={2}>
                     <Text mb={1}><b>Phone:</b> (574) 709-7955</Text>
-                    <Text><b>Email:</b> <a href="mailto:amy@projectmattersllc.com" style={{ color: "#232883", fontWeight: "bold", textDecoration: "underline" }}>amy@projectmattersllc.com</a></Text>
+                    <Text><b>Email:</b> <a href="mailto:amy@projectmattersllc.com" style={{ color: "#273776", fontWeight: "bold", textDecoration: "underline" }}>amy@projectmattersllc.com</a></Text>
                   </Box>
                 </Box>
               </Flex>
             </Box>
 
-            {/* Signup: Small Biz Updates - Centered Below Main Content */}
+            {/* Signup: Sign up for Updates - Centered Below Main Content */}
             <Box id="signup" bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 10 }} mt={8}>
-              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#e07a22" fontWeight="bold" textAlign="center" mb={2}>
-                Sign Up for Small Business Updates
+              <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} color="#ffc107" fontWeight="bold" textAlign="center" mb={2}>
+                Sign up for Updates
               </Heading>
               <Text color="gray.700" textAlign="center" mb={8}>
                 Receive updates about the latest resources for small businesses.
@@ -246,7 +207,7 @@ function BusinessAssistancePage() {
                 </Text>
                 <Input {...register("cell", { required: false })} placeholder="Cell #" mb={8} />
                 <Flex justify="flex-start">
-                  <Button type="submit" colorScheme="orange" size="lg" w="56" loading={isSubmitting} fontWeight="normal" letterSpacing={2}>
+                  <Button type="submit" bg="#649b42" color="white" _hover={{ bg: "#5a8a3a" }} size="lg" w="56" loading={isSubmitting} fontWeight="normal" letterSpacing={2}>
                     SIGN ME UP!
                   </Button>
                 </Flex>

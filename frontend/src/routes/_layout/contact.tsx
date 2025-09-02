@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, Flex, VStack, SimpleGrid } from "@chakra-ui/react";
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { useForm } from "react-hook-form"
 import { Button, Input, Textarea, Grid, GridItem } from "@chakra-ui/react"
@@ -65,24 +65,17 @@ Please forward to director@fultondevelopment.org
 
   return (
     <Box bg="gray.50" minH="100vh">
-      {/* Hero Section - compact, centered, with shadow */}
+      {/* Hero Section */}
       <Box
-        bg="linear-gradient(135deg, #232883 0%, #1a1f5c 100%)"
-        color="white"
-        py={6}
-        boxShadow="md"
-        borderRadius="xl"
-        maxW="900px"
-        mx="auto"
-        mt={{ base: 6, md: 8 }}
-        mb={{ base: 8, md: 10 }}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
+        h="200px"
+        bg="linear-gradient(135deg, #273776 0%, #1a1f5c 100%)"
+        position="relative"
       >
-        <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold" textAlign="center">
-          Contact Us
-        </Heading>
+        <Container maxW="7xl" h="100%">
+          <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold" textAlign="center" color="white">
+            Contact Us
+          </Heading>
+        </Container>
       </Box>
       <Container maxW="7xl" py={0}>
         <Flex direction={{ base: "column", lg: "row" }} gap={{ base: 6, lg: 16 }} align="flex-start">
@@ -97,31 +90,59 @@ Please forward to director@fultondevelopment.org
             h="fit-content"
             mb={{ base: 6, lg: 0 }}
           >
-            <Heading as="h2" fontSize="xl" color="#232883" mb={6} fontWeight="bold">
+            <Heading as="h2" fontSize="xl" color="#273776" mb={6} fontWeight="bold">
               ABOUT
             </Heading>
-            <Flex direction="column" gap={4} fontWeight="bold" fontSize="1.1rem">
+            <VStack align="stretch" spacing={4} fontWeight="bold" fontSize="1.1rem">
               <Link to="/staff">
-                <Text color={currentPath === "/staff" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Staff</Text>
+                <Text color={currentPath === "/staff" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Staff</Text>
               </Link>
               <Link to="/board">
-                <Text color={currentPath === "/board" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Board of Directors</Text>
+                <Text color={currentPath === "/board" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Board of Directors</Text>
               </Link>
               <Link to="/mission">
-                <Text color={currentPath === "/mission" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Mission</Text>
+                <Text color={currentPath === "/mission" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Mission</Text>
               </Link>
               <Link to="/contact">
-                <Text color={currentPath === "/contact" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Contact</Text>
+                <Text color={currentPath === "/contact" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Contact</Text>
               </Link>
-            </Flex>
+            </VStack>
           </Box>
 
           {/* Contact Content */}
-          <Box flex={1} bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
-            {/* Top: Office Info and Map side by side, 1:1 ratio */}
-            <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={8} mb={12}>
+          <Box flex="1" ml={{ lg: 8 }} mt={{ base: 8, lg: 0 }}>
+            <Box bg="white" borderRadius="xl" boxShadow="xl" p={8}>
+              <Heading as="h2" fontSize="xl" color="#273776" mb={6} fontWeight="bold">
+                About Our Team
+              </Heading>
+              <VStack align="stretch" spacing={4}>
+                <Link to="/staff">
+                  <Text color={currentPath === "/staff" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Staff</Text>
+                </Link>
+                <Link to="/board">
+                  <Text color={currentPath === "/board" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Board of Directors</Text>
+                </Link>
+                <Link to="/mission">
+                  <Text color={currentPath === "/mission" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Mission</Text>
+                </Link>
+                <Link to="/contact">
+                  <Text color={currentPath === "/contact" ? "#ffc107" : "#649b42"} _hover={{ textDecoration: "underline" }}>Contact</Text>
+                </Link>
+              </VStack>
+            </Box>
+          </Box>
+        </Flex>
+      </Container>
+      {/* Main Content */}
+      <Container maxW="7xl" py={10}>
+        <VStack spacing={12} align="stretch">
+          <Box bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
+            <Heading as="h2" fontSize="2xl" color="#273776" mb={6} fontWeight="bold" letterSpacing="wide">
+              Contact Information
+            </Heading>
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
               <GridItem>
-                <Heading as="h2" fontSize="2xl" color="#232883" mb={6} fontWeight="bold" letterSpacing="wide">
+                <Heading as="h2" fontSize="2xl" color="#273776" mb={6} fontWeight="bold" letterSpacing="wide">
                   OUR OFFICE
                 </Heading>
                 <Text color="#232323" fontSize="md" mb={2}>
@@ -136,57 +157,45 @@ Please forward to director@fultondevelopment.org
               <GridItem>
                 <Box borderRadius="xl" overflow="hidden" boxShadow="md" minH="300px" height="100%">
                   <iframe
-                    title="Google Map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.964964234624!2d-86.2151236846036!3d41.0651237792937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8811e1e2e2e2e2e2%3A0x1234567890abcdef!2s822%20Main%20St%2C%20Rochester%2C%20IN%2046975!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.0000000000005!2d-86.2169444!3d41.0486111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8816c210d1b2bf2d%3A0x8e8b2b5f7e7f7e9b!2sFulton%20Economic%20Development%20Corporation!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
                     width="100%"
                     height="300"
-                    style={{ border: 0, display: 'block' }}
-                    allowFullScreen
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Google Maps Location for FEDCO"
                   ></iframe>
                 </Box>
               </GridItem>
-            </Grid>
-            {/* Bottom: Contact Us and Form side by side */}
-            <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={8}>
-              <GridItem>
-                <Heading as="h2" fontSize="2xl" color="#232883" mb={6} fontWeight="bold" letterSpacing="wide">
-                  CONTACT US
-                </Heading>
-                <Text color="#232323" fontSize="md" mb={4}>
-                  We look forward to hearing from you! Please fill out the form and a staff person will be in touch with you as soon as possible. Please allow 48 hours for an emailed response.
-                </Text>
-                <Text color="#232323" fontSize="md">
-                  For urgent matters or emergencies, please call us <b>574 223 0701</b>.
-                </Text>
-              </GridItem>
-              <GridItem>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                  <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={4} mb={4}>
-                    <GridItem>
-                      <Text fontSize="sm" fontWeight="bold">First Name</Text>
-                      <Input {...register("firstName", { required: true })} placeholder="First Name" />
-                    </GridItem>
-                    <GridItem>
-                      <Text fontSize="sm" fontWeight="bold">Last Name</Text>
-                      <Input {...register("lastName", { required: true })} placeholder="Last Name" />
-                    </GridItem>
-                  </Grid>
-                  <Text fontSize="sm" fontWeight="bold">Email Address</Text>
-                  <Input {...register("email", { required: true })} placeholder="Email Address" mb={4} />
-                  <Text fontSize="sm" fontWeight="bold">Phone</Text>
-                  <Input {...register("phone", { required: true })} placeholder="Phone" mb={4} />
-                  <Text fontSize="sm" fontWeight="bold">Subject</Text>
-                  <Input {...register("subject", { required: true })} placeholder="Subject" mb={4} />
-                  <Text fontSize="sm" fontWeight="bold">Message</Text>
-                  <Textarea {...register("message", { required: true })} placeholder="Message" mb={4} />
-                  <Button type="submit" colorScheme="orange" w="40" loading={isSubmitting}>SUBMIT</Button>
-                </form>
-              </GridItem>
-            </Grid>
+            </SimpleGrid>
           </Box>
-        </Flex>
+          <Box bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
+            <Heading as="h2" fontSize="2xl" color="#273776" mb={6} fontWeight="bold" letterSpacing="wide">
+              Send Us a Message
+            </Heading>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={4} mb={4}>
+                <GridItem>
+                  <Text fontSize="sm" fontWeight="bold">First Name</Text>
+                  <Input {...register("firstName", { required: true })} placeholder="First Name" />
+                </GridItem>
+                <GridItem>
+                  <Text fontSize="sm" fontWeight="bold">Last Name</Text>
+                  <Input {...register("lastName", { required: true })} placeholder="Last Name" />
+                </GridItem>
+              </Grid>
+              <Text fontSize="sm" fontWeight="bold">Email Address</Text>
+              <Input {...register("email", { required: true })} placeholder="Email Address" mb={4} />
+              <Text fontSize="sm" fontWeight="bold">Phone</Text>
+              <Input {...register("phone", { required: true })} placeholder="Phone" mb={4} />
+              <Text fontSize="sm" fontWeight="bold">Subject</Text>
+              <Input {...register("subject", { required: true })} placeholder="Subject" mb={4} />
+              <Text fontSize="sm" fontWeight="bold">Message</Text>
+              <Textarea {...register("message", { required: true })} placeholder="Message" mb={4} />
+              <Button type="submit" colorScheme="orange" w="40" loading={isSubmitting}>SUBMIT</Button>
+            </form>
+          </Box>
+        </VStack>
       </Container>
     </Box>
   );

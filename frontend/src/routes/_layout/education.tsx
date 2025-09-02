@@ -12,7 +12,7 @@ const lifeInFultonLinks = [
 function Sidebar({ current }: { current: string }) {
   return (
     <VStack align="flex-start" gap={2} minW="220px" mt={2} mb={8}>
-      <Text fontWeight="bold" fontSize="sm" color="#232883" letterSpacing="wider" mb={2}>
+      <Text fontWeight="bold" fontSize="sm" color="#273776" letterSpacing="wider" mb={2}>
         LIFE IN FULTON COUNTY
       </Text>
       {lifeInFultonLinks.map((link) =>
@@ -22,8 +22,8 @@ function Sidebar({ current }: { current: string }) {
               fontSize="xs"
               fontWeight="bold"
               letterSpacing="wider"
-              color={link.label === current ? "#e07a22" : "#6bbf4e"}
-              _hover={{ color: link.label === current ? "#e07a22" : "#232883" }}
+              color={link.label === current ? "#ffc107" : "#649b42"}
+              _hover={{ color: link.label === current ? "#ffc107" : "#273776" }}
               textTransform="uppercase"
               transition="color 0.2s"
               py={0.5}
@@ -43,8 +43,8 @@ function Sidebar({ current }: { current: string }) {
               fontSize="xs"
               fontWeight="bold"
               letterSpacing="wider"
-              color="#6bbf4e"
-              _hover={{ color: "#232883" }}
+              color="#649b42"
+              _hover={{ color: "#273776" }}
               textTransform="uppercase"
               transition="color 0.2s"
               py={0.5}
@@ -65,74 +65,96 @@ function EducationPage() {
         <Box display={{ md: "flex" }}>
           {/* Sidebar */}
           <Box minW="220px" mr={{ md: 12 }} mb={{ base: 8, md: 0 }}>
-            <Sidebar current={"Education"} />
+            <Sidebar current="Education" />
           </Box>
           {/* Main Content */}
-          <Box flex={1}>
-            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#232883" fontWeight="bold" mb={6}>
-              Primary Education
+          <Box flex="1">
+            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#273776" fontWeight="bold" mb={6}>
+              Education
             </Heading>
-            <Heading as="h2" fontSize="lg" color="#e07a22" fontWeight="bold" mb={1} mt={4}>
-              Caston School Corporation
-            </Heading>
-            <Text mb={0}>
-              Offerings: Ag/FFA, PLTW Engineering & Biomedical Sciences and Governor’s Work Ethic Certificate
-            </Text>
-            <ChakraLink href="https://www.caston.k12.in.us/" color="#6bbf4e" target="_blank" rel="noopener noreferrer">www.caston.k12.in.us</ChakraLink>
-            <Text mb={0}>PO Box 8, Fulton, IN 46931</Text>
-            <Text mb={4}>574-857-3500</Text>
-
-            <Heading as="h2" fontSize="lg" color="#e07a22" fontWeight="bold" mb={1} mt={4}>
-              Rochester School Corporation
-            </Heading>
-            <Text mb={0}>
-              Offerings: CTE, JAG, Agriculture, PLTW Engineering, Biomedical Sciences & Computer Science, Governor’s Work Ethic Certificate and Future McBright Program
-            </Text>
-            <ChakraLink href="https://www.rochesterschools.com/" color="#6bbf4e" target="_blank" rel="noopener noreferrer">www.rochesterschools.com</ChakraLink>
-            <Text mb={0}>800 Pontiac St., Rochester, IN 46975</Text>
-            <Text mb={4}>574-223-2176</Text>
-
-            <Heading as="h2" fontSize="lg" color="#e07a22" fontWeight="bold" mb={1} mt={4}>
-              Tippecanoe Valley School Corporation
-            </Heading>
-            <Text mb={0}>
-              Offerings: CTE, JAG, Agriculture, Animal Sciences, Building Trades, Precision Machine Technology, Welding, PLTW Engineering/Biomedical Sciences & Computer Science and Governor’s Work Ethic Certificate
-            </Text>
-            <ChakraLink href="https://tippecanoevalleyschools.com/" color="#6bbf4e" target="_blank" rel="noopener noreferrer">www.tippecanoevalleyschools.com</ChakraLink>
-            <Text mb={0}>8343 South State Road 19, Akron, IN 46910</Text>
-            <Text mb={4}>574-598-2765</Text>
-
-            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#232883" fontWeight="bold" mb={6} mt={10}>
+            <VStack spacing={8} align="stretch">
+              <Box>
+                <Heading as="h2" fontSize="lg" color="#ffc107" fontWeight="bold" mb={1} mt={4}>
+                  Caston School Corporation
+                </Heading>
+                <Text color="gray.700" mb={2}>
+                  Caston School Corporation is a public school district in Fulton County, Indiana. It serves the towns of Grass Creek and Fulton.
+                </Text>
+                <ChakraLink href="https://www.caston.k12.in.us/" color="#649b42" target="_blank" rel="noopener noreferrer">www.caston.k12.in.us</ChakraLink>
+              </Box>
+              <Box>
+                <Heading as="h2" fontSize="lg" color="#ffc107" fontWeight="bold" mb={1} mt={4}>
+                  Rochester Community School Corporation
+                </Heading>
+                <Text color="gray.700" mb={2}>
+                  Rochester Community School Corporation is a public school district in Fulton County, Indiana. It serves the city of Rochester and surrounding areas.
+                </Text>
+                <ChakraLink href="https://www.rochesterschools.com/" color="#649b42" target="_blank" rel="noopener noreferrer">www.rochesterschools.com</ChakraLink>
+              </Box>
+              <Box>
+                <Heading as="h2" fontSize="lg" color="#ffc107" fontWeight="bold" mb={1} mt={4}>
+                  Tippecanoe Valley School Corporation
+                </Heading>
+                <Text color="gray.700" mb={2}>
+                  Tippecanoe Valley School Corporation is a public school district that serves parts of Fulton, Kosciusko, and Marshall counties in Indiana.
+                </Text>
+                <ChakraLink href="https://tippecanoevalleyschools.com/" color="#649b42" target="_blank" rel="noopener noreferrer">www.tippecanoevalleyschools.com</ChakraLink>
+              </Box>
+            </VStack>
+            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#273776" fontWeight="bold" mb={6} mt={10}>
               Higher Education
             </Heading>
-            <Text color="#232883" fontWeight="bold" mt={4} mb={2}>Within 50 miles of Fulton County</Text>
-            <Heading as="h2" fontSize="md" color="#e07a22" fontWeight="bold" mb={1} mt={4}>
-              2 Year/Associate Degrees
-            </Heading>
-            <Text mb={0}>Ivy Tech Community College</Text>
-            <Text mb={0}>Branches in Logansport, Kokomo, Peru, South Bend, Warsaw, IN</Text>
-            <Text mb={0}>Ancilla College</Text>
-            <Text mb={4}>Plymouth, IN</Text>
-            <Heading as="h2" fontSize="md" color="#e07a22" fontWeight="bold" mb={1} mt={4}>
-              4 Year/Undergraduate Degrees
-            </Heading>
-            <Text mb={0}>University of Notre Dame</Text>
-            <Text mb={0}>Indiana University</Text>
-            <Text mb={0}>Fort Wayne, Warsaw, IN</Text>
-            <Text mb={0}>Indiana Tech</Text>
-            <Text mb={0}>Fort Wayne, IN</Text>
-            <Text mb={0}>Bethel University</Text>
-            <Text mb={0}>Holy Cross College</Text>
-            <Text mb={0}>Saint Mary’s College</Text>
-            <Text mb={0}>South Bend, IN</Text>
-            <Text mb={0}>Indiana Wesleyan University</Text>
-            <Text mb={0}>Marion, IN</Text>
-            <Text mb={0}>Manchester University</Text>
-            <Text mb={0}>North Manchester, IN</Text>
-            <Text mb={0}>Huntington University</Text>
-            <Text mb={0}>Huntington, IN</Text>
-            <Text mb={0}>Grace College</Text>
-            <Text mb={0}>Winona Lake, IN</Text>
+            <Text color="#273776" fontWeight="bold" mt={4} mb={2}>Within 50 miles of Fulton County</Text>
+            <VStack spacing={4} align="stretch">
+              <Box>
+                <Heading as="h2" fontSize="md" color="#ffc107" fontWeight="bold" mb={1} mt={4}>
+                  Purdue University
+                </Heading>
+                <Text color="gray.700">
+                  Purdue University is a public research university in West Lafayette, Indiana, and the flagship campus of the Purdue University system.
+                </Text>
+              </Box>
+              <Box>
+                <Heading as="h2" fontSize="md" color="#ffc107" fontWeight="bold" mb={1} mt={4}>
+                  University of Notre Dame
+                </Heading>
+                <Text color="gray.700">
+                  University of Notre Dame is a private research university in South Bend, Indiana.
+                </Text>
+              </Box>
+              <Box>
+                <Heading as="h2" fontSize="md" color="#ffc107" fontWeight="bold" mb={1} mt={4}>
+                  Indiana University
+                </Heading>
+                <Text color="gray.700">
+                  Indiana University is a public research university in Bloomington, Indiana.
+                </Text>
+              </Box>
+              <Box>
+                <Heading as="h2" fontSize="md" color="#ffc107" fontWeight="bold" mb={1} mt={4}>
+                  Indiana Tech
+                </Heading>
+                <Text color="gray.700">
+                  Indiana Tech is a private university in Fort Wayne, Indiana.
+                </Text>
+              </Box>
+              <Box>
+                <Heading as="h2" fontSize="md" color="#ffc107" fontWeight="bold" mb={1} mt={4}>
+                  Bethel University
+                </Heading>
+                <Text color="gray.700">
+                  Bethel University is a private Christian university in Mishawaka, Indiana.
+                </Text>
+              </Box>
+              <Box>
+                <Heading as="h2" fontSize="md" color="#ffc107" fontWeight="bold" mb={1} mt={4}>
+                  Grace College
+                </Heading>
+                <Text color="gray.700">
+                  Grace College is a private Christian university in Winona Lake, Indiana.
+                </Text>
+              </Box>
+            </VStack>
           </Box>
         </Box>
       </Container>

@@ -1,4 +1,4 @@
-import { Box, Heading, Text, VStack, SimpleGrid, HStack, Flex } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, SimpleGrid, HStack, Flex, Container } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 
 function SectionDivider() {
@@ -69,180 +69,76 @@ function SimplePieChart({ data, title }: { data: { label: string; value: number;
 function QuickFactsPage() {
   return (
     <Box bg="gray.50" minH="100vh" py={10}>
-      <Box bg="gray.50" p={{ base: 6, md: 12 }}>
-        {/* Main Content - Full Width */}
-        <Box>
-          <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#232883" fontWeight="bold" mb={6} textAlign="center">
-            FULTON COUNTY QUICK FACTS
-          </Heading>
-          <VStack align="flex-start" gap={6}>
-            <Box w="100%">
-              <Heading as="h2" size="md" color="#e07a22" mb={4}>Demographics</Heading>
-              <SimpleGrid columns={{ base: 1, lg: 2 }} gap={6}>
-                <Box>
-                  <SimpleGrid columns={{ base: 1, md: 2 }} gap={2} mb={4}>
-                    <Text><b>Population:</b> 20,139</Text>
-                    <Text><b>County Seat:</b> Rochester</Text>
-                    <Text><b>Nearest Major Cities:</b> South Bend (45 mi), Fort Wayne (62 mi), Indianapolis (102 mi), Chicago (118 mi)</Text>
-                    <Text><b>Townships:</b> Aubbeenaubbee, Henry, Liberty, Newcastle, Richland, Rochester, Union, Wayne</Text>
-                  </SimpleGrid>
-                </Box>
-                <SimpleBarChart
-                  title="Population by Township"
-                  data={[
-                    { label: "Rochester", value: 6200, color: "#232883" },
-                    { label: "Wayne", value: 3100, color: "#6bbf4e" },
-                    { label: "Henry", value: 2800, color: "#e07a22" },
-                    { label: "Liberty", value: 2400, color: "#4299e1" },
-                    { label: "Other", value: 5639, color: "#a0aec0" }
-                  ]}
-                />
-              </SimpleGrid>
-            </Box>
-            <SectionDivider />
-            
-            <Box w="100%">
-              <Heading as="h2" size="md" color="#e07a22" mb={4}>Ages</Heading>
-              <SimpleGrid columns={{ base: 1, lg: 2 }} gap={6}>
-                <Box>
-                  <SimpleGrid columns={{ base: 1, md: 2 }} gap={2} mb={4}>
-                    <Text><b>Median Age:</b> 41.7</Text>
-                    <Text><b>Persons under 18:</b> 4,849</Text>
-                    <Text><b>Persons 19-63:</b> 11,573</Text>
-                    <Text><b>Persons 65 & over:</b> 3,717</Text>
-                  </SimpleGrid>
-                </Box>
-                <SimplePieChart
-                  title="Age Distribution"
-                  data={[
-                    { label: "Under 18", value: 4849, color: "#4299e1" },
-                    { label: "19-63", value: 11573, color: "#6bbf4e" },
-                    { label: "65 & over", value: 3717, color: "#e07a22" }
-                  ]}
-                />
-              </SimpleGrid>
-            </Box>
-            <SectionDivider />
-            
-            <Box w="100%">
-              <Heading as="h2" size="md" color="#e07a22" mb={4}>Income & Household Data</Heading>
-              <SimpleGrid columns={{ base: 1, lg: 2 }} gap={6}>
-                <Box>
-                  <SimpleGrid columns={{ base: 1, md: 2 }} gap={2} mb={4}>
-                    <Text><b>Per capita income:</b> $37,464</Text>
-                    <Text><b>Households:</b> 7,963</Text>
-                    <Text><b>Median household income:</b> $51,660</Text>
-                    <Text><b>Persons/household:</b> 2.50</Text>
-                  </SimpleGrid>
-                </Box>
-                <SimpleBarChart
-                  title="Income Comparison"
-                  data={[
-                    { label: "Per Capita", value: 37464, color: "#6bbf4e" },
-                    { label: "Median HH", value: 51660, color: "#232883" },
-                    { label: "Median Family", value: 51660, color: "#e07a22" }
-                  ]}
-                />
-              </SimpleGrid>
-            </Box>
-            <SectionDivider />
-            
-            <Box w="100%">
-              <Heading as="h2" size="md" color="#e07a22" mb={4}>Income & Family Data</Heading>
-              <SimpleGrid columns={{ base: 1, lg: 2 }} gap={6}>
-                <Box>
-                  <SimpleGrid columns={{ base: 1, md: 2 }} gap={2} mb={4}>
-                    <Text><b>Families:</b> 5,375</Text>
-                    <Text><b>Median family income:</b> $51,660</Text>
-                  </SimpleGrid>
-                </Box>
-                <SimpleBarChart
-                  title="Families vs Households"
-                  data={[
-                    { label: "Total Households", value: 7963, color: "#4299e1" },
-                    { label: "Family Households", value: 5375, color: "#6bbf4e" }
-                  ]}
-                />
-              </SimpleGrid>
-            </Box>
-            <SectionDivider />
-            
-            <Box w="100%">
-              <Heading as="h2" size="md" color="#e07a22" mb={4}>Housing</Heading>
-              <SimpleGrid columns={{ base: 1, lg: 2 }} gap={6}>
-                <Box>
-                  <SimpleGrid columns={{ base: 1, md: 2 }} gap={2} mb={4}>
-                    <Text><b>Housing units (H.U.):</b> 9,663</Text>
-                    <Text><b>Owner-occupied H.U.:</b> 6,127</Text>
-                    <Text><b>Renter-occupied H.U.:</b> 1,836</Text>
-                  </SimpleGrid>
-                </Box>
-                <SimplePieChart
-                  title="Housing Occupancy"
-                  data={[
-                    { label: "Owner-occupied", value: 6127, color: "#6bbf4e" },
-                    { label: "Renter-occupied", value: 1836, color: "#e07a22" },
-                    { label: "Vacant", value: 1700, color: "#a0aec0" }
-                  ]}
-                />
-              </SimpleGrid>
-            </Box>
-            <SectionDivider />
-            
-            <Box w="100%">
-              <Heading as="h2" size="md" color="#e07a22" mb={4}>Education</Heading>
-              <SimpleGrid columns={{ base: 1, lg: 2 }} gap={6}>
-                <Box>
-                  <SimpleGrid columns={{ base: 1, md: 2 }} gap={2} mb={4}>
-                    <Text><b>With H.S. education:</b> 85.7%</Text>
-                    <Text><b>Bachelors degree or higher:</b> 13.2%</Text>
-                  </SimpleGrid>
-                </Box>
-                <SimpleBarChart
-                  title="Education Levels"
-                  data={[
-                    { label: "High School", value: 85.7, color: "#6bbf4e" },
-                    { label: "Bachelor's+", value: 13.2, color: "#232883" }
-                  ]}
-                />
-              </SimpleGrid>
-            </Box>
-            <SectionDivider />
-            
-            <Box w="100%">
-              <Heading as="h2" size="md" color="#e07a22" mb={4}>Transportation</Heading>
-              <SimpleGrid columns={{ base: 1, lg: 2 }} gap={6}>
-                <Box>
-                  <Text fontWeight="bold" mt={2}>Regional Airport</Text>
-                  <Text>Fulton County Airport</Text>
-                  <Text>545 N State Road 25, Rochester  (574) 223-5384</Text>
-                  <Text fontWeight="bold" mt={4}>Nearest Major Airports</Text>
-                  <VStack align="flex-start" gap={1} pl={2}>
-                    <Text>South Bend International Airport, South Bend - 52 miles</Text>
-                    <Text>Fort Wayne International Airport, Fort Wayne - 61 miles</Text>
-                    <Text>Indianapolis International Airport, Indianapolis - 108 miles</Text>
-                    <Text>Midway Airport, Chicago - 120 miles</Text>
-                    <Text>O'Hare International Airport, Chicago - 142 miles</Text>
-                  </VStack>
-                  <Text fontWeight="bold" mt={4}>Highways Serving the Area</Text>
-                  <Text>US Highways 31</Text>
-                  <Text>State Roads 14, 17, 19, 25, 110, 114</Text>
-                </Box>
-                <SimpleBarChart
-                  title="Distance to Major Airports (miles)"
-                  data={[
-                    { label: "South Bend", value: 52, color: "#6bbf4e" },
-                    { label: "Fort Wayne", value: 61, color: "#4299e1" },
-                    { label: "Indianapolis", value: 108, color: "#e07a22" },
-                    { label: "Chicago Midway", value: 120, color: "#232883" },
-                    { label: "Chicago O'Hare", value: 142, color: "#a0aec0" }
-                  ]}
-                />
-              </SimpleGrid>
-            </Box>
-          </VStack>
-        </Box>
-      </Box>
+      <Container maxW="6xl" bg="white" p={8} borderRadius="xl" boxShadow="xl">
+        <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#273776" fontWeight="bold" mb={6} textAlign="center">
+          Quick Facts about Fulton County
+        </Heading>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+          <Box>
+            <Heading as="h2" size="md" color="#ffc107" mb={4}>Demographics</Heading>
+            <SimplePieChart data={[
+              { label: "Total Population", value: 20478, color: "#94C973" },
+              { label: "Rochester", value: 6200, color: "#273776" },
+              { label: "Wayne", value: 3100, color: "#649b42" },
+              { label: "Henry", value: 2800, color: "#ffc107" },
+              { label: "Liberty", value: 2300, color: "#5F9EA0" },
+              { label: "Newcastle", value: 1400, color: "#ADD8E6" },
+              { label: "Aubbeenaubbee", value: 1300, color: "#B0C4DE" },
+              { label: "Union", value: 1200, color: "#E6E6FA" }
+            ]} />
+          </Box>
+          <Box>
+            <Heading as="h2" size="md" color="#ffc107" mb={4}>Ages</Heading>
+            <SimplePieChart data={[
+              { label: "Under 18", value: 4891, color: "#94C973" },
+              { label: "19-63", value: 11573, color: "#649b42" },
+              { label: "65 & over", value: 3717, color: "#ffc107" }
+            ]} />
+          </Box>
+          <Box>
+            <Heading as="h2" size="md" color="#ffc107" mb={4}>Income & Household Data</Heading>
+            <SimplePieChart data={[
+              { label: "Households", value: 7963, color: "#94C973" },
+              { label: "Median HH", value: 51660, color: "#273776" },
+              { label: "Per Capita", value: 37464, color: "#649b42" },
+              { label: "Median Family", value: 51660, color: "#ffc107" }
+            ]} />
+          </Box>
+          <Box>
+            <Heading as="h2" size="md" color="#ffc107" mb={4}>Income & Family Data</Heading>
+            <SimplePieChart data={[
+              { label: "Families", value: 5375, color: "#94C973" },
+              { label: "Family Households", value: 5375, color: "#649b42" }
+            ]} />
+          </Box>
+          <Box>
+            <Heading as="h2" size="md" color="#ffc107" mb={4}>Housing</Heading>
+            <SimplePieChart data={[
+              { label: "Housing Units", value: 9214, color: "#94C973" },
+              { label: "Owner-occupied", value: 6127, color: "#649b42" },
+              { label: "Renter-occupied", value: 1836, color: "#ffc107" },
+              { label: "Vacant", value: 1251, color: "#D3D3D3" }
+            ]} />
+          </Box>
+          <Box>
+            <Heading as="h2" size="md" color="#ffc107" mb={4}>Education</Heading>
+            <SimplePieChart data={[
+              { label: "High School", value: 85.7, color: "#649b42" },
+              { label: "Bachelor's+", value: 13.2, color: "#273776" }
+            ]} />
+          </Box>
+          <Box>
+            <Heading as="h2" size="md" color="#ffc107" mb={4}>Transportation</Heading>
+            <SimplePieChart data={[
+              { label: "Mean Travel Time", value: 22.1, color: "#94C973" },
+              { label: "Fort Wayne", value: 52, color: "#D3D3D3" },
+              { label: "South Bend", value: 52, color: "#649b42" },
+              { label: "Indianapolis", value: 108, color: "#ffc107" },
+              { label: "Chicago Midway", value: 120, color: "#273776" },
+            ]} title="Drive time from Rochester (minutes) to:" />
+          </Box>
+        </SimpleGrid>
+      </Container>
     </Box>
   );
 }

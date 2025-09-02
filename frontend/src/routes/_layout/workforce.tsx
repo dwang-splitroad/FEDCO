@@ -10,7 +10,7 @@ const whyFultonLinks = [
 function Sidebar({ current }: { current: string }) {
   return (
     <VStack align="flex-start" gap={2} minW="220px" mt={2} mb={8}>
-      <Text fontWeight="bold" fontSize="sm" color="#232883" letterSpacing="wider" mb={2}>
+      <Text fontWeight="bold" fontSize="sm" color="#273776" letterSpacing="wider" mb={2}>
         FULTON COUNTY
       </Text>
       {whyFultonLinks.map((link) => (
@@ -19,8 +19,8 @@ function Sidebar({ current }: { current: string }) {
             fontSize="xs"
             fontWeight="bold"
             letterSpacing="wider"
-            color={link.label === current ? "#e07a22" : "#6bbf4e"}
-            _hover={{ color: link.label === current ? "#e07a22" : "#232883" }}
+            color={link.label === current ? "#ffc107" : "#649b42"}
+            _hover={{ color: link.label === current ? "#ffc107" : "#273776" }}
             textTransform="uppercase"
             transition="color 0.2s"
             py={0.5}
@@ -54,8 +54,8 @@ function WorkforcePage() {
     ["REGION", "144,564", "139,568", "4,996", "3.50%", "3.30%"],
   ];
   return (
-    <Box bg="gray.50" minH="100vh" py={10}>
-      <Container maxW="6xl" bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
+    <Box bg="gray.50" minH="100vh">
+      <Container maxW="7xl" py={10}>
         <Box display={{ md: "flex" }}>
           {/* Sidebar */}
           <Box minW="220px" mr={{ md: 12 }} mb={{ base: 8, md: 0 }}>
@@ -63,15 +63,15 @@ function WorkforcePage() {
           </Box>
           {/* Main Content */}
           <Box flex={1}>
-            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#232883" fontWeight="bold" mb={6}>
-              Fulton County Labor Force
+            <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} color="#273776" fontWeight="bold" mb={6}>
+              Workforce
             </Heading>
-            <Text mb={4}>
-              <ChakraLink href="https://static1.squarespace.com/static/5947df59e3df28301b274b0b/t/5d653da33e77300001818457/1566916005424/June+2019+Labor+Market+Review.pdf" color="#6bbf4e" target="_blank" rel="noopener noreferrer">
+            <Text color="gray.700" mb={6}>
+              <ChakraLink href="https://www.in.gov/dwd/files/Indiana-LMA-June+2019+Labor+Market+Review.pdf" color="#649b42" target="_blank" rel="noopener noreferrer">
                 Click here for a full Labor Market Review
               </ChakraLink> by Indiana Workforce Development
             </Text>
-            <Box overflowX="auto" mb={8}>
+            <Box overflowX="auto" bg="white" p={4} borderRadius="md" boxShadow="md">
               <Box
                 display="grid"
                 gridTemplateColumns="repeat(6, 1fr)"
@@ -83,7 +83,7 @@ function WorkforcePage() {
                 {headers.map((header, i) => (
                   <Box
                     key={header}
-                    bg="#e07a22"
+                    bg="#ffc107"
                     color="white"
                     fontWeight="bold"
                     fontSize="md"
@@ -101,8 +101,8 @@ function WorkforcePage() {
                   row.map((cell, colIdx) => (
                     <Box
                       key={rowIdx + cell}
-                      bg={colIdx === 0 ? "#6bbf4e" : "white"}
-                      color={colIdx === 0 ? "white" : "#232323"}
+                      bg={colIdx === 0 ? "#649b42" : "white"}
+                      color={colIdx === 0 ? "white" : "gray.800"}
                       fontWeight={colIdx === 0 ? "bold" : "normal"}
                       px={4}
                       py={3}

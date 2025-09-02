@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Text, Flex, Stack } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, Flex, Stack, VStack, SimpleGrid } from "@chakra-ui/react";
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_layout/board")({
@@ -11,84 +11,50 @@ function BoardPage() {
 
   return (
     <Box bg="gray.50" minH="100vh">
-      {/* Hero Section - compact, centered, with shadow */}
+      {/* Hero Section */}
       <Box
-        bg="linear-gradient(135deg, #232883 0%, #1a1f5c 100%)"
-        color="white"
-        py={6}
-        boxShadow="md"
-        borderRadius="xl"
-        maxW="900px"
-        mx="auto"
-        mt={{ base: 6, md: 8 }}
-        mb={{ base: 8, md: 10 }}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
+        h="200px"
+        bg="linear-gradient(135deg, #273776 0%, #1a1f5c 100%)"
+        position="relative"
       >
-        <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold" textAlign="center">
-          Board of Directors
-        </Heading>
+        <Container maxW="7xl" h="100%">
+          <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold" textAlign="center" color="white">
+            Board of Directors
+          </Heading>
+        </Container>
       </Box>
-      <Container maxW="7xl" py={0}>
-        <Flex direction={{ base: "column", lg: "row" }} gap={{ base: 6, lg: 16 }} align="flex-start">
-          {/* Sidebar Navigation */}
-          <Box 
-            minW={{ lg: "280px" }} 
-            w={{ base: "100%", lg: "280px" }}
-            bg="white" 
-            p={8} 
-            borderRadius="xl" 
-            boxShadow="lg" 
-            h="fit-content"
-            mb={{ base: 6, lg: 0 }}
-          >
-            <Heading as="h2" fontSize="xl" color="#232883" mb={6} fontWeight="bold">
-              ABOUT
-            </Heading>
-            <Flex direction="column" gap={4} fontWeight="bold" fontSize="1.1rem">
-              <Link to="/staff">
-                <Text color={currentPath === "/staff" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Staff</Text>
-              </Link>
-              <Link to="/board">
-                <Text color={currentPath === "/board" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Board of Directors</Text>
-              </Link>
-              <Link to="/mission">
-                <Text color={currentPath === "/mission" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Mission</Text>
-              </Link>
-              <Link to="/contact">
-                <Text color={currentPath === "/contact" ? "#e07a22" : "#6bbf4e"} _hover={{ textDecoration: "underline" }}>Contact</Text>
-              </Link>
-            </Flex>
-          </Box>
-          {/* Board Content in a single white box with padding */}
-          <Box flex={1} bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
-            {/* Executive Board Section */}
-            <SectionHeading color="#232883">Executive Board</SectionHeading>
-            <Stack direction="column" gap={6} mb={14}>
-              <BoardMember name="Jason Grube" role="President" org="Rochester Iron & Metal" color="#e07a22" />
-              <BoardMember name="Andrew Horstman" role="Vice President" org="Fulton County REMC" color="#e07a22" />
-              <BoardMember name="Brian Johnson" role="Treasurer" org="Smith, Sawyer & Smith" color="#e07a22" />
-              <BoardMember name="Kathy Rans" role="Secretary" org="Fulton County Chamber of Commerce" color="#e07a22" />
-            </Stack>
-            {/* Directors Section */}
-            <SectionHeading color="#232883">Directors</SectionHeading>
-            <Stack direction="column" gap={6} mb={14}>
-              <BoardMember name="Lauren Adley" role="Board Attorney" org="Peterson Waggoner & Perkins LLP" color="#6bbf4e" />
-              <BoardMember name="Rennell Finke" org="Akron" color="#6bbf4e" />
-              <BoardMember name="Mike McCarter" org="Kewanna" color="#6bbf4e" />
-              <BoardMember name="Mark McCall" org="Beacon Credit Union" color="#6bbf4e" />
-              <BoardMember name="Randy Gundrum" org="Fulton County Council" color="#6bbf4e" />
-            </Stack>
-            {/* Ex Officio Section */}
-            <SectionHeading color="#232883">Ex Officio</SectionHeading>
-            <Stack direction="column" gap={6}>
-              <BoardMember name="Brian Goodman" org="Modern Materials/Rochester City Council" color="#6bbf4e" />
-              <BoardMember name="Randy Gundrum" org="Fulton County Council" color="#6bbf4e" />
-              <BoardMember name="Mark McCall" org="Beacon Credit Union" color="#6bbf4e" />
-            </Stack>
-          </Box>
-        </Flex>
+      <Container maxW="7xl" py={10}>
+        <Box bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
+          <VStack spacing={12} align="stretch">
+            <Box>
+              <SectionHeading color="#273776">Executive Board</SectionHeading>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} mt={4}>
+                <BoardMember name="Jason Grube" role="President" org="Rochester Iron & Metal" color="#ffc107" />
+                <BoardMember name="Andrew Horstman" role="Vice President" org="Fulton County REMC" color="#ffc107" />
+                <BoardMember name="Brian Johnson" role="Treasurer" org="Smith, Sawyer & Smith" color="#ffc107" />
+                <BoardMember name="Kathy Rans" role="Secretary" org="Fulton County Chamber of Commerce" color="#ffc107" />
+              </SimpleGrid>
+            </Box>
+            <Box>
+              <SectionHeading color="#273776">Directors</SectionHeading>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} mt={4}>
+                <BoardMember name="Lauren Adley" role="Board Attorney" org="Peterson Waggoner & Perkins LLP" color="#649b42" />
+                <BoardMember name="Rennell Finke" org="Akron" color="#649b42" />
+                <BoardMember name="Mike McCarter" org="Kewanna" color="#649b42" />
+                <BoardMember name="Mark McCall" org="Beacon Credit Union" color="#649b42" />
+                <BoardMember name="Randy Gundrum" org="Fulton County Council" color="#649b42" />
+              </SimpleGrid>
+            </Box>
+            <Box>
+              <SectionHeading color="#273776">Ex Officio</SectionHeading>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} mt={4}>
+                <BoardMember name="Brian Goodman" org="Modern Materials/Rochester City Council" color="#649b42" />
+                <BoardMember name="Randy Gundrum" org="Fulton County Council" color="#649b42" />
+                <BoardMember name="Mark McCall" org="Beacon Credit Union" color="#649b42" />
+              </SimpleGrid>
+            </Box>
+          </VStack>
+        </Box>
       </Container>
     </Box>
   );
