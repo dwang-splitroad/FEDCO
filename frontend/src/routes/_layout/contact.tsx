@@ -64,7 +64,7 @@ Please forward to director@fultondevelopment.org
   return (
     <Box bg="gray.50" minH="100vh">
       {/* Header bar inside container */}
-      <Container maxW="3xl" py={10}>
+      <Container maxW="7xl" py={10}>
         <Box
           bg="#273776"
           color="white"
