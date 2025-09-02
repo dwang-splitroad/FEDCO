@@ -1,34 +1,6 @@
 import { Box, Heading, Text, VStack, SimpleGrid, HStack, Flex, Container } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 
-// Simple bar chart component
-function SimpleBarChart({ data, title }: { data: { label: string; value: number; color?: string }[]; title?: string }) {
-  const maxValue = Math.max(...data.map(d => d.value));
-  
-  return (
-    <Box p={4} bg="gray.50" borderRadius="md" w="100%">
-      {title && <Text fontSize="sm" fontWeight="bold" mb={3} textAlign="center">{title}</Text>}
-      <VStack gap={2} align="stretch">
-        {data.map((item, index) => (
-          <HStack key={index} gap={3}>
-            <Text fontSize="sm" minW="100px" textAlign="right">{item.label}</Text>
-            <Flex flex={1} align="center">
-              <Box 
-                bg={item.color || "#6bbf4e"} 
-                h="20px" 
-                borderRadius="sm"
-                width={`${(item.value / maxValue) * 100}%`}
-                minW="2px"
-              />
-              <Text fontSize="sm" ml={2} minW="50px">{item.value.toLocaleString()}</Text>
-            </Flex>
-          </HStack>
-        ))}
-      </VStack>
-    </Box>
-  );
-}
-
 // Simple pie chart representation
 function SimplePieChart({ data, title }: { data: { label: string; value: number; color: string }[]; title?: string }) {
   const total = data.reduce((sum, item) => sum + item.value, 0);
