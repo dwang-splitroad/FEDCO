@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-This Next.js application is optimized for Vercel deployment.
+This Next.js 16.1.1 application is optimized for Vercel deployment and located at the **root directory**.
 
 ### Prerequisites
 
