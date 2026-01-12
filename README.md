@@ -15,9 +15,6 @@ Modern, responsive website for Fulton Economic Development Corporation built wit
 # Install dependencies
 pnpm install
 
-# Copy environment variables
-cp .env.example .env.local
-
 # Start development server
 pnpm dev
 ```
@@ -32,7 +29,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **Icons**: Lucide React
 - **Fonts**: Geist Sans & Geist Mono
 - **Analytics**: Vercel Analytics
-- **Forms**: Web3Forms integration
 
 ## 🛠️ Build for Production
 
@@ -44,28 +40,17 @@ pnpm build
 pnpm start
 ```
 
-## 📋 Environment Variables
-
-Create a `.env.local` file with:
-
-```bash
-NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_key_here
-```
-
-Get your Web3Forms API key from [https://web3forms.com](https://web3forms.com)
-
 ## 🌐 Deployment
 
 This site is optimized for Vercel deployment. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
 
 ### Quick Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=YOUR_REPO_URL)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/dwang-splitroad/FEDCO)
 
-1. Push to GitHub/GitLab
+1. Push to GitHub
 2. Import to Vercel
-3. Add environment variables
-4. Deploy!
+3. Deploy!
 
 ## 📁 Project Structure
 
@@ -97,7 +82,7 @@ frontend-new/
 
 - **Primary Blue**: `#273776`
 - **Secondary Green**: `#649b42`
-- **Accent Gold**: `#ffc107`
+- **Neutral Accents**: Light grays (yellow removed)
 
 ## 🔗 Key Pages
 
@@ -107,7 +92,7 @@ frontend-new/
 - **Life in Fulton County** (`/life-in-fulton-county`) - Community information
 - **Fulton County** (`/fulton-county`) - Workforce and top employers
 - **About** (`/about/*`) - Mission, staff, board of directors
-- **Contact** (`/contact`) - Contact form with Web3Forms integration
+- **Contact** (`/contact`) - Contact form (ready for your form service)
 
 ## 🧪 Testing
 
@@ -133,8 +118,9 @@ All content from the previous React/Vite/Chakra UI site has been preserved:
 ✅ Workforce data and top employers  
 ✅ Community information (education, healthcare, utilities)  
 ✅ About section (mission, staff, board)  
-✅ Contact form with Web3Forms integration  
+✅ Contact form UI (ready for integration)  
 ✅ All 50+ images migrated  
+✅ Fully responsive design (mobile, tablet, desktop)
 
 See [CONTENT_INVENTORY.md](../CONTENT_INVENTORY.md) for complete content mapping.
 
@@ -160,11 +146,12 @@ Check TypeScript errors:
 pnpm run type-check
 ```
 
-### Environment Variables Not Working
+### Contact Form Setup
 
-- Must start with `NEXT_PUBLIC_` for client-side access
-- Restart dev server after changing `.env.local`
-- Rebuild for production after changing env vars
+The contact form is ready to connect to your preferred service:
+- Update `app/contact/page.tsx` `handleSubmit` function
+- Popular options: Formspree, Netlify Forms, custom API
+- Form fields: name, email, phone, company, subject, message
 
 ## 📞 Support
 

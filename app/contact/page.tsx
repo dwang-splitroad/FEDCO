@@ -15,30 +15,16 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setFormStatus("submitting")
-    
-    const formData = new FormData(e.currentTarget)
-    
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      })
-      
-      if (response.ok) {
-        setFormStatus("success")
-        ;(e.target as HTMLFormElement).reset()
-      } else {
-        setFormStatus("error")
-      }
-    } catch {
-      setFormStatus("error")
-    }
+    // TODO: Connect to your preferred form service (Formspree, Netlify Forms, etc.)
+    // For now, the form data can be accessed via FormData
+    console.log("Form submitted - connect to your form service")
+    alert("Form service not yet configured. Please email us directly at director@fultondevelopment.org")
   }
 
   return (
     <main className="min-h-screen">
       <Header />
+      <div className="h-20" /> {/* Spacer for fixed header */}
 
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-16 lg:py-24">
@@ -68,8 +54,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || ""} />
-                  <input type="hidden" name="subject" value="New Contact Form Submission - FEDCO Website" />
+                  {/* Ready to connect to any form service */}
                   
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
@@ -95,7 +80,7 @@ export default function ContactPage() {
 
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject <span className="text-destructive">*</span></Label>
-                    <Input id="subject" name="subject_line" placeholder="How can we help?" required />
+                    <Input id="subject" name="subject" placeholder="How can we help?" required />
                   </div>
 
                   <div className="space-y-2">

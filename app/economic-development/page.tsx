@@ -9,6 +9,7 @@ export default function EconomicDevelopmentPage() {
   return (
     <main className="min-h-screen">
       <Header />
+      <div className="h-20" /> {/* Spacer for fixed header */}
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-background to-accent/5 py-20 lg:py-32">

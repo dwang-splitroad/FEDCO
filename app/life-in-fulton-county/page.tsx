@@ -72,6 +72,7 @@ export default function LifeInFultonCountyPage() {
   return (
     <main className="min-h-screen">
       <Header />
+      <div className="h-20" /> {/* Spacer for fixed header */}
 
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-16 lg:py-24">

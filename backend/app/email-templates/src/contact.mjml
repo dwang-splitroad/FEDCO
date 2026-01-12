@@ -1,0 +1,39 @@
+<mjml>
+  <mj-body background-color="#f4f4f4">
+    <mj-section background-color="#f0f0f0" padding-bottom="20px" padding-top="20px">
+      <mj-column width="100%">
+        <mj-text align="center" font-size="13px" color="#555" font-family="Helvetica">
+          FEDCO
+        </mj-text>
+        <mj-text align="center" font-size="13px" color="#555" font-family="Helvetica">
+          © 2024 FEDCO. All rights reserved.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#ffffff" padding="20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="bold" color="#273776">New Contact Form Submission</mj-text>
+        <mj-divider border-color="#273776" />
+        <mj-text>You have a new submission from the contact form on your website.</mj-text>
+        <mj-table>
+          <tr style="border-bottom:1px solid #ecedee;text-align:left;">
+            <th style="padding:15px 0;">Name</th>
+            <td style="padding:15px 0;">{{ name }}</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ecedee;text-align:left;">
+            <th style="padding:15px 0;">Email</th>
+            <td style="padding:15px 0;">{{ email }}</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ecedee;text-align:left;">
+            <th style="padding:15px 0;">Message</th>
+            <td style="padding:15px 0;">{{ message }}</td>
+          </tr>
+        </mj-table>
+        <mj-button href="mailto:{{ email }}" background-color="#273776" color="white">
+          Reply to {{ name }}
+        </mj-button>
+        <mj-text>This email was sent from a contact form on FEDCO ({% if domain %}{{ domain }}{% endif %})</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml> 

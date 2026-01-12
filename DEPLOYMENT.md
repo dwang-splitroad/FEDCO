@@ -8,7 +8,6 @@ This Next.js application is optimized for Vercel deployment.
 
 1. GitHub/GitLab/Bitbucket account with the code repository
 2. Vercel account (free tier works great)
-3. Web3Forms API key (for contact form)
 
 ---
 
@@ -24,7 +23,7 @@ git add .
 git commit -m "Initial commit - FEDCO website remake"
 
 # Push to your repository
-git remote add origin YOUR_REPO_URL
+git remote add origin https://github.com/dwang-splitroad/FEDCO.git
 git push -u origin main
 ```
 
@@ -47,17 +46,10 @@ Vercel will auto-detect these settings, but verify:
 
 ### 4. Environment Variables
 
-Add these in Vercel Dashboard → Project Settings → Environment Variables:
+No environment variables required at this time.
 
-```bash
-NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_actual_key_here
-```
-
-To get a Web3Forms API key:
-1. Go to https://web3forms.com
-2. Sign up for free
-3. Create a new form
-4. Copy the Access Key
+If you add a form service later, you can add environment variables in:
+Vercel Dashboard → Project Settings → Environment Variables
 
 ### 5. Deploy
 
@@ -94,12 +86,12 @@ Click "Deploy" and Vercel will:
 - [ ] Website loads correctly
 - [ ] All images display properly
 - [ ] Navigation and dropdowns work smoothly
-- [ ] Contact form submissions work (test it!)
 - [ ] Check mobile responsiveness
 - [ ] Test all internal links
 - [ ] Verify external links open correctly
 - [ ] Check page load performance
 - [ ] SSL certificate is active (automatic on Vercel)
+- [ ] Configure contact form with your preferred service (if needed)
 
 ---
 
@@ -188,11 +180,13 @@ pnpm build
 - Check image paths (case-sensitive!)
 - Verify images were committed to git
 
-### Form Not Working
+### Contact Form Setup
 
-- Check Web3Forms API key in environment variables
-- Test form endpoint: https://web3forms.com/
-- Check browser console for errors
+The contact form is ready to connect to your preferred service:
+- **Formspree**: Easy setup, free tier available
+- **Netlify Forms**: If using Netlify
+- **Custom API**: Build your own endpoint
+- **Mailto**: Simple email fallback
 
 ### DNS Issues
 
@@ -202,20 +196,10 @@ pnpm build
 
 ---
 
-## Contact Form Configuration
-
-The contact form is already integrated with Web3Forms. Make sure to:
-
-1. Get your API key from web3forms.com
-2. Add it to Vercel environment variables
-3. Configure email forwarding in Web3Forms dashboard to: `director@fultondevelopment.org`
-
----
-
 ## Next Steps After Deployment
 
-1. **Set up Google Analytics** (if needed)
-2. **Configure Web3Forms** email notifications
+1. **Connect contact form** to your preferred service
+2. **Set up Google Analytics** (if needed)
 3. **Test all pages** thoroughly
 4. **Update social media links** with new domain
 5. **Submit sitemap** to Google Search Console
@@ -226,7 +210,6 @@ The contact form is already integrated with Web3Forms. Make sure to:
 
 - Vercel Docs: https://vercel.com/docs
 - Next.js Docs: https://nextjs.org/docs
-- Web3Forms Docs: https://docs.web3forms.com
 
 ---
 
