@@ -24,7 +24,7 @@ function StaffPage() {
             Our Staff
           </Heading>
         </Box>
-        <Box bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
+        <Box p={{ base: 6, md: 12 }} maxW="3xl" mx="auto">
           <VStack gap={8} align="stretch">
             <Box>
               <Text fontSize="sm" color="#ffc107" fontWeight="bold" mb={3} letterSpacing="wide">

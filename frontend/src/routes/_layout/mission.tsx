@@ -25,7 +25,7 @@ function MissionPage() {
           </Heading>
         </Box>
         <Container maxW="3xl" p={0}>
-          <Box bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
+          <Box p={{ base: 6, md: 12 }} maxW="3xl" mx="auto">
             <Heading as="h2" fontSize="2xl" color="#273776" mb={8} fontWeight="bold" letterSpacing="wide">
               Our Mission
             </Heading>

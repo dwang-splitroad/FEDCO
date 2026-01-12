@@ -1,4 +1,12 @@
 {
+  "name": "fedco-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:old": "cd frontend && npm run dev",
+    "dev:new": "cd C:\\Users\\User\\.cursor\\worktrees\\FEDCO\\ssu\\frontend-new && pnpm dev",
+    "dev": "pnpm run dev:new"
+  },
   "dependencies": {
     "@chakra-ui/react": "^3.22.0",
     "@emotion/react": "^11.14.0",

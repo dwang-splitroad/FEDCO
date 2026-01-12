@@ -82,7 +82,7 @@ Please forward to director@fultondevelopment.org
         </Box>
         {/* Main Content */}
         <VStack gap={12} align="stretch">
-          <Box bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
+          <Box p={{ base: 6, md: 12 }} maxW="3xl" mx="auto">
             <Heading as="h2" fontSize="2xl" color="#273776" mb={6} fontWeight="bold" letterSpacing="wide">
               Contact Information
             </Heading>
@@ -101,7 +101,7 @@ Please forward to director@fultondevelopment.org
                 </Text>
               </GridItem>
               <GridItem>
-                <Box borderRadius="xl" overflow="hidden" boxShadow="md" minH="300px" height="100%">
+                <Box overflow="hidden" minH="300px" height="100%">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.0000000000005!2d-86.2169444!3d41.0486111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8816c210d1b2bf2d%3A0x8e8b2b5f7e7f7e9b!2sFulton%20Economic%20Development%20Corporation!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
                     width="100%"
@@ -115,7 +115,7 @@ Please forward to director@fultondevelopment.org
               </GridItem>
             </SimpleGrid>
           </Box>
-          <Box bg="white" borderRadius="xl" boxShadow="xl" p={{ base: 6, md: 12 }}>
+          <Box p={{ base: 6, md: 12 }} maxW="3xl" mx="auto">
             <Heading as="h2" fontSize="2xl" color="#273776" mb={6} fontWeight="bold" letterSpacing="wide">
               Send Us a Message
             </Heading>
