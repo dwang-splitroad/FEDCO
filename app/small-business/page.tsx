@@ -27,7 +27,7 @@ export default function SmallBusinessPage() {
     },
     {
       title: "Rochester Boat Company",
-      image: "/images/storiesofbizgro/article pictures/Rochester+Boat+Company.png",
+      image: "/images/storiesofbizgro/article pictures/OBS_9109.jpg",
       industry: "Marine Repair & Sales",
       yearStarted: "2003",
       quote: "It was a simple process that helped us get our business started.",
@@ -44,7 +44,7 @@ export default function SmallBusinessPage() {
     },
     {
       title: "Kline Performance Equine",
-      image: "/images/storiesofbizgro/article pictures/Rochester+Bagel_Kline+Performance+Equine_Blog+Header@300x.png",
+      image: "/images/storiesofbizgro/article pictures/OBS_8874.jpg",
       industry: "Veterinary Services",
       yearStarted: "2021",
       quote: "The class gave me the tools to write a business plan and I still refer back to it.",
@@ -59,7 +59,7 @@ export default function SmallBusinessPage() {
     },
     {
       title: "Rochester Bagel & Coffee House",
-      image: "/images/storiesofbizgro/article pictures/Rochester+Bagel_Rochester+Bagel_Blog+Header@300x.png",
+      image: "/images/storiesofbizgro/article pictures/OBS_8962-2.jpg",
       industry: "Restaurant & Café",
       yearStarted: "2017",
       quote: "Without FEDCO's loan program, we wouldn't have been able to make our dreams a reality.",
@@ -76,7 +76,7 @@ export default function SmallBusinessPage() {
     },
     {
       title: "Hoffman Body Shop & Graphics",
-      image: "/images/storiesofbizgro/article pictures/OBS_8868.jpg",
+      image: "/images/storiesofbizgro/article pictures/OBS_7591.jpg",
       industry: "Auto Body & Graphics",
       yearStarted: "1971",
       quote: "50 years of serving Fulton County's residents",
@@ -90,7 +90,7 @@ export default function SmallBusinessPage() {
     },
     {
       title: "Jarrety's Place",
-      image: "/images/storiesofbizgro/article pictures/OBS_9055.jpg",
+      image: "/images/storiesofbizgro/article pictures/OBS_7511.jpg",
       industry: "Restaurant & Bar",
       yearStarted: "2020",
       quote: "Bringing the community back together in Akron",
@@ -104,7 +104,7 @@ export default function SmallBusinessPage() {
     },
     {
       title: "Manitou Marina",
-      image: "/images/storiesofbizgro/article pictures/OBS_7215.jpg",
+      image: "/images/storiesofbizgro/article pictures/OBS_7256.jpg",
       industry: "Marina Services",
       yearStarted: "2017",
       quote: "Back on our feet and serving the Lake Manitou community",
@@ -118,7 +118,7 @@ export default function SmallBusinessPage() {
     },
     {
       title: "Northern Traders",
-      image: "/images/storiesofbizgro/article pictures/OBS_9172.jpg",
+      image: "/images/storiesofbizgro/article pictures/OBS_7131.jpg",
       industry: "Retail & Resale",
       yearStarted: "2017",
       quote: "Your destination for tools, auto parts, and household items",
@@ -152,22 +152,32 @@ export default function SmallBusinessPage() {
       <div className="h-20" /> {/* Spacer for fixed header */}
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary/10 via-background to-accent/5 py-20 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
+      <section 
+        className="relative py-32 lg:py-40 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=2070&auto=format&fit=crop)',
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#273776]/90 via-[#273776]/85 to-[#273776]/90" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
               We Help New and Existing Businesses
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed text-pretty">
+            <p className="mt-6 text-lg text-white/90 leading-relaxed text-pretty">
               FEDCO is committed to helping small businesses succeed. Whether you're starting a new venture or growing
               an existing business, we provide the resources, guidance, and connections you need.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg">Get Started Today</Button>
+                <Button size="lg" className="bg-[#649b42] hover:bg-[#5a8a3a] text-white w-full sm:w-auto">
+                  Get Started Today
+                </Button>
               </Link>
               <a href="#services">
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="bg-white text-[#273776] hover:bg-gray-100 border-white w-full sm:w-auto">
                   Browse Resources
                 </Button>
               </a>
@@ -353,19 +363,20 @@ export default function SmallBusinessPage() {
 
           <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-2">
             {bizgroStories.map((story, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col">
+              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col p-0">
                 {/* Business Image */}
-                <div className="relative h-48 w-full bg-muted">
+                <div className="relative h-64 w-full bg-muted">
                   <Image
                     src={story.image}
                     alt={story.title}
                     fill
                     className="object-cover"
+                    style={story.title === "Northern Traders" ? { objectPosition: "center top" } : {}}
                   />
                 </div>
 
                 {/* Card Content */}
-                <CardHeader className="flex-none">
+                <CardHeader className="flex-none pt-6">
                   <div className="flex justify-between items-start mb-2">
                     <CardTitle className="text-2xl text-primary">{story.title}</CardTitle>
                     <span className="text-sm text-muted-foreground whitespace-nowrap ml-2">Est. {story.yearStarted}</span>
