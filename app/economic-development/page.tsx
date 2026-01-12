@@ -12,21 +12,31 @@ export default function EconomicDevelopmentPage() {
       <div className="h-20" /> {/* Spacer for fixed header */}
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/10 via-background to-accent/5 py-20 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
+      <section 
+        className="relative py-32 lg:py-40 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop)',
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#273776]/90 via-[#273776]/85 to-[#273776]/90" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
               Sites & Buildings
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed text-pretty">
+            <p className="mt-6 text-lg text-white/90 leading-relaxed text-pretty">
               Fulton County has a number of sites and buildings available for development. We are committed to helping you find the perfect location for your business.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="https://www.iedc.in.gov/relocation-expansion/site-selection/" target="_blank" rel="noopener noreferrer">
-                <Button size="lg">Search IEDC Database</Button>
+                <Button size="lg" className="bg-[#649b42] hover:bg-[#5a8a3a] text-white w-full sm:w-auto">
+                  Search IEDC Database
+                </Button>
               </a>
               <Link href="/contact">
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="bg-white text-[#273776] hover:bg-gray-100 border-white w-full sm:w-auto">
                   Contact Us
                 </Button>
               </Link>
@@ -261,9 +271,9 @@ export default function EconomicDevelopmentPage() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px] lg:h-[600px] rounded-lg overflow-hidden">
+            <div className="relative h-[400px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
               <img
-                src="/modern-office-building-with-business-professionals.jpg"
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
                 alt="Business development in Fulton County"
                 className="object-cover w-full h-full"
               />
