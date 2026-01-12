@@ -13,11 +13,6 @@ export const metadata: Metadata = {
     "Building tomorrow's economy in the heart of America. FEDCO partners with businesses to create opportunities and foster sustainable growth throughout Fulton County, Indiana.",
   keywords: ["economic development", "Fulton County", "Indiana", "business assistance", "small business", "Rochester"],
   authors: [{ name: "Fulton Economic Development Corporation" }],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   openGraph: {
     title: "FEDCO - Fulton Economic Development Corporation",
     description: "Building tomorrow's economy in the heart of America.",
@@ -26,6 +21,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+}
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
