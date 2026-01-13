@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ArrowRight, Download } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function CTASection() {
   return (
@@ -18,12 +18,6 @@ export function CTASection() {
             <Button size="lg" className="w-full bg-[#649b42] hover:bg-[#5a8a3a] text-white">
               Schedule a Consultation
               <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
-            </Button>
-          </Link>
-          <Link href="/economic-development" className="w-full sm:w-auto">
-            <Button size="lg" variant="outline" className="w-full bg-transparent border-white text-white hover:bg-white hover:text-[#273776]">
-              Download Resources
-              <Download className="ml-2 h-4 w-4 md:h-5 md:w-5" />
             </Button>
           </Link>
         </div>
