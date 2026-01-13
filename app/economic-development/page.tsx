@@ -9,10 +9,10 @@ export default function EconomicDevelopmentPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      <div className="h-20" /> {/* Spacer for fixed header */}
+      <div className="h-20" />
 
       {/* Hero Section */}
-      <section 
+      <section
         className="relative py-32 lg:py-40 bg-cover bg-center"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop)',

@@ -53,28 +53,30 @@ export function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 w-full border-b shadow-lg backdrop-blur-sm transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full shadow-lg backdrop-blur-sm transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
       style={{ backgroundColor: "rgba(39, 55, 118, 0.98)", color: "white" }}
     >
-      <div className="container mx-auto flex h-20 items-center px-6 md:px-10">
-        {/* Logo - Left */}
-        <div className="flex-shrink-0">
-          <Link href="/" className="flex items-center transition-transform hover:scale-105 duration-200">
-            <img
-              src="/images/FEDCO+Logo_White@300x-8.png"
-              alt="FEDCO - Fulton Economic Development Corp"
-              className="h-14 w-auto max-w-[260px] object-contain"
-            />
-          </Link>
-        </div>
+      <div className="w-full h-20 px-6 md:px-10">
+        {/* Desktop Grid Layout */}
+        <div className="hidden lg:grid lg:grid-cols-[auto_1fr_auto] h-full items-center gap-4">
+          {/* Logo - Left Grid (Left Aligned) */}
+          <div className="flex justify-start">
+            <Link href="/" className="flex items-center transition-transform hover:scale-105 duration-200">
+              <img
+                src="/images/FEDCO+Logo_White@300x-8.png"
+                alt="FEDCO - Fulton Economic Development Corp"
+                className="h-14 w-auto max-w-[260px] object-contain"
+              />
+            </Link>
+          </div>
 
-        {/* Desktop Navigation - Center */}
-        <nav className="hidden lg:flex flex-1 items-center justify-center gap-2">
+          {/* Desktop Navigation - Center Grid (Centered) */}
+          <nav className="flex items-center justify-center gap-1">
           {/* Home */}
           <Link href="/">
-            <button className="px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
               Home
             </button>
           </Link>
@@ -85,7 +87,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("economic-development")}
             onMouseLeave={() => handleMenuClose("economic-development")}
           >
-            <button className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
               Economic Development
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "economic-development" ? "rotate-180" : ""}`} />
             </button>
@@ -128,7 +130,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("small-biz")}
             onMouseLeave={() => handleMenuClose("small-biz")}
           >
-            <button className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
               Small Biz
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "small-biz" ? "rotate-180" : ""}`} />
             </button>
@@ -145,10 +147,10 @@ export function Header() {
                 >
                   Upcoming Biz Events
                 </a>
-                <Link href="/small-business#stories" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
+                <Link href="/stories-of-bizgro" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
                   Stories of BizGro
                 </Link>
-                <Link href="/small-business#signup" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
+                <Link href="/sign-up" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
                   Sign up for Updates
                 </Link>
               </div>
@@ -157,7 +159,7 @@ export function Header() {
 
           {/* Workone External Link */}
           <a href="https://www.in.gov/dwd/" target="_blank" rel="noopener noreferrer">
-            <button className="px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
               Workone
             </button>
           </a>
@@ -168,22 +170,22 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("life-in-fulton")}
             onMouseLeave={() => handleMenuClose("life-in-fulton")}
           >
-            <button className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
               Life In Fulton County
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "life-in-fulton" ? "rotate-180" : ""}`} />
             </button>
             {openMenu === "life-in-fulton" && (
               <div className="absolute top-full left-0 mt-2 w-60 bg-white rounded-lg shadow-xl border border-gray-100 py-2 animate-in fade-in-0 slide-in-from-top-2 duration-200">
-                <Link href="/life-in-fulton-county#quick-facts" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
+                <Link href="/life-in-fulton-county/quick-facts" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
                   Quick Facts
                 </Link>
-                <Link href="/life-in-fulton-county#healthcare" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
+                <Link href="/life-in-fulton-county/healthcare" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
                   Healthcare
                 </Link>
-                <Link href="/life-in-fulton-county#education" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
+                <Link href="/life-in-fulton-county/education" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
                   Education
                 </Link>
-                <Link href="/life-in-fulton-county#utilities" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
+                <Link href="/life-in-fulton-county/utilities" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
                   Utilities
                 </Link>
                 <a
@@ -204,7 +206,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("fulton-county")}
             onMouseLeave={() => handleMenuClose("fulton-county")}
           >
-            <button className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
               Fulton County
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "fulton-county" ? "rotate-180" : ""}`} />
             </button>
@@ -216,7 +218,7 @@ export function Header() {
                 <Link href="/fulton-county#top-employers" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
                   Top Employers
                 </Link>
-                <Link href="/life-in-fulton-county#utilities" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
+                <Link href="/life-in-fulton-county/utilities" className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-[#649b42] hover:text-white rounded-md mx-2 transition-colors">
                   Utilities
                 </Link>
               </div>
@@ -229,7 +231,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("partners")}
             onMouseLeave={() => handleMenuClose("partners")}
           >
-            <button className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
               Partners
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "partners" ? "rotate-180" : ""}`} />
             </button>
@@ -266,7 +268,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("about")}
             onMouseLeave={() => handleMenuClose("about")}
           >
-            <button className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
               About
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "about" ? "rotate-180" : ""}`} />
             </button>
@@ -288,25 +290,38 @@ export function Header() {
             )}
           </div>
 
-        </nav>
+          </nav>
 
-        {/* Contact Us Button - Right */}
-        <div className="hidden lg:flex flex-shrink-0">
-          <Link href="/contact">
-            <button className="px-6 py-2.5 text-sm font-bold text-white bg-[#649b42] hover:bg-[#5a8a3a] hover:shadow-lg rounded-lg transition-all duration-200 transform hover:scale-105">
-              Contact Us
-            </button>
-          </Link>
+          {/* Contact Us Button - Right Grid (Right Aligned) */}
+          <div className="flex justify-end">
+            <Link href="/contact">
+              <button className="px-6 py-2.5 text-base font-bold text-white bg-[#649b42] hover:bg-[#5a8a3a] rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105">
+                Contact Us
+              </button>
+            </Link>
+          </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-white p-2.5 hover:bg-white/10 rounded-lg transition-colors ml-auto"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        {/* Mobile Layout */}
+        <div className="flex lg:hidden h-full items-center justify-between">
+          {/* Logo - Mobile */}
+          <Link href="/" className="flex items-center transition-transform hover:scale-105 duration-200">
+            <img
+              src="/images/FEDCO+Logo_White@300x-8.png"
+              alt="FEDCO - Fulton Economic Development Corp"
+              className="h-14 w-auto max-w-[260px] object-contain"
+            />
+          </Link>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="text-white p-2 ml-auto"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -331,19 +346,19 @@ export function Header() {
             <Link href="/small-business" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
               Business Assistance
             </Link>
-            <Link href="/small-business#stories" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/stories-of-bizgro" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
               Stories of BizGro
             </Link>
-            <Link href="/life-in-fulton-county#education" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/life-in-fulton-county/education" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
               Education
             </Link>
             <Link href="/fulton-county#workforce" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
               Workforce
             </Link>
-            <Link href="/life-in-fulton-county#utilities" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/life-in-fulton-county/utilities" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
               Utilities
             </Link>
-            <Link href="/life-in-fulton-county#quick-facts" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/life-in-fulton-county/quick-facts" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all" onClick={() => setMobileMenuOpen(false)}>
               Quick Facts
             </Link>
           </nav>

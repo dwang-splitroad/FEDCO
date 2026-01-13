@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer"
 
 export default function MissionPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen flex flex-col">
       <Header />
       <div className="h-20" /> {/* Spacer for fixed header */}
       
@@ -19,7 +19,7 @@ export default function MissionPage() {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 flex-1">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="prose prose-lg max-w-none">
