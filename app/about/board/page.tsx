@@ -45,17 +45,6 @@ export default function BoardPage() {
     <main className="min-h-screen">
       <Header />
       <div className="h-20" /> {/* Spacer for fixed header */}
-      
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-16 lg:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-balance">
-              Board of Directors
-            </h1>
-          </div>
-        </div>
-      </section>
 
       {/* Board Members Section */}
       <section className="py-16 lg:py-24">

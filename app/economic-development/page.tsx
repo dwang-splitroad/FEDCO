@@ -30,7 +30,7 @@ export default function EconomicDevelopmentPage() {
               Fulton County has a number of sites and buildings available for development. We are committed to helping you find the perfect location for your business.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://www.iedc.in.gov/relocation-expansion/site-selection/" target="_blank" rel="noopener noreferrer">
+              <a href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-[#649b42] hover:bg-[#5a8a3a] text-white w-full sm:w-auto">
                   Search IEDC Database
                 </Button>
@@ -48,56 +48,39 @@ export default function EconomicDevelopmentPage() {
       {/* Available Properties Section */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-              Available Properties
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground text-pretty">
-              Search the Indiana Economic Development Corporation database for available sites and buildings in Fulton County.
-            </p>
-          </div>
+          {/* Properties Viewer */}
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
+              <h3 className="text-2xl font-bold text-[#273776] mb-4 text-center">
+                Browse Available Properties
+              </h3>
+              <p className="text-center text-muted-foreground mb-6">
+                View current listings of available sites and buildings in our region
+              </p>
+              
+              {/* Zoom Prospector iFrame */}
+              <div className="rounded-lg overflow-hidden border border-gray-200">
+                <iframe
+                  src="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured"
+                  width="100%"
+                  height="800"
+                  style={{ border: 0 }}
+                  title="Available Properties in Fulton County"
+                  className="w-full"
+                />
+              </div>
 
-          <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-            <Card className="border-secondary/20">
-              <CardHeader>
-                <MapPin className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Search Indiana Sites & Buildings</CardTitle>
-                <CardDescription>
-                  The Indiana Economic Development Corporation maintains a comprehensive database of available commercial and industrial properties throughout the state.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
+              <div className="mt-6 text-center">
                 <a 
-                  href="https://www.iedc.in.gov/relocation-expansion/site-selection/" 
-                  target="_blank" 
+                  href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="text-secondary font-semibold hover:underline"
+                  className="inline-flex items-center text-secondary font-semibold hover:underline"
                 >
-                  Indiana Site & Building Database →
+                  View All Properties in Full Screen →
                 </a>
-              </CardContent>
-            </Card>
-
-            <Card className="border-secondary/20">
-              <CardHeader>
-                <Phone className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Contact for More Information</CardTitle>
-                <CardDescription>
-                  For personalized assistance with site selection and available properties in Fulton County, contact our team directly.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <p className="font-semibold">Tiffany Phillips, Executive Director</p>
-                  <a href="mailto:tiffany@fultondevelopment.org" className="block text-secondary hover:underline">
-                    tiffany@fultondevelopment.org
-                  </a>
-                  <a href="tel:574-223-3326" className="block text-secondary hover:underline">
-                    (574) 223-3326
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -317,7 +300,7 @@ export default function EconomicDevelopmentPage() {
                 Contact Our Team
               </Button>
             </Link>
-            <a href="https://www.iedc.in.gov/relocation-expansion/site-selection/" target="_blank" rel="noopener noreferrer">
+            <a href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
                 variant="outline"

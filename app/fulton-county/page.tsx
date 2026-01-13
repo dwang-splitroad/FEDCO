@@ -50,20 +50,6 @@ export default function FultonCountyPage() {
       <Header />
       <div className="h-20" /> {/* Spacer for fixed header */}
 
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-16 lg:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-balance">
-              Fulton County
-            </h1>
-            <p className="mt-6 text-lg text-primary-foreground/90">
-              Discover our strong workforce and diverse employer base.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Workforce Section */}
       <section id="workforce" className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
