@@ -43,43 +43,39 @@ export default function WorkforcePage() {
               </p>
             </div>
 
-            <Card className="overflow-hidden">
-              <CardContent className="p-0">
-                <div className="overflow-x-auto">
-                  <Table>
-                    <TableHeader>
-                      <TableRow className="bg-accent hover:bg-accent">
-                        <TableHead className="text-accent-foreground font-bold">County</TableHead>
-                        <TableHead className="text-accent-foreground font-bold text-right">Labor Force</TableHead>
-                        <TableHead className="text-accent-foreground font-bold text-right">Employed</TableHead>
-                        <TableHead className="text-accent-foreground font-bold text-right">Unemployed</TableHead>
-                        <TableHead className="text-accent-foreground font-bold text-right">Unemployment Rate</TableHead>
-                        <TableHead className="text-accent-foreground font-bold text-right">Rate 1 Yr Ago</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {workforceData.map((row) => (
-                        <TableRow 
-                          key={row.county} 
-                          className={`${row.highlight ? "bg-secondary/10 hover:bg-secondary/10" : row.isTotal ? "bg-muted font-semibold hover:bg-muted" : "hover:bg-transparent"}`}
-                        >
-                          <TableCell className={`font-medium ${row.highlight ? "text-secondary" : row.isTotal ? "text-primary" : "text-foreground"}`}>
-                            {row.county}
-                          </TableCell>
-                          <TableCell className="text-right text-foreground">{row.laborForce}</TableCell>
-                          <TableCell className="text-right text-foreground">{row.employed}</TableCell>
-                          <TableCell className="text-right text-foreground">{row.unemployed}</TableCell>
-                          <TableCell className={`text-right ${row.highlight ? "font-semibold text-secondary" : "text-foreground"}`}>
-                            {row.rate}
-                          </TableCell>
-                          <TableCell className="text-right text-foreground">{row.rateYearAgo}</TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="overflow-x-auto border border-border">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-accent hover:bg-accent">
+                    <TableHead className="text-accent-foreground font-bold">County</TableHead>
+                    <TableHead className="text-accent-foreground font-bold text-right">Labor Force</TableHead>
+                    <TableHead className="text-accent-foreground font-bold text-right">Employed</TableHead>
+                    <TableHead className="text-accent-foreground font-bold text-right">Unemployed</TableHead>
+                    <TableHead className="text-accent-foreground font-bold text-right">Unemployment Rate</TableHead>
+                    <TableHead className="text-accent-foreground font-bold text-right">Rate 1 Yr Ago</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {workforceData.map((row) => (
+                    <TableRow 
+                      key={row.county} 
+                      className={`${row.highlight ? "bg-secondary/10 hover:bg-secondary/10" : row.isTotal ? "bg-muted font-semibold hover:bg-muted" : "hover:bg-transparent"}`}
+                    >
+                      <TableCell className={`font-medium ${row.highlight ? "text-secondary" : row.isTotal ? "text-primary" : "text-foreground"}`}>
+                        {row.county}
+                      </TableCell>
+                      <TableCell className="text-right text-foreground">{row.laborForce}</TableCell>
+                      <TableCell className="text-right text-foreground">{row.employed}</TableCell>
+                      <TableCell className="text-right text-foreground">{row.unemployed}</TableCell>
+                      <TableCell className={`text-right ${row.highlight ? "font-semibold text-secondary" : "text-foreground"}`}>
+                        {row.rate}
+                      </TableCell>
+                      <TableCell className="text-right text-foreground">{row.rateYearAgo}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
 
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               <Card className="text-center p-6">
