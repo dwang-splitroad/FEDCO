@@ -40,7 +40,7 @@ export default function StaffPage() {
               <h3 className="text-lg font-semibold text-primary mb-4">Get in Touch</h3>
               <a 
                 href="mailto:director@fultondevelopment.org"
-                className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 font-medium transition-colors"
+                className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 font-medium transition-colors cursor-pointer"
               >
                 <Mail className="h-5 w-5" />
                 director@fultondevelopment.org

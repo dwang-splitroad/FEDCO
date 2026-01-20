@@ -283,7 +283,7 @@ export default function StoriesOfBizGroPage() {
             </p>
             <p className="text-muted-foreground">
               BizGro is funded in part by a grant from{" "}
-              <a href="https://www.flagstar.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="https://www.flagstar.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline cursor-pointer">
                 Flagstar® Bank
               </a>{" "}
               and the USDA.
@@ -302,12 +302,12 @@ export default function StoriesOfBizGroPage() {
             Learn more about our business assistance programs and how we can help you achieve your entrepreneurial goals.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/small-business">
+            <Link href="/small-business" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-white bg-primary hover:bg-primary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 View Business Assistance
               </button>
             </Link>
-            <Link href="/sign-up">
+            <Link href="/sign-up" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 Sign Up for Updates
               </button>

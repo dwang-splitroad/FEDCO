@@ -35,7 +35,7 @@ export default function WorkforcePage() {
                   href="https://www.in.gov/dwd/files/Indiana-LMA-June+2019+Labor+Market+Review.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-primary hover:underline cursor-pointer"
                 >
                   Click here for a full Labor Market Review
                 </a>{" "}
@@ -109,13 +109,13 @@ export default function WorkforcePage() {
               href="https://www.in.gov/dwd/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-colors"
+              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-colors cursor-pointer"
             >
               Visit WorkOne Indiana
             </a>
             <Link 
               href="/contact"
-              className="inline-flex items-center gap-2 bg-transparent border border-primary-foreground text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary-foreground hover:text-primary transition-colors"
+              className="inline-flex items-center gap-2 bg-transparent border border-primary-foreground text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary-foreground hover:text-primary transition-colors cursor-pointer"
             >
               Contact FEDCO
             </Link>

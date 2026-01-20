@@ -30,12 +30,12 @@ export default function EconomicDevelopmentPage() {
               Fulton County has a number of sites and buildings available for development. We are committed to helping you find the perfect location for your business.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured" target="_blank" rel="noopener noreferrer">
+              <a href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                 <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white w-full sm:w-auto">
                   Search IEDC Database
                 </Button>
               </a>
-              <Link href="/contact">
+              <Link href="/contact" className="cursor-pointer">
                 <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 border-white w-full sm:w-auto">
                   Contact Us
                 </Button>
@@ -275,7 +275,7 @@ export default function EconomicDevelopmentPage() {
             <p className="text-lg text-muted-foreground mb-8">
               Fulton County is home to a number of major employers in a variety of industries, including manufacturing, healthcare, and education.
             </p>
-            <Link href="/top-employers">
+            <Link href="/top-employers" className="cursor-pointer">
               <Button size="lg" variant="outline">
                 View Top Employers in Fulton County →
               </Button>
@@ -295,12 +295,12 @@ export default function EconomicDevelopmentPage() {
             starting or expanding your business.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/contact" className="cursor-pointer">
               <Button size="lg" variant="secondary">
                 Contact Our Team
               </Button>
             </Link>
-            <a href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured" target="_blank" rel="noopener noreferrer">
+            <a href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
               <Button
                 size="lg"
                 variant="outline"

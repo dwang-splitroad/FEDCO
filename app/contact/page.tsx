@@ -124,7 +124,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Phone</h3>
-                      <a href="tel:574-223-0701" className="text-muted-foreground hover:text-foreground transition-colors">
+                      <a href="tel:574-223-0701" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                         574 223 0701
                       </a>
                     </div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Email</h3>
-                      <a href="mailto:director@fultondevelopment.org" className="text-muted-foreground hover:text-foreground transition-colors">
+                      <a href="mailto:director@fultondevelopment.org" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                         director@fultondevelopment.org
                       </a>
                     </div>
@@ -200,7 +200,7 @@ export default function ContactPage() {
             our team is ready to help you succeed.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:574-223-0701">
+            <a href="tel:574-223-0701" className="cursor-pointer">
               <Button size="lg" variant="outline" className="bg-white text-secondary hover:bg-white/90 border-white">
                 Call Us: 574 223 0701
               </Button>

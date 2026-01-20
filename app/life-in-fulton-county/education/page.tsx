@@ -112,17 +112,17 @@ export default function EducationPage() {
             Discover our healthcare facilities, reliable utilities, and community facts.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/life-in-fulton-county/healthcare">
+            <Link href="/life-in-fulton-county/healthcare" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 Healthcare
               </button>
             </Link>
-            <Link href="/life-in-fulton-county/utilities">
+            <Link href="/life-in-fulton-county/utilities" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 Utilities
               </button>
             </Link>
-            <Link href="/life-in-fulton-county/quick-facts">
+            <Link href="/life-in-fulton-county/quick-facts" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 Quick Facts
               </button>

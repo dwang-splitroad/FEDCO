@@ -188,17 +188,17 @@ export default function QuickFactsPage() {
             Explore our healthcare, education, and utilities to see why Fulton County is a great place to call home.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/life-in-fulton-county/healthcare">
+            <Link href="/life-in-fulton-county/healthcare" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 Healthcare
               </button>
             </Link>
-            <Link href="/life-in-fulton-county/education">
+            <Link href="/life-in-fulton-county/education" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 Education
               </button>
             </Link>
-            <Link href="/life-in-fulton-county/utilities">
+            <Link href="/life-in-fulton-county/utilities" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 Utilities
               </button>

@@ -32,12 +32,12 @@ export default function SmallBusinessPage() {
               an existing business, we provide the resources, guidance, and connections you need.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
+              <Link href="/contact" className="cursor-pointer">
                 <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white w-full sm:w-auto">
                   Get Started Today
                 </Button>
               </Link>
-              <a href="#services">
+              <a href="#services" className="cursor-pointer">
                 <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 border-white w-full sm:w-auto">
                   Browse Resources
                 </Button>
@@ -199,7 +199,7 @@ export default function SmallBusinessPage() {
                   <p className="text-foreground"><span className="font-semibold">Phone:</span> (574) 709-7955</p>
                   <p className="text-foreground">
                     <span className="font-semibold">Email:</span>{" "}
-                    <a href="mailto:amy@projectmattersllc.com" className="text-primary font-semibold hover:underline">
+                    <a href="mailto:amy@projectmattersllc.com" className="text-primary font-semibold hover:underline cursor-pointer">
                       amy@projectmattersllc.com
                     </a>
                   </p>
@@ -229,7 +229,7 @@ export default function SmallBusinessPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/stories-of-bizgro">
+                  <Link href="/stories-of-bizgro" className="cursor-pointer">
                     <Button size="lg" className="w-full bg-primary hover:bg-primary/90">
                       Read Success Stories
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -246,7 +246,7 @@ export default function SmallBusinessPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/sign-up">
+                  <Link href="/sign-up" className="cursor-pointer">
                     <Button size="lg" className="w-full bg-secondary hover:bg-secondary/90">
                       Stay Informed
                       <ArrowRight className="ml-2 h-4 w-4" />

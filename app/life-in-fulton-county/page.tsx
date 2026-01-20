@@ -327,10 +327,10 @@ export default function LifeInFultonCountyPage() {
               <CardContent>
                 <p className="text-sm font-medium text-muted-foreground mb-2">Service Providers:</p>
                 <div className="space-y-1">
-                  <a href="http://www.fultoncountymc.com/" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
+                  <a href="http://www.fultoncountymc.com/" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline cursor-pointer">
                     Fulton County REMC →
                   </a>
-                  <a href="https://www.duke-energy.com/home" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
+                  <a href="https://www.duke-energy.com/home" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline cursor-pointer">
                     Duke Energy →
                   </a>
                 </div>
@@ -382,7 +382,7 @@ export default function LifeInFultonCountyPage() {
             <p className="text-muted-foreground mb-6">
               Contact our team to learn more about utility services and how we can help you establish your business in Fulton County.
             </p>
-            <Link href="/contact" className="text-primary hover:underline font-medium">
+            <Link href="/contact" className="text-primary hover:underline font-medium cursor-pointer">
               Contact Us →
             </Link>
           </div>
