@@ -90,7 +90,7 @@ export default function SignUpPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/small-business">
-              <button className="px-6 py-3 text-base font-bold text-white bg-[#649b42] hover:bg-[#5a8a3a] rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+              <button className="px-6 py-3 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 View Business Assistance
               </button>
             </Link>
@@ -107,5 +107,7 @@ export default function SignUpPage() {
     </main>
   )
 }
+
+
 
 

@@ -39,7 +39,7 @@ export default function UtilitiesPage() {
             <Card className="shadow-lg">
               <CardHeader>
                 <div className="flex items-center gap-3">
-                  <Zap className="h-8 w-8 text-secondary" />
+                  <Zap className="h-8 w-8 text-primary" />
                   <CardTitle>Electric</CardTitle>
                 </div>
                 <CardDescription>
@@ -49,10 +49,10 @@ export default function UtilitiesPage() {
               <CardContent>
                 <p className="text-sm font-medium text-muted-foreground mb-2">Service Providers:</p>
                 <div className="space-y-1">
-                  <a href="http://www.fultoncountymc.com/" target="_blank" rel="noopener noreferrer" className="block text-secondary hover:underline font-medium">
+                  <a href="http://www.fultoncountymc.com/" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline font-medium">
                     Fulton County REMC →
                   </a>
-                  <a href="https://www.duke-energy.com/home" target="_blank" rel="noopener noreferrer" className="block text-secondary hover:underline font-medium">
+                  <a href="https://www.duke-energy.com/home" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline font-medium">
                     Duke Energy →
                   </a>
                 </div>
@@ -104,7 +104,7 @@ export default function UtilitiesPage() {
             <p className="text-muted-foreground mb-6">
               Contact our team to learn more about utility services and how we can help you establish your business in Fulton County.
             </p>
-            <Link href="/contact" className="inline-block text-secondary hover:underline font-medium text-lg">
+            <Link href="/contact" className="inline-block text-primary hover:underline font-medium text-lg">
               Contact Us →
             </Link>
           </div>
@@ -122,7 +122,7 @@ export default function UtilitiesPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/life-in-fulton-county/healthcare">
-              <button className="px-6 py-3 text-base font-bold text-white bg-[#649b42] hover:bg-[#5a8a3a] rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+              <button className="px-6 py-3 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 Healthcare
               </button>
             </Link>

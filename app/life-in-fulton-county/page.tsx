@@ -107,7 +107,7 @@ export default function LifeInFultonCountyPage() {
                 {quickFacts.demographics.map((item) => (
                   <div key={item.label} className="flex justify-between">
                     <span className="text-muted-foreground">{item.label}</span>
-                    <span className="font-medium">{item.value}</span>
+                    <span className="font-medium text-foreground">{item.value}</span>
                   </div>
                 ))}
               </CardContent>
@@ -122,7 +122,7 @@ export default function LifeInFultonCountyPage() {
                 {quickFacts.ages.map((item) => (
                   <div key={item.label} className="flex justify-between">
                     <span className="text-muted-foreground">{item.label}</span>
-                    <span className="font-medium">{item.value}</span>
+                    <span className="font-medium text-foreground">{item.value}</span>
                   </div>
                 ))}
               </CardContent>
@@ -137,7 +137,7 @@ export default function LifeInFultonCountyPage() {
                 {quickFacts.income.map((item) => (
                   <div key={item.label} className="flex justify-between">
                     <span className="text-muted-foreground">{item.label}</span>
-                    <span className="font-medium">{item.value}</span>
+                    <span className="font-medium text-foreground">{item.value}</span>
                   </div>
                 ))}
               </CardContent>
@@ -145,14 +145,14 @@ export default function LifeInFultonCountyPage() {
 
             <Card>
               <CardHeader>
-                <Home className="h-8 w-8 text-secondary mb-2" />
+                <Home className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Housing</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 {quickFacts.housing.map((item) => (
                   <div key={item.label} className="flex justify-between">
                     <span className="text-muted-foreground">{item.label}</span>
-                    <span className="font-medium">{item.value}</span>
+                    <span className="font-medium text-foreground">{item.value}</span>
                   </div>
                 ))}
               </CardContent>
@@ -160,14 +160,14 @@ export default function LifeInFultonCountyPage() {
 
             <Card>
               <CardHeader>
-                <GraduationCap className="h-8 w-8 text-secondary mb-2" />
+                <GraduationCap className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Education Attainment</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 {quickFacts.education.map((item) => (
                   <div key={item.label} className="flex justify-between">
                     <span className="text-muted-foreground">{item.label}</span>
-                    <span className="font-medium">{item.value}</span>
+                    <span className="font-medium text-foreground">{item.value}</span>
                   </div>
                 ))}
               </CardContent>
@@ -175,7 +175,7 @@ export default function LifeInFultonCountyPage() {
 
             <Card>
               <CardHeader>
-                <Car className="h-8 w-8 text-secondary mb-2" />
+                <Car className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Transportation</CardTitle>
                 <CardDescription>Drive time from Rochester</CardDescription>
               </CardHeader>
@@ -183,7 +183,7 @@ export default function LifeInFultonCountyPage() {
                 {quickFacts.transportation.map((item) => (
                   <div key={item.label} className="flex justify-between">
                     <span className="text-muted-foreground">{item.label}</span>
-                    <span className="font-medium">{item.value}</span>
+                    <span className="font-medium text-foreground">{item.value}</span>
                   </div>
                 ))}
               </CardContent>
@@ -215,7 +215,7 @@ export default function LifeInFultonCountyPage() {
                   href="https://www.woodlawnhealth.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-secondary hover:underline font-medium"
+                  className="text-primary hover:underline font-medium"
                 >
                   Visit Woodlawn Hospital Website →
                 </a>
@@ -276,7 +276,7 @@ export default function LifeInFultonCountyPage() {
                       href={school.website} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-secondary hover:underline text-sm"
+                      className="text-primary hover:underline text-sm"
                     >
                       Visit Website →
                     </a>
@@ -317,7 +317,7 @@ export default function LifeInFultonCountyPage() {
             <Card>
               <CardHeader>
                 <div className="flex items-center gap-3">
-                  <Zap className="h-8 w-8 text-secondary" />
+                  <Zap className="h-8 w-8 text-primary" />
                   <CardTitle>Electric</CardTitle>
                 </div>
                 <CardDescription>
@@ -327,10 +327,10 @@ export default function LifeInFultonCountyPage() {
               <CardContent>
                 <p className="text-sm font-medium text-muted-foreground mb-2">Service Providers:</p>
                 <div className="space-y-1">
-                  <a href="http://www.fultoncountymc.com/" target="_blank" rel="noopener noreferrer" className="block text-secondary hover:underline">
+                  <a href="http://www.fultoncountymc.com/" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
                     Fulton County REMC →
                   </a>
-                  <a href="https://www.duke-energy.com/home" target="_blank" rel="noopener noreferrer" className="block text-secondary hover:underline">
+                  <a href="https://www.duke-energy.com/home" target="_blank" rel="noopener noreferrer" className="block text-primary hover:underline">
                     Duke Energy →
                   </a>
                 </div>
@@ -382,7 +382,7 @@ export default function LifeInFultonCountyPage() {
             <p className="text-muted-foreground mb-6">
               Contact our team to learn more about utility services and how we can help you establish your business in Fulton County.
             </p>
-            <Link href="/contact" className="text-secondary hover:underline font-medium">
+            <Link href="/contact" className="text-primary hover:underline font-medium">
               Contact Us →
             </Link>
           </div>

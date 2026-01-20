@@ -6,11 +6,11 @@
 :root {
   /* FEDCO Brand Colors */
   --background: oklch(0.98 0 0);
-  --foreground: oklch(0.145 0 0);
+  --foreground: oklch(0.329 0.107 264); /* Changed to primary blue #273776 */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.329 0.107 264); /* Changed to primary blue #273776 */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.329 0.107 264); /* Changed to primary blue #273776 */
   /* Primary: FEDCO Dark Blue #273776 */
   --primary: oklch(0.329 0.107 264);
   --primary-foreground: oklch(0.985 0 0);
@@ -19,8 +19,8 @@
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.96 0.005 264);
   --muted-foreground: oklch(0.45 0.02 264);
-  /* Accent: Black for visibility */
-  --accent: oklch(0.145 0 0);
+  /* Accent: Primary blue for consistency */
+  --accent: oklch(0.329 0.107 264); /* Changed to primary blue #273776 */
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);

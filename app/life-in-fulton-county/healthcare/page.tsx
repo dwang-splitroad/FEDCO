@@ -49,7 +49,7 @@ export default function HealthcarePage() {
                   href="https://www.woodlawnhealth.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-secondary hover:underline font-medium"
+                  className="text-primary hover:underline font-medium"
                 >
                   Visit Woodlawn Hospital Website →
                 </a>
@@ -58,7 +58,7 @@ export default function HealthcarePage() {
 
             <Card className="shadow-lg">
               <CardHeader>
-                <Heart className="h-10 w-10 text-secondary mb-2" />
+                <Heart className="h-10 w-10 text-primary mb-2" />
                 <CardTitle>Other Healthcare Providers</CardTitle>
                 <CardDescription>
                   In addition to Woodlawn Hospital, Fulton County is home to a number of other healthcare providers, including primary care physicians, dentists, and specialists.
@@ -100,7 +100,7 @@ export default function HealthcarePage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/life-in-fulton-county/education">
-              <button className="px-6 py-3 text-base font-bold text-white bg-[#649b42] hover:bg-[#5a8a3a] rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+              <button className="px-6 py-3 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 Education
               </button>
             </Link>

@@ -69,12 +69,12 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/about/mission" className="hover:text-white">
-                  Our Mission
+                  Mission
                 </Link>
               </li>
               <li>
                 <Link href="/about/staff" className="hover:text-white">
-                  Leadership Team
+                  Staff
                 </Link>
               </li>
               <li>
@@ -84,51 +84,66 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/contact" className="hover:text-white">
-                  Contact Us
+                  Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Services Column */}
+          {/* Small Biz Column */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
+            <h4 className="text-white font-semibold mb-4">Small Biz</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/small-business" className="hover:text-white">
-                  Business Development
+                  Business Assistance
                 </Link>
               </li>
               <li>
-                <Link href="/economic-development" className="hover:text-white">
-                  Site Selection
+                <a
+                  href="https://www.facebook.com/fedco46975#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Upcoming Biz Events
+                </a>
+              </li>
+              <li>
+                <Link href="/stories-of-bizgro" className="hover:text-white">
+                  Stories of BizGro
                 </Link>
               </li>
               <li>
-                <Link href="/fulton-county#workforce" className="hover:text-white">
-                  Workforce Training
-                </Link>
-              </li>
-              <li>
-                <Link href="/economic-development" className="hover:text-white">
-                  Incentive Programs
+                <Link href="/sign-up" className="hover:text-white">
+                  Sign up for Updates
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Community Column */}
+          {/* Life in Fulton County Column */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Community</h4>
+            <h4 className="text-white font-semibold mb-4">Life in Fulton County</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/life-in-fulton-county" className="hover:text-white">
-                  Life in Fulton County
+                <Link href="/life-in-fulton-county/quick-facts" className="hover:text-white">
+                  Quick Facts
                 </Link>
               </li>
               <li>
-                <Link href="/life-in-fulton-county#education" className="hover:text-white">
+                <Link href="/life-in-fulton-county/healthcare" className="hover:text-white">
+                  Healthcare
+                </Link>
+              </li>
+              <li>
+                <Link href="/life-in-fulton-county/education" className="hover:text-white">
                   Education
+                </Link>
+              </li>
+              <li>
+                <Link href="/life-in-fulton-county/utilities" className="hover:text-white">
+                  Utilities
                 </Link>
               </li>
               <li>
@@ -138,29 +153,29 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white"
                 >
-                  Recreation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.co.fulton.in.us/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  Real Estate
+                  Things to Do
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Resources Column */}
+          {/* Economic Development Column */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Resources</h4>
+            <h4 className="text-white font-semibold mb-4">Economic Development</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/fulton-county#top-employers" className="hover:text-white">
-                  Business Directory
+                <Link href="/economic-development" className="hover:text-white">
+                  Sites & Buildings
+                </Link>
+              </li>
+              <li>
+                <Link href="/workforce" className="hover:text-white">
+                  Workforce
+                </Link>
+              </li>
+              <li>
+                <Link href="/top-employers" className="hover:text-white">
+                  Top Employers
                 </Link>
               </li>
               <li>
@@ -170,23 +185,8 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white"
                 >
-                  Economic Data
+                  Labor Statistics
                 </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/fedco46975#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  News & Events
-                </a>
-              </li>
-              <li>
-                <Link href="/economic-development" className="hover:text-white">
-                  Partners
-                </Link>
               </li>
             </ul>
           </div>

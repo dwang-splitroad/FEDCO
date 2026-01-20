@@ -27,7 +27,7 @@ export default function StaffPage() {
                   </div>
                   <div className="p-6 md:p-8">
                     <h2 className="text-xl font-bold text-primary mb-4">MICHAEL C. LADD</h2>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
+                    <p className="text-foreground leading-relaxed mb-6">
                       His background includes <span className="font-semibold text-accent">35+ years in nonprofit management</span> in various positions. His experience is comprehensive, including chambers of commerce, Main Street and Urban Enterprise Zones. He brings with him extensive experience in organizational development, downtown revitalization, economic development, fundraising and grant writing. Contact Mike if you have a special project that needs a kick start!
                     </p>
                   </div>

@@ -77,7 +77,7 @@ export default function EducationPage() {
                       href={school.website} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-secondary hover:underline text-sm font-medium"
+                      className="text-primary hover:underline text-sm font-medium"
                     >
                       Visit Website →
                     </a>
@@ -113,7 +113,7 @@ export default function EducationPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/life-in-fulton-county/healthcare">
-              <button className="px-6 py-3 text-base font-bold text-white bg-[#649b42] hover:bg-[#5a8a3a] rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+              <button className="px-6 py-3 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                 Healthcare
               </button>
             </Link>

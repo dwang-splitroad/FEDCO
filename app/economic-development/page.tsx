@@ -19,7 +19,7 @@ export default function EconomicDevelopmentPage() {
         }}
       >
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#273776]/90 via-[#273776]/85 to-[#273776]/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-primary/90" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -31,12 +31,12 @@ export default function EconomicDevelopmentPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[#649b42] hover:bg-[#5a8a3a] text-white w-full sm:w-auto">
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white w-full sm:w-auto">
                   Search IEDC Database
                 </Button>
               </a>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="bg-white text-[#273776] hover:bg-gray-100 border-white w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 border-white w-full sm:w-auto">
                   Contact Us
                 </Button>
               </Link>
@@ -51,7 +51,7 @@ export default function EconomicDevelopmentPage() {
           {/* Properties Viewer */}
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-[#273776] mb-4 text-center">
+              <h3 className="text-2xl font-bold text-primary mb-4 text-center">
                 Browse Available Properties
               </h3>
               <p className="text-center text-muted-foreground mb-6">
@@ -75,7 +75,7 @@ export default function EconomicDevelopmentPage() {
                   href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-secondary font-semibold hover:underline"
+                  className="inline-flex items-center text-primary font-semibold hover:underline"
                 >
                   View All Properties in Full Screen →
                 </a>
@@ -189,8 +189,8 @@ export default function EconomicDevelopmentPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto h-16 w-16 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
-                <Building2 className="h-8 w-8 text-secondary" />
+              <div className="mx-auto h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Building2 className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Agriculture</h3>
               <p className="text-sm text-muted-foreground">Rich agricultural heritage with modern farming operations</p>
@@ -275,7 +275,7 @@ export default function EconomicDevelopmentPage() {
             <p className="text-lg text-muted-foreground mb-8">
               Fulton County is home to a number of major employers in a variety of industries, including manufacturing, healthcare, and education.
             </p>
-            <Link href="/fulton-county#employers">
+            <Link href="/top-employers">
               <Button size="lg" variant="outline">
                 View Top Employers in Fulton County →
               </Button>

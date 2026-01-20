@@ -33,12 +33,12 @@ export default function SmallBusinessPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-[#649b42] hover:bg-[#5a8a3a] text-white w-full sm:w-auto">
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white w-full sm:w-auto">
                   Get Started Today
                 </Button>
               </Link>
               <a href="#services">
-                <Button size="lg" variant="outline" className="bg-white text-[#273776] hover:bg-gray-100 border-white w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 border-white w-full sm:w-auto">
                   Browse Resources
                 </Button>
               </a>
@@ -85,10 +85,10 @@ export default function SmallBusinessPage() {
                     href="https://www.isbdc.org/locations/north-central-indiana-sbdc" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-secondary hover:underline font-semibold"
+                    className="text-primary hover:underline font-semibold"
                   >
                     ISBDC website
-                  </a>. Click on, <span className="font-semibold">Let's Work Together</span> on the top right or call (574) 520-4126.
+                  </a>. Click on, <span className="font-semibold text-foreground">Let's Work Together</span> on the top right or call (574) 520-4126.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -104,7 +104,7 @@ export default function SmallBusinessPage() {
                     href="https://www.facebook.com/fedco46975#" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-secondary hover:underline"
+                    className="text-primary hover:underline"
                   >
                     Check out upcoming biz events for current seminars.
                   </a>
@@ -123,14 +123,14 @@ export default function SmallBusinessPage() {
               Funding and Financial Support
             </h2>
             <p className="mt-4 text-lg text-muted-foreground text-pretty">
-              You have options; <span className="font-semibold">especially</span> in Fulton County.
+              You have options; <span className="font-semibold text-foreground">especially</span> in Fulton County.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="border-secondary/20">
               <CardHeader>
-                <DollarSign className="h-10 w-10 text-secondary mb-2" />
+                <DollarSign className="h-10 w-10 text-primary mb-2" />
                 <CardTitle>FEDCO's Loan Program</CardTitle>
                 <CardDescription>
                   Thanks to funding from the USDA, FEDCO has a low interest revolving loan pool for businesses with less than 50 employees and less than $1 million in gross annual sales located in Fulton County. Funds can be used for a variety of business-related expenses.
@@ -144,7 +144,7 @@ export default function SmallBusinessPage() {
 
             <Card className="border-secondary/20">
               <CardHeader>
-                <Briefcase className="h-10 w-10 text-secondary mb-2" />
+                <Briefcase className="h-10 w-10 text-primary mb-2" />
                 <CardTitle>SBA Loans</CardTitle>
                 <CardDescription>
                   Small Business Administration supported loans. SBA does not actually make direct loans; instead, it provides loan guarantees to entrepreneurs, promising the bank/lender to pay back a certain percentage of your loan if you are unable to.
@@ -153,7 +153,7 @@ export default function SmallBusinessPage() {
                     href="https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-secondary font-semibold hover:underline"
+                    className="text-primary font-semibold hover:underline"
                   >
                     Click here to find the best lender for your needs.
                   </a>
@@ -163,7 +163,7 @@ export default function SmallBusinessPage() {
 
             <Card className="border-secondary/20">
               <CardHeader>
-                <GraduationCap className="h-10 w-10 text-secondary mb-2" />
+                <GraduationCap className="h-10 w-10 text-primary mb-2" />
                 <CardTitle>Training Funds</CardTitle>
                 <CardDescription>
                   Through a grant from the USDA, FEDCO can pay for training needs of our small businesses with less than 50 employees and less than $1 million in gross annual sales. This money does not have to be repaid.
@@ -240,7 +240,7 @@ export default function SmallBusinessPage() {
 
               <Card className="text-center p-6 hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-secondary mb-2">Sign Up for Updates</CardTitle>
+                  <CardTitle className="text-2xl text-primary mb-2">Sign Up for Updates</CardTitle>
                   <CardDescription>
                     Get the latest news about workshops, funding opportunities, and business resources.
                   </CardDescription>

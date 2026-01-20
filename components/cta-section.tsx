@@ -15,7 +15,7 @@ export function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
           <Link href="/contact" className="w-full sm:w-auto">
-            <Button size="lg" className="w-full bg-[#649b42] hover:bg-[#5a8a3a] text-white">
+            <Button size="lg" className="w-full bg-secondary hover:bg-secondary/90 text-white">
               Schedule a Consultation
               <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
             </Button>

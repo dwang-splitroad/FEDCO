@@ -119,8 +119,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/10 flex items-center justify-center">
-                      <Phone className="h-5 w-5 text-secondary" />
+                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Phone</h3>
@@ -153,8 +153,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/10 flex items-center justify-center">
-                      <Facebook className="h-5 w-5 text-secondary" />
+                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Facebook className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Follow Us</h3>
