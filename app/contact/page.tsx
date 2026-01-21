@@ -82,7 +82,7 @@ export default function ContactPage() {
 
                   <Button 
                     type="submit" 
-                    className="w-full" 
+                    className="w-full cursor-pointer" 
                     disabled={formStatus === "submitting"}
                   >
                     {formStatus === "submitting" ? "Sending..." : "Send Message"}
@@ -162,7 +162,7 @@ export default function ContactPage() {
                         href="https://www.facebook.com/fedco46975" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-foreground transition-colors"
+                        className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                       >
                         Facebook
                       </a>
@@ -201,7 +201,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="tel:574-223-0701" className="cursor-pointer">
-              <Button size="lg" variant="outline" className="bg-white text-secondary hover:bg-white/90 border-white">
+              <Button size="lg" variant="outline" className="bg-white text-secondary border-white cursor-pointer hover:bg-white hover:text-secondary">
                 Call Us: 574 223 0701
               </Button>
             </a>

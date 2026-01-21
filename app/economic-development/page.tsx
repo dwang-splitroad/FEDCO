@@ -276,7 +276,7 @@ export default function EconomicDevelopmentPage() {
               Fulton County is home to a number of major employers in a variety of industries, including manufacturing, healthcare, and education.
             </p>
             <Link href="/top-employers" className="cursor-pointer">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="cursor-pointer">
                 View Top Employers in Fulton County →
               </Button>
             </Link>
@@ -296,7 +296,7 @@ export default function EconomicDevelopmentPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="cursor-pointer">
-              <Button size="lg" variant="secondary">
+              <Button size="lg" variant="secondary" className="cursor-pointer">
                 Contact Our Team
               </Button>
             </Link>
@@ -304,7 +304,7 @@ export default function EconomicDevelopmentPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary cursor-pointer"
               >
                 Search Properties
               </Button>

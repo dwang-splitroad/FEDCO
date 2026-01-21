@@ -33,12 +33,12 @@ export default function SmallBusinessPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="cursor-pointer">
-                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white w-full sm:w-auto">
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white w-full sm:w-auto cursor-pointer">
                   Get Started Today
                 </Button>
               </Link>
               <a href="#services" className="cursor-pointer">
-                <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 border-white w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="bg-white text-primary border-white w-full sm:w-auto cursor-pointer hover:bg-white hover:text-primary">
                   Browse Resources
                 </Button>
               </a>
@@ -85,7 +85,7 @@ export default function SmallBusinessPage() {
                     href="https://www.isbdc.org/locations/north-central-indiana-sbdc" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline font-semibold"
+                    className="text-primary hover:underline font-semibold cursor-pointer"
                   >
                     ISBDC website
                   </a>. Click on, <span className="font-semibold text-foreground">Let's Work Together</span> on the top right or call (574) 520-4126.
@@ -104,7 +104,7 @@ export default function SmallBusinessPage() {
                     href="https://www.facebook.com/fedco46975#" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-primary hover:underline cursor-pointer"
                   >
                     Check out upcoming biz events for current seminars.
                   </a>
@@ -153,7 +153,7 @@ export default function SmallBusinessPage() {
                     href="https://www.sba.gov/funding-programs/loans/lender-match-connects-you-lenders" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-primary font-semibold hover:underline"
+                    className="text-primary font-semibold hover:underline cursor-pointer"
                   >
                     Click here to find the best lender for your needs.
                   </a>
@@ -221,16 +221,16 @@ export default function SmallBusinessPage() {
               Discover success stories from local entrepreneurs and sign up to stay informed about the latest business opportunities.
             </p>
             <div className="grid gap-6 md:grid-cols-2">
-              <Card className="text-center p-6 hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
+              <Card className="text-center p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <CardHeader className="flex-grow">
                   <CardTitle className="text-2xl text-primary mb-2">Stories of BizGro</CardTitle>
                   <CardDescription>
                     See how FEDCO has helped local businesses thrive and grow in Fulton County.
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="mt-auto">
                   <Link href="/stories-of-bizgro" className="cursor-pointer">
-                    <Button size="lg" className="w-full bg-primary hover:bg-primary/90">
+                    <Button size="lg" className="w-full bg-primary hover:bg-primary/90 cursor-pointer">
                       Read Success Stories
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -238,16 +238,16 @@ export default function SmallBusinessPage() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center p-6 hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
+              <Card className="text-center p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <CardHeader className="flex-grow">
                   <CardTitle className="text-2xl text-primary mb-2">Sign Up for Updates</CardTitle>
                   <CardDescription>
                     Get the latest news about workshops, funding opportunities, and business resources.
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="mt-auto">
                   <Link href="/sign-up" className="cursor-pointer">
-                    <Button size="lg" className="w-full bg-secondary hover:bg-secondary/90">
+                    <Button size="lg" className="w-full bg-secondary hover:bg-secondary/90 cursor-pointer">
                       Stay Informed
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>

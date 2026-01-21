@@ -49,7 +49,7 @@ export default function HealthcarePage() {
                   href="https://www.woodlawnhealth.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline font-medium"
+                  className="text-primary hover:underline font-medium cursor-pointer"
                 >
                   Visit Woodlawn Hospital Website →
                 </a>
@@ -100,17 +100,17 @@ export default function HealthcarePage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/life-in-fulton-county/education" className="cursor-pointer">
-              <button className="px-6 py-3 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+              <button className="px-6 py-3 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
                 Education
               </button>
             </Link>
             <Link href="/life-in-fulton-county/utilities" className="cursor-pointer">
-              <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+              <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
                 Utilities
               </button>
             </Link>
             <Link href="/life-in-fulton-county/quick-facts" className="cursor-pointer">
-              <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+              <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
                 Quick Facts
               </button>
             </Link>
