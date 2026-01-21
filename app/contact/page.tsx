@@ -201,7 +201,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="tel:574-223-0701" className="cursor-pointer">
-              <Button size="lg" variant="outline" className="bg-white text-secondary border-white cursor-pointer hover:bg-white hover:text-secondary">
+              <Button size="lg" variant="outline" className="bg-white text-secondary border-white cursor-pointer hover:bg-secondary hover:text-white">
                 Call Us: 574 223 0701
               </Button>
             </a>

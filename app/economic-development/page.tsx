@@ -31,12 +31,12 @@ export default function EconomicDevelopmentPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
-                <Button size="lg" className="bg-secondary hover:bg-secondary text-white w-full sm:w-auto cursor-pointer">
+                <Button size="lg" className="bg-secondary hover:bg-white text-white hover:text-secondary w-full sm:w-auto cursor-pointer">
                   Search IEDC Database
                 </Button>
               </a>
               <Link href="/contact" className="cursor-pointer">
-                <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white hover:text-primary border-white w-full sm:w-auto cursor-pointer">
+                <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-primary hover:text-white border-white w-full sm:w-auto cursor-pointer">
                   Contact Us
                 </Button>
               </Link>

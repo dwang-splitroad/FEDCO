@@ -38,7 +38,7 @@ export default function SmallBusinessPage() {
                 </Button>
               </Link>
               <a href="#services" className="cursor-pointer">
-                <Button size="lg" variant="outline" className="bg-white text-primary border-white w-full sm:w-auto cursor-pointer hover:bg-white hover:text-primary">
+                <Button size="lg" variant="outline" className="bg-white text-primary border-white w-full sm:w-auto cursor-pointer hover:bg-primary hover:text-white">
                   Browse Resources
                 </Button>
               </a>
