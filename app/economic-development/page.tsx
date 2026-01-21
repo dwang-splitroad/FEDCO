@@ -31,12 +31,12 @@ export default function EconomicDevelopmentPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
-                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white w-full sm:w-auto">
+                <Button size="lg" className="bg-secondary hover:bg-secondary text-white w-full sm:w-auto cursor-pointer">
                   Search IEDC Database
                 </Button>
               </a>
               <Link href="/contact" className="cursor-pointer">
-                <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 border-white w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white hover:text-primary border-white w-full sm:w-auto cursor-pointer">
                   Contact Us
                 </Button>
               </Link>
@@ -75,7 +75,7 @@ export default function EconomicDevelopmentPage() {
                   href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-primary font-semibold hover:underline"
+                  className="inline-flex items-center text-primary font-semibold hover:underline cursor-pointer"
                 >
                   View All Properties in Full Screen →
                 </a>
@@ -296,7 +296,7 @@ export default function EconomicDevelopmentPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="cursor-pointer">
-              <Button size="lg" variant="secondary" className="cursor-pointer">
+              <Button size="lg" variant="secondary" className="cursor-pointer hover:bg-secondary">
                 Contact Our Team
               </Button>
             </Link>
@@ -304,7 +304,7 @@ export default function EconomicDevelopmentPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary cursor-pointer"
+                className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-transparent hover:text-primary-foreground cursor-pointer"
               >
                 Search Properties
               </Button>
