@@ -34,7 +34,7 @@ export function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-2xl mx-auto">
             <Link href="/small-business" className="w-full sm:w-auto cursor-pointer">
-              <Button size="lg" className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold shadow-md px-6 md:px-10 py-6 md:py-7 text-sm md:text-base">
+              <Button size="lg" className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold shadow-md px-6 md:px-10 py-6 md:py-7 text-sm md:text-base cursor-pointer">
                 How We Help Small Business
                 <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </Button>
@@ -43,7 +43,7 @@ export function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="w-full border-white text-white bg-white/10 hover:bg-white hover:text-primary font-bold px-6 md:px-10 py-6 md:py-7 text-sm md:text-base"
+                className="w-full border-white text-white bg-white/10 hover:bg-white hover:text-primary font-bold px-6 md:px-10 py-6 md:py-7 text-sm md:text-base cursor-pointer"
               >
                 Learn About Our Community
               </Button>

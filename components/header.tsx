@@ -87,7 +87,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("economic-development")}
             onMouseLeave={() => handleMenuClose("economic-development")}
           >
-            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200 cursor-pointer">
               Economic Development
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "economic-development" ? "rotate-180" : ""}`} />
             </button>
@@ -130,7 +130,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("small-biz")}
             onMouseLeave={() => handleMenuClose("small-biz")}
           >
-            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200 cursor-pointer">
               Small Biz
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "small-biz" ? "rotate-180" : ""}`} />
             </button>
@@ -170,7 +170,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("life-in-fulton")}
             onMouseLeave={() => handleMenuClose("life-in-fulton")}
           >
-            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200 cursor-pointer">
               Life In Fulton County
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "life-in-fulton" ? "rotate-180" : ""}`} />
             </button>
@@ -206,7 +206,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("fulton-county")}
             onMouseLeave={() => handleMenuClose("fulton-county")}
           >
-            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200 cursor-pointer">
               Fulton County
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "fulton-county" ? "rotate-180" : ""}`} />
             </button>
@@ -231,7 +231,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("partners")}
             onMouseLeave={() => handleMenuClose("partners")}
           >
-            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200 cursor-pointer">
               Partners
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "partners" ? "rotate-180" : ""}`} />
             </button>
@@ -268,7 +268,7 @@ export function Header() {
             onMouseEnter={() => handleMenuOpen("about")}
             onMouseLeave={() => handleMenuClose("about")}
           >
-            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200">
+            <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-white hover:bg-white/15 hover:text-white rounded-lg transition-all duration-200 cursor-pointer">
               About
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === "about" ? "rotate-180" : ""}`} />
             </button>
@@ -295,7 +295,7 @@ export function Header() {
           {/* Contact Us Button - Right Grid (Right Aligned) */}
           <div className="flex justify-end">
             <Link href="/contact" className="cursor-pointer">
-              <button className="px-6 py-2.5 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105">
+              <button className="px-6 py-2.5 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 cursor-pointer">
                 Contact Us
               </button>
             </Link>
@@ -315,7 +315,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="text-white p-2 ml-auto"
+            className="text-white p-2 ml-auto cursor-pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >

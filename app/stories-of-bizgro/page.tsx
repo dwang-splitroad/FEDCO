@@ -9,7 +9,7 @@ export default function StoriesOfBizGroPage() {
   const bizgroStories = [
     {
       title: "Newby Services",
-      image: "/images/storiesofbizgro/article pictures/Newby+Services.png",
+      image: "/images/storiesofbizgro/article pictures/OBS_9213.jpg",
       industry: "HVAC Services",
       yearStarted: "2021",
       quote: "I attended the NxLevel course and felt I had the tools I needed to go into business.",
