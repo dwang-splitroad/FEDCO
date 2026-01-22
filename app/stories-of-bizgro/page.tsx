@@ -293,7 +293,7 @@ export default function StoriesOfBizGroPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-secondary text-primary-foreground">
+      <section className="py-16 lg:py-24 text-white" style={{ backgroundColor: "#273776" }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-balance mb-6">
             Ready to Start Your Success Story?
@@ -303,12 +303,12 @@ export default function StoriesOfBizGroPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/business-assistance" className="cursor-pointer">
-              <button className="px-6 py-3 text-base font-bold text-white bg-primary rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-110 transition-all">
+              <button className="px-6 py-3 text-base font-bold text-white bg-secondary rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-110 transition-all">
                 View Business Assistance
               </button>
             </Link>
             <Link href="/sign-up" className="cursor-pointer">
-              <button className="px-6 py-3 text-base font-bold text-primary bg-white rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-105 transition-all">
+              <button className="px-6 py-3 text-base font-bold bg-white rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-105 transition-all" style={{ color: "#273776" }}>
                 Sign Up for Updates
               </button>
             </Link>
