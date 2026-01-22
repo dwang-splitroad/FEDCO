@@ -100,17 +100,17 @@ export default function HealthcarePage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/life-in-fulton-county/education" className="cursor-pointer">
-              <button className="px-6 py-3 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
+              <button className="px-6 py-3 text-base font-bold text-white bg-secondary rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-110 transition-all">
                 Education
               </button>
             </Link>
             <Link href="/life-in-fulton-county/utilities" className="cursor-pointer">
-              <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
+              <button className="px-6 py-3 text-base font-bold text-primary bg-white rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-105 transition-all">
                 Utilities
               </button>
             </Link>
             <Link href="/life-in-fulton-county/quick-facts" className="cursor-pointer">
-              <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
+              <button className="px-6 py-3 text-base font-bold text-primary bg-white rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-105 transition-all">
                 Quick Facts
               </button>
             </Link>

@@ -33,12 +33,12 @@ export default function SmallBusinessPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="cursor-pointer">
-                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white w-full sm:w-auto cursor-pointer">
+                <Button size="lg" className="bg-secondary hover:bg-secondary text-white w-full sm:w-auto cursor-pointer shadow-md hover:shadow-xl hover:brightness-110 transition-all">
                   Get Started Today
                 </Button>
               </Link>
               <a href="#services" className="cursor-pointer">
-                <Button size="lg" variant="outline" className="bg-white text-primary border-white w-full sm:w-auto cursor-pointer hover:bg-primary hover:text-white">
+                <Button size="lg" variant="outline" className="bg-white hover:bg-white text-primary hover:text-primary border-white w-full sm:w-auto cursor-pointer shadow-md hover:shadow-xl hover:brightness-105 transition-all">
                   Browse Resources
                 </Button>
               </a>
@@ -48,7 +48,7 @@ export default function SmallBusinessPage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 lg:py-24">
+      <section id="services" className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
@@ -116,7 +116,7 @@ export default function SmallBusinessPage() {
       </section>
 
       {/* Funding Section */}
-      <section className="py-16 lg:py-24 bg-muted/30">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
@@ -177,7 +177,7 @@ export default function SmallBusinessPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-8 p-8 bg-card rounded-lg border">
@@ -211,13 +211,13 @@ export default function SmallBusinessPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#649b42]/10 to-[#273776]/10">
+      <section className="py-16 lg:py-24 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-6">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-balance mb-6">
               Explore More Resources
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white/90 mb-8">
               Discover success stories from local entrepreneurs and sign up to stay informed about the latest business opportunities.
             </p>
             <div className="grid gap-6 md:grid-cols-2">
@@ -230,7 +230,7 @@ export default function SmallBusinessPage() {
                 </CardHeader>
                 <CardContent className="mt-auto">
                   <Link href="/stories-of-bizgro" className="cursor-pointer">
-                    <Button size="lg" className="w-full bg-primary hover:bg-primary/90 cursor-pointer">
+                    <Button size="lg" className="w-full bg-primary hover:bg-primary cursor-pointer shadow-md hover:shadow-xl hover:brightness-110 transition-all">
                       Read Success Stories
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -247,7 +247,7 @@ export default function SmallBusinessPage() {
                 </CardHeader>
                 <CardContent className="mt-auto">
                   <Link href="/sign-up" className="cursor-pointer">
-                    <Button size="lg" className="w-full bg-secondary hover:bg-secondary/90 cursor-pointer">
+                    <Button size="lg" className="w-full bg-secondary hover:bg-secondary cursor-pointer shadow-md hover:shadow-xl hover:brightness-110 transition-all">
                       Stay Informed
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>

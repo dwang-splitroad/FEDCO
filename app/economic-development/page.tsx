@@ -31,12 +31,12 @@ export default function EconomicDevelopmentPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
-                <Button size="lg" className="bg-secondary hover:bg-white text-white hover:text-secondary w-full sm:w-auto cursor-pointer">
+                <Button size="lg" className="bg-secondary hover:bg-secondary text-white w-full sm:w-auto cursor-pointer shadow-md hover:shadow-xl hover:brightness-110 transition-all">
                   Search IEDC Database
                 </Button>
               </a>
               <Link href="/contact" className="cursor-pointer">
-                <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-primary hover:text-white border-white w-full sm:w-auto cursor-pointer">
+                <Button size="lg" variant="outline" className="bg-white hover:bg-white text-primary hover:text-primary border-white w-full sm:w-auto cursor-pointer shadow-md hover:shadow-xl hover:brightness-105 transition-all">
                   Contact Us
                 </Button>
               </Link>
@@ -276,7 +276,7 @@ export default function EconomicDevelopmentPage() {
               Fulton County is home to a number of major employers in a variety of industries, including manufacturing, healthcare, and education.
             </p>
             <Link href="/top-employers" className="cursor-pointer">
-              <Button size="lg" variant="outline" className="cursor-pointer">
+              <Button size="lg" variant="outline" className="cursor-pointer shadow-md hover:shadow-xl hover:brightness-105 transition-all hover:bg-background hover:text-foreground">
                 View Top Employers in Fulton County →
               </Button>
             </Link>
@@ -296,7 +296,7 @@ export default function EconomicDevelopmentPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="cursor-pointer">
-              <Button size="lg" variant="secondary" className="cursor-pointer hover:bg-secondary">
+              <Button size="lg" variant="secondary" className="cursor-pointer shadow-md hover:shadow-xl hover:brightness-110 transition-all hover:bg-secondary">
                 Contact Our Team
               </Button>
             </Link>
@@ -304,7 +304,7 @@ export default function EconomicDevelopmentPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-transparent hover:text-primary-foreground cursor-pointer"
+                className="bg-transparent hover:bg-transparent border-primary-foreground text-primary-foreground hover:text-primary-foreground cursor-pointer shadow-md hover:shadow-xl hover:brightness-110 transition-all"
               >
                 Search Properties
               </Button>

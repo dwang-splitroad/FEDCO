@@ -303,12 +303,12 @@ export default function StoriesOfBizGroPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/small-business" className="cursor-pointer">
-              <button className="px-6 py-3 text-base font-bold text-white bg-primary hover:bg-primary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
+              <button className="px-6 py-3 text-base font-bold text-white bg-primary rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-110 transition-all">
                 View Business Assistance
               </button>
             </Link>
             <Link href="/sign-up" className="cursor-pointer">
-              <button className="px-6 py-3 text-base font-bold text-primary bg-white hover:bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
+              <button className="px-6 py-3 text-base font-bold text-primary bg-white rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-105 transition-all">
                 Sign Up for Updates
               </button>
             </Link>

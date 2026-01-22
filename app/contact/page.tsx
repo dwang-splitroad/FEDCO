@@ -82,7 +82,7 @@ export default function ContactPage() {
 
                   <Button 
                     type="submit" 
-                    className="w-full cursor-pointer" 
+                    className="w-full cursor-pointer shadow-md hover:shadow-xl hover:bg-primary hover:brightness-110 transition-all" 
                     disabled={formStatus === "submitting"}
                   >
                     {formStatus === "submitting" ? "Sending..." : "Send Message"}
@@ -201,7 +201,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="tel:574-223-0701" className="cursor-pointer">
-              <Button size="lg" variant="outline" className="bg-white text-secondary border-white cursor-pointer hover:bg-secondary hover:text-white">
+              <Button size="lg" variant="outline" className="bg-white hover:bg-white text-secondary hover:text-secondary border-white cursor-pointer shadow-md hover:shadow-xl hover:brightness-105 transition-all">
                 Call Us: 574 223 0701
               </Button>
             </a>

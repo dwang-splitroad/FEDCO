@@ -403,7 +403,7 @@ export default function LifeInFultonCountyPage() {
             href="https://fultoncountyindiana.com/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-secondary px-6 py-3 rounded-lg font-medium hover:bg-white/90 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 bg-white text-secondary px-6 py-3 rounded-lg font-medium cursor-pointer hover:shadow-xl hover:brightness-105 transition-all"
           >
             Visit Fulton County Indiana →
           </a>

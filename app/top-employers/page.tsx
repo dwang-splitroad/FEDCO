@@ -79,13 +79,13 @@ export default function TopEmployersPage() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link 
               href="/workforce"
-              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium cursor-pointer hover:shadow-xl hover:brightness-110 transition-all"
             >
               View Workforce Data
             </Link>
             <Link 
               href="/contact"
-              className="inline-flex items-center gap-2 bg-transparent border border-primary-foreground text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary-foreground hover:text-primary transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 bg-transparent border border-primary-foreground text-primary-foreground px-6 py-3 rounded-lg font-medium cursor-pointer hover:shadow-xl hover:brightness-110 transition-all"
             >
               Contact FEDCO
             </Link>

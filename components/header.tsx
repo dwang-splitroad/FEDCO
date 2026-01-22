@@ -295,7 +295,7 @@ export function Header() {
           {/* Contact Us Button - Right Grid (Right Aligned) */}
           <div className="flex justify-end">
             <Link href="/contact" className="cursor-pointer">
-              <button className="px-6 py-2.5 text-base font-bold text-white bg-secondary hover:bg-secondary/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 cursor-pointer">
+              <button className="px-6 py-2.5 text-base font-bold text-white bg-secondary rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-110 transition-all">
                 Contact Us
               </button>
             </Link>
