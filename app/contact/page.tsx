@@ -30,15 +30,15 @@ export default function ContactPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
-            {/* Contact Form */}
-            <Card className="border-border">
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary">Send Us a Message</CardTitle>
-                <CardDescription>
+            {/* Contact Form - using plain div instead of Card to test color rendering */}
+            <div className="border border-border rounded-xl py-6 shadow-sm bg-white">
+              <div className="px-6 mb-6">
+                <h2 className="text-2xl font-semibold text-primary leading-none">Send Us a Message</h2>
+                <p className="text-muted-foreground text-sm mt-2">
                   Fill out the form below and we'll get back to you as soon as possible.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
+                </p>
+              </div>
+              <div className="px-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Ready to connect to any form service */}
                   
@@ -80,13 +80,27 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    className="w-full cursor-pointer shadow-md hover:shadow-xl hover:bg-primary hover:brightness-110 transition-all" 
-                    disabled={formStatus === "submitting"}
+                  {/* Submit button - wrapped in div to match navbar color rendering */}
+                  <div 
+                    className="w-full rounded-lg shadow-lg overflow-hidden" 
+                    style={{ backgroundColor: "#273776" }}
                   >
-                    {formStatus === "submitting" ? "Sending..." : "Send Message"}
-                  </Button>
+                    <button 
+                      type="submit"
+                      className="w-full h-12 font-semibold cursor-pointer bg-transparent border-0"
+                      style={{ 
+                        color: "#ffffff",
+                        backgroundColor: "transparent",
+                        border: "none",
+                        outline: "none"
+                      }}
+                      disabled={formStatus === "submitting"}
+                    >
+                      <span style={{ color: "#ffffff" }}>
+                        {formStatus === "submitting" ? "Sending..." : "Send Message"}
+                      </span>
+                    </button>
+                  </div>
 
                   {formStatus === "success" && (
                     <p className="text-secondary text-center font-medium">
@@ -99,8 +113,8 @@ export default function ContactPage() {
                     </p>
                   )}
                 </form>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
             {/* Contact Information */}
             <div className="space-y-8">
@@ -190,7 +204,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-secondary text-secondary-foreground">
+      <section className="py-16 lg:py-24 text-white" style={{ backgroundColor: "#273776" }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-balance mb-6">
             Ready to Get Started?
@@ -201,7 +215,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="tel:574-223-0701" className="cursor-pointer">
-              <Button size="lg" variant="outline" className="bg-white hover:bg-white text-secondary hover:text-secondary border-white cursor-pointer shadow-md hover:shadow-xl hover:brightness-105 transition-all">
+              <Button size="lg" variant="outline" className="bg-white hover:bg-white text-primary hover:text-primary border-white cursor-pointer shadow-md hover:shadow-xl hover:brightness-105 transition-all">
                 Call Us: 574 223 0701
               </Button>
             </a>

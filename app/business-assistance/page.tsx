@@ -6,7 +6,7 @@ import { GraduationCap, Users, DollarSign, Briefcase, BookOpen, ArrowRight, MapP
 import Image from "next/image"
 import Link from "next/link"
 
-export default function SmallBusinessPage() {
+export default function BusinessAssistancePage() {
   return (
     <main className="min-h-screen">
       <Header />
@@ -263,4 +263,4 @@ export default function SmallBusinessPage() {
     </main>
   )
 }
-               
+

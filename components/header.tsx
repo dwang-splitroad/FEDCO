@@ -53,10 +53,10 @@ export function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 w-full shadow-lg backdrop-blur-sm transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full shadow-lg transition-transform duration-300 text-white ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
-      style={{ backgroundColor: "rgba(39, 55, 118, 0.98)", color: "white" }}
+      style={{ backgroundColor: "#273776" }}
     >
       <div className="w-full h-20 px-6 md:px-10">
         {/* Desktop Grid Layout */}
@@ -136,7 +136,7 @@ export function Header() {
             </button>
             {openMenu === "small-biz" && (
               <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 py-2 animate-in fade-in-0 slide-in-from-top-2 duration-200">
-                <Link href="/small-business" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
+                <Link href="/business-assistance" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
                   Business Assistance
                 </Link>
                 <a
@@ -326,7 +326,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-white/20 backdrop-blur-sm" style={{ backgroundColor: "rgba(39, 55, 118, 0.98)" }}>
+        <div className="lg:hidden border-t border-white/20" style={{ backgroundColor: "#273776" }}>
           <nav className="flex flex-col gap-1 p-4 max-h-[calc(100vh-5rem)] overflow-y-auto">
             <Link href="/" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
               Home
@@ -343,7 +343,7 @@ export function Header() {
             <Link href="/contact" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
               Contact
             </Link>
-            <Link href="/small-business" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/business-assistance" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
               Business Assistance
             </Link>
             <Link href="/stories-of-bizgro" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>

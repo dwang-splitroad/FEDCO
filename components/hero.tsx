@@ -33,7 +33,7 @@ export function Hero() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-2xl mx-auto">
-            <Link href="/small-business" className="w-full sm:w-auto cursor-pointer">
+            <Link href="/business-assistance" className="w-full sm:w-auto cursor-pointer">
               <Button size="lg" className="w-full bg-secondary hover:bg-secondary text-white font-bold shadow-md px-6 md:px-10 py-6 md:py-7 text-sm md:text-base cursor-pointer hover:shadow-xl hover:brightness-110 transition-all">
                 How We Help Small Business
                 <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />

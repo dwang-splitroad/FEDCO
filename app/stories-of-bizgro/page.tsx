@@ -302,7 +302,7 @@ export default function StoriesOfBizGroPage() {
             Learn more about our business assistance programs and how we can help you achieve your entrepreneurial goals.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/small-business" className="cursor-pointer">
+            <Link href="/business-assistance" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-white bg-primary rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-110 transition-all">
                 View Business Assistance
               </button>

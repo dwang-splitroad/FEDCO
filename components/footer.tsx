@@ -48,11 +48,11 @@ export function Footer() {
               </a>
             </div>
             <div className="mt-4 space-y-1 text-sm">
-              <p>1424 College Ave</p>
-              <p>Rochester, IN 46975</p>
+              <p>822 Main Street</p>
+              <p>Rochester, Indiana 46975</p>
               <p className="mt-2">
-                <a href="tel:5742233434" className="hover:text-white cursor-pointer">
-                  (574) 223-3434
+                <a href="tel:5742233326" className="hover:text-white cursor-pointer">
+                  (574) 223-3326
                 </a>
               </p>
               <p>
@@ -95,7 +95,7 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Small Biz</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/small-business" className="hover:text-white cursor-pointer">
+                <Link href="/business-assistance" className="hover:text-white cursor-pointer">
                   Business Assistance
                 </Link>
               </li>

@@ -89,7 +89,7 @@ export default function SignUpPage() {
             Explore our business assistance programs and success stories from local entrepreneurs.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/small-business" className="cursor-pointer">
+            <Link href="/business-assistance" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-white bg-secondary rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-110 transition-all">
                 View Business Assistance
               </button>
