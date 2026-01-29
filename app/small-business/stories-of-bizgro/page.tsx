@@ -173,7 +173,7 @@ export default function StoriesOfBizGroPage() {
       {/* Stories Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-2">
+          <div className="max-w-5xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2">
             {bizgroStories.map((story, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col p-0">
                 {/* Business Image */}
@@ -302,12 +302,12 @@ export default function StoriesOfBizGroPage() {
             Learn more about our business assistance programs and how we can help you achieve your entrepreneurial goals.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/business-assistance" className="cursor-pointer">
+            <Link href="/small-business/business-assistance" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-white bg-secondary rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-110 transition-all">
                 View Business Assistance
               </button>
             </Link>
-            <Link href="/sign-up" className="cursor-pointer">
+            <Link href="/small-business/sign-up" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold bg-white rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-105 transition-all" style={{ color: "#273776" }}>
                 Sign Up for Updates
               </button>

@@ -50,7 +50,7 @@ export default function SignUpPage() {
               </CardHeader>
               <CardContent>
                 <form className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First Name <span className="text-muted-foreground text-xs">(required)</span></Label>
                       <Input id="firstName" placeholder="First Name" required />
@@ -89,12 +89,12 @@ export default function SignUpPage() {
             Explore our business assistance programs and success stories from local entrepreneurs.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/business-assistance" className="cursor-pointer">
+            <Link href="/small-business/business-assistance" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-white bg-secondary rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-110 transition-all">
                 View Business Assistance
               </button>
             </Link>
-            <Link href="/stories-of-bizgro" className="cursor-pointer">
+            <Link href="/small-business/stories-of-bizgro" className="cursor-pointer">
               <button className="px-6 py-3 text-base font-bold text-primary bg-white rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:brightness-105 transition-all">
                 Read Success Stories
               </button>

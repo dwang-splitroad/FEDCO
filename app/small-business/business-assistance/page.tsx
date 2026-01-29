@@ -180,26 +180,26 @@ export default function BusinessAssistancePage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-8 p-8 bg-card rounded-lg border">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 p-6 md:p-8 bg-card rounded-lg border">
               <div className="flex-shrink-0">
                 <Image
                   src="/images/Amyheadshothead2Red2023.jpg"
                   alt="Amy Beechy, Director of Entrepreneurial Programs"
                   width={200}
                   height={200}
-                  className="rounded-full object-cover"
+                  className="rounded-full object-cover w-[150px] h-[150px] md:w-[200px] md:h-[200px]"
                 />
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-xl font-bold text-primary mb-2">Contact</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="text-lg md:text-xl font-bold text-primary mb-2">Contact</h3>
+                <p className="text-sm md:text-base text-muted-foreground mb-4">
                   For more information about small business assistance, please contact Amy Beechy, Director of Entrepreneurial Programs:
                 </p>
-                <div className="space-y-1">
+                <div className="space-y-1 text-sm md:text-base">
                   <p className="text-foreground"><span className="font-semibold">Phone:</span> (574) 709-7955</p>
                   <p className="text-foreground">
                     <span className="font-semibold">Email:</span>{" "}
-                    <a href="mailto:amy@projectmattersllc.com" className="text-primary font-semibold hover:underline cursor-pointer">
+                    <a href="mailto:amy@projectmattersllc.com" className="text-primary font-semibold hover:underline cursor-pointer break-all">
                       amy@projectmattersllc.com
                     </a>
                   </p>
@@ -229,7 +229,7 @@ export default function BusinessAssistancePage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="mt-auto">
-                  <Link href="/stories-of-bizgro" className="cursor-pointer">
+                  <Link href="/small-business/stories-of-bizgro" className="cursor-pointer">
                     <Button size="lg" className="w-full bg-primary hover:bg-primary cursor-pointer shadow-md hover:shadow-xl hover:brightness-110 transition-all">
                       Read Success Stories
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -246,7 +246,7 @@ export default function BusinessAssistancePage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="mt-auto">
-                  <Link href="/sign-up" className="cursor-pointer">
+                  <Link href="/small-business/sign-up" className="cursor-pointer">
                     <Button size="lg" className="w-full bg-secondary hover:bg-secondary cursor-pointer shadow-md hover:shadow-xl hover:brightness-110 transition-all">
                       Stay Informed
                       <ArrowRight className="ml-2 h-4 w-4" />

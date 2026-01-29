@@ -46,7 +46,7 @@ export default function EconomicDevelopmentPage() {
       </section>
 
       {/* Available Properties Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Properties Viewer */}
           <div className="max-w-6xl mx-auto">
@@ -64,9 +64,9 @@ export default function EconomicDevelopmentPage() {
                   src="https://properties.zoomprospector.com/indiana/broker/2911/seo-key?page=1&s%5BSortDirection%5D=true&s%5BSortBy%5D=featured"
                   width="100%"
                   height="800"
-                  style={{ border: 0 }}
+                  style={{ border: 0, minHeight: '500px' }}
                   title="Available Properties in Fulton County"
-                  className="w-full"
+                  className="w-full h-[500px] md:h-[800px]"
                 />
               </div>
 
@@ -86,7 +86,7 @@ export default function EconomicDevelopmentPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 lg:py-24 bg-muted/30">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
@@ -165,7 +165,7 @@ export default function EconomicDevelopmentPage() {
       </section>
 
       {/* Key Industries */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
@@ -177,84 +177,84 @@ export default function EconomicDevelopmentPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             <div className="text-center">
-              <div className="mx-auto h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Factory className="h-8 w-8 text-primary" />
+              <div className="mx-auto h-14 w-14 md:h-16 md:w-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Factory className="h-7 w-7 md:h-8 md:w-8 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">Manufacturing</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="text-base md:text-lg font-semibold text-foreground mb-2">Manufacturing</h3>
+              <p className="text-xs md:text-sm text-muted-foreground">
                 Advanced manufacturing with skilled workforce and modern facilities
               </p>
             </div>
 
             <div className="text-center">
-              <div className="mx-auto h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Building2 className="h-8 w-8 text-primary" />
+              <div className="mx-auto h-14 w-14 md:h-16 md:w-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Building2 className="h-7 w-7 md:h-8 md:w-8 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">Agriculture</h3>
-              <p className="text-sm text-muted-foreground">Rich agricultural heritage with modern farming operations</p>
+              <h3 className="text-base md:text-lg font-semibold text-foreground mb-2">Agriculture</h3>
+              <p className="text-xs md:text-sm text-muted-foreground">Rich agricultural heritage with modern farming operations</p>
             </div>
 
             <div className="text-center">
-              <div className="mx-auto h-16 w-16 rounded-full bg-accent/10 flex items-center justify-center mb-4">
-                <Briefcase className="h-8 w-8 text-accent" />
+              <div className="mx-auto h-14 w-14 md:h-16 md:w-16 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+                <Briefcase className="h-7 w-7 md:h-8 md:w-8 text-accent" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">Logistics</h3>
-              <p className="text-sm text-muted-foreground">Strategic location with excellent transportation access</p>
+              <h3 className="text-base md:text-lg font-semibold text-foreground mb-2">Logistics</h3>
+              <p className="text-xs md:text-sm text-muted-foreground">Strategic location with excellent transportation access</p>
             </div>
 
             <div className="text-center">
-              <div className="mx-auto h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Users className="h-8 w-8 text-primary" />
+              <div className="mx-auto h-14 w-14 md:h-16 md:w-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Users className="h-7 w-7 md:h-8 md:w-8 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">Healthcare</h3>
-              <p className="text-sm text-muted-foreground">Growing healthcare sector with quality medical facilities</p>
+              <h3 className="text-base md:text-lg font-semibold text-foreground mb-2">Healthcare</h3>
+              <p className="text-xs md:text-sm text-muted-foreground">Growing healthcare sector with quality medical facilities</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why Fulton County */}
-      <section className="py-16 lg:py-24 bg-muted/30">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-6">
+          <div className="grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-6">
                 Why Choose Fulton County?
               </h2>
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Strategic Location</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">Strategic Location</h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     Centrally located between Chicago and Indianapolis, providing easy access to major markets and
                     transportation corridors.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Skilled Workforce</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">Skilled Workforce</h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     Access to a dedicated workforce with strong work ethic and technical skills, supported by local
                     training programs.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Quality of Life</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">Quality of Life</h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     Affordable cost of living, excellent schools, and abundant recreational opportunities make Fulton
                     County an ideal place to live and work.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Business-Friendly Environment</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">Business-Friendly Environment</h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     Competitive tax rates, streamlined permitting, and strong local support for business growth and
                     development.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative h-[300px] md:h-[400px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl order-1 lg:order-2">
               <img
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
                 alt="Business development in Fulton County"
@@ -266,7 +266,7 @@ export default function EconomicDevelopmentPage() {
       </section>
 
       {/* Major Employers CTA */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-4">
@@ -275,7 +275,7 @@ export default function EconomicDevelopmentPage() {
             <p className="text-lg text-muted-foreground mb-8">
               Fulton County is home to a number of major employers in a variety of industries, including manufacturing, healthcare, and education.
             </p>
-            <Link href="/top-employers" className="cursor-pointer">
+            <Link href="/fulton-county/top-employers" className="cursor-pointer">
               <Button size="lg" variant="outline" className="cursor-pointer shadow-md hover:shadow-xl hover:brightness-105 transition-all hover:bg-background hover:text-foreground">
                 View Top Employers in Fulton County →
               </Button>

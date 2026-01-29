@@ -72,7 +72,7 @@ export default function QuickFactsPage() {
       {/* Quick Facts Grid */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <Card className="shadow-lg">
               <CardHeader>
                 <BarChart3 className="h-8 w-8 text-primary mb-2" />
@@ -166,9 +166,9 @@ export default function QuickFactsPage() {
               <CardContent>
                 <ul className="space-y-2 text-muted-foreground">
                   {quickFacts.transportation.map((fact, i) => (
-                    <li key={i} className="flex justify-between text-sm">
-                      <span>{fact.label}:</span>
-                      <span className="font-medium text-foreground">{fact.value}</span>
+                    <li key={i} className="flex justify-between text-xs sm:text-sm">
+                      <span className="mr-2">{fact.label}:</span>
+                      <span className="font-medium text-foreground whitespace-nowrap">{fact.value}</span>
                     </li>
                   ))}
                 </ul>

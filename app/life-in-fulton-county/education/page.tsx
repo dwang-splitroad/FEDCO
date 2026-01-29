@@ -63,8 +63,8 @@ export default function EducationPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold text-primary mb-6">K-12 Schools</h3>
-            <div className="grid gap-6 md:grid-cols-3 mb-12">
+            <h3 className="text-xl md:text-2xl font-bold text-primary mb-6">K-12 Schools</h3>
+            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-12">
               {schools.map((school) => (
                 <Card key={school.name} className="shadow-lg">
                   <CardHeader>
@@ -86,9 +86,9 @@ export default function EducationPage() {
               ))}
             </div>
 
-            <h3 className="text-xl font-bold text-primary mb-6 text-center">Higher Education</h3>
-            <p className="text-muted-foreground mb-6 text-center">Within 50 miles of Fulton County</p>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <h3 className="text-xl md:text-2xl font-bold text-primary mb-6 text-center">Higher Education</h3>
+            <p className="text-sm md:text-base text-muted-foreground mb-6 text-center">Within 50 miles of Fulton County</p>
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {higherEd.map((school) => (
                 <Card key={school.name} className="shadow-lg">
                   <CardHeader className="pb-2">

@@ -16,8 +16,8 @@ export default function StaffPage() {
           <div className="max-w-4xl mx-auto">
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <div className="grid md:grid-cols-[280px_1fr] gap-0">
-                  <div className="relative h-[300px] md:h-full">
+                <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-0">
+                  <div className="relative h-[300px] md:h-full md:min-h-[400px]">
                     <Image
                       src="/images/michaelladd.jpg"
                       alt="Michael C. Ladd"
@@ -26,8 +26,8 @@ export default function StaffPage() {
                     />
                   </div>
                   <div className="p-6 md:p-8">
-                    <h2 className="text-xl font-bold text-primary mb-4">MICHAEL C. LADD</h2>
-                    <p className="text-foreground leading-relaxed mb-6">
+                    <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">MICHAEL C. LADD</h2>
+                    <p className="text-sm md:text-base text-foreground leading-relaxed mb-6">
                       His background includes <span className="font-semibold text-accent">35+ years in nonprofit management</span> in various positions. His experience is comprehensive, including chambers of commerce, Main Street and Urban Enterprise Zones. He brings with him extensive experience in organizational development, downtown revitalization, economic development, fundraising and grant writing. Contact Mike if you have a special project that needs a kick start!
                     </p>
                   </div>

@@ -11,10 +11,10 @@ interface BoardMemberProps {
 function BoardMember({ name, role, org, highlight = false }: BoardMemberProps) {
   return (
     <div>
-      <p className={`font-semibold text-lg ${highlight ? 'text-accent' : 'text-secondary'}`}>
+      <p className={`font-semibold text-base md:text-lg ${highlight ? 'text-accent' : 'text-secondary'}`}>
         {name}{role ? `, ${role}` : ""}
       </p>
-      <p className="text-muted-foreground italic">{org}</p>
+      <p className="text-sm md:text-base text-muted-foreground italic">{org}</p>
     </div>
   )
 }
@@ -55,7 +55,7 @@ export default function BoardPage() {
               <h2 className="text-2xl font-bold text-primary mb-8 uppercase tracking-wide">
                 Executive Board
               </h2>
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {executiveBoard.map((member) => (
                   <BoardMember 
                     key={member.name} 
@@ -71,7 +71,7 @@ export default function BoardPage() {
               <h2 className="text-2xl font-bold text-primary mb-8 uppercase tracking-wide">
                 Directors
               </h2>
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {directors.map((member) => (
                   <BoardMember 
                     key={member.name + member.org} 
@@ -86,7 +86,7 @@ export default function BoardPage() {
               <h2 className="text-2xl font-bold text-primary mb-8 uppercase tracking-wide">
                 Ex Officio
               </h2>
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {exOfficio.map((member, index) => (
                   <BoardMember 
                     key={member.name + member.org + index} 

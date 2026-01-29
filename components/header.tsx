@@ -93,7 +93,7 @@ export function Header() {
             </button>
             {openMenu === "economic-development" && (
               <div className="absolute top-full left-0 mt-2 w-60 bg-white rounded-lg shadow-xl border border-gray-100 py-2 animate-in fade-in-0 slide-in-from-top-2 duration-200">
-                <Link href="/economic-development" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
+                <Link href="/economic-development/sites-and-buildings" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
                   Sites & Buildings
                 </Link>
                 <a
@@ -136,7 +136,7 @@ export function Header() {
             </button>
             {openMenu === "small-biz" && (
               <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 py-2 animate-in fade-in-0 slide-in-from-top-2 duration-200">
-                <Link href="/business-assistance" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
+                <Link href="/small-business/business-assistance" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
                   Business Assistance
                 </Link>
                 <a
@@ -147,10 +147,10 @@ export function Header() {
                 >
                   Upcoming Biz Events
                 </a>
-                <Link href="/stories-of-bizgro" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
+                <Link href="/small-business/stories-of-bizgro" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
                   Stories of BizGro
                 </Link>
-                <Link href="/sign-up" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
+                <Link href="/small-business/sign-up" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
                   Sign up for Updates
                 </Link>
               </div>
@@ -212,10 +212,10 @@ export function Header() {
             </button>
             {openMenu === "fulton-county" && (
               <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2 animate-in fade-in-0 slide-in-from-top-2 duration-200">
-                <Link href="/workforce" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
+                <Link href="/fulton-county/workforce" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
                   Workforce
                 </Link>
-                <Link href="/top-employers" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
+                <Link href="/fulton-county/top-employers" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
                   Top Employers
                 </Link>
                 <Link href="/life-in-fulton-county/utilities" className="block px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary hover:text-white rounded-md mx-2 transition-colors cursor-pointer">
@@ -328,41 +328,110 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-white/20" style={{ backgroundColor: "#273776" }}>
           <nav className="flex flex-col gap-1 p-4 max-h-[calc(100vh-5rem)] overflow-y-auto">
+            {/* Home */}
             <Link href="/" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
               Home
             </Link>
-            <Link href="/about/mission" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
-              Mission
+
+            {/* Economic Development */}
+            <div className="text-white/60 text-xs uppercase tracking-wide px-4 pt-3 pb-1 font-semibold">Economic Development</div>
+            <Link href="/economic-development/sites-and-buildings" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Sites & Buildings
             </Link>
-            <Link href="/about/staff" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
-              Staff
-            </Link>
-            <Link href="/about/board" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
-              Board
-            </Link>
-            <Link href="/contact" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
-              Contact
-            </Link>
-            <Link href="/business-assistance" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+            <a href="https://www.bls.gov/regions/midwest/news-release/countyemploymentandwages_indiana.htm" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Wage Survey
+            </a>
+            <a href="https://www.hoosierdata.in.gov" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Labor Statistics
+            </a>
+            <a href="https://www.in.gov/dwd/newsroom/employment-reports" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Employment Rates
+            </a>
+
+            {/* Small Biz */}
+            <div className="text-white/60 text-xs uppercase tracking-wide px-4 pt-3 pb-1 font-semibold">Small Biz</div>
+            <Link href="/small-business/business-assistance" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
               Business Assistance
             </Link>
-            <Link href="/stories-of-bizgro" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+            <a href="https://www.facebook.com/fedco46975#" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Upcoming Biz Events
+            </a>
+            <Link href="/small-business/stories-of-bizgro" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
               Stories of BizGro
             </Link>
-            <Link href="/life-in-fulton-county/education" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/small-business/sign-up" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Sign up for Updates
+            </Link>
+
+            {/* Workone */}
+            <a href="https://www.in.gov/dwd/" target="_blank" rel="noopener noreferrer" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Workone
+            </a>
+
+            {/* Life in Fulton County */}
+            <div className="text-white/60 text-xs uppercase tracking-wide px-4 pt-3 pb-1 font-semibold">Life in Fulton County</div>
+            <Link href="/life-in-fulton-county/quick-facts" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Quick Facts
+            </Link>
+            <Link href="/life-in-fulton-county/healthcare" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Healthcare
+            </Link>
+            <Link href="/life-in-fulton-county/education" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
               Education
             </Link>
-            <Link href="/workforce" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
-              Workforce
-            </Link>
-            <Link href="/top-employers" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
-              Top Employers
-            </Link>
-            <Link href="/life-in-fulton-county/utilities" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/life-in-fulton-county/utilities" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
               Utilities
             </Link>
-            <Link href="/life-in-fulton-county/quick-facts" className="text-white py-3 px-4 hover:bg-white/10 hover:text-white rounded-lg font-medium transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
-              Quick Facts
+            <a href="https://fultoncountyindiana.com/" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Things to Do
+            </a>
+
+            {/* Fulton County */}
+            <div className="text-white/60 text-xs uppercase tracking-wide px-4 pt-3 pb-1 font-semibold">Fulton County</div>
+            <Link href="/fulton-county/workforce" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Workforce
+            </Link>
+            <Link href="/fulton-county/top-employers" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Top Employers
+            </Link>
+
+            {/* Partners */}
+            <div className="text-white/60 text-xs uppercase tracking-wide px-4 pt-3 pb-1 font-semibold">Partners</div>
+            <a href="https://rochester.in.us/" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Rochester
+            </a>
+            <a href="https://www.co.fulton.in.us/" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Fulton County
+            </a>
+            <a href="https://akronindiana.com/" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Akron
+            </a>
+            <a href="https://www.facebook.com/share/1CNHgtB9Vj" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Kewanna
+            </a>
+            <a href="https://ieda.org" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              IEDA
+            </a>
+            <a href="https://iedc.in.gov" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              IEDC
+            </a>
+            <a href="https://www.iar.cc/north-central-indiana-regional-palnning-council" target="_blank" rel="noopener noreferrer" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              NCIRPC
+            </a>
+
+            {/* About */}
+            <div className="text-white/60 text-xs uppercase tracking-wide px-4 pt-3 pb-1 font-semibold">About</div>
+            <Link href="/about/staff" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Staff
+            </Link>
+            <Link href="/about/board" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Board of Directors
+            </Link>
+            <Link href="/about/mission" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Mission
+            </Link>
+            <Link href="/contact" className="text-white py-2 px-4 pl-8 hover:bg-white/10 hover:text-white rounded-lg transition-all cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
+              Contact
             </Link>
           </nav>
         </div>

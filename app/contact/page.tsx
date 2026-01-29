@@ -42,7 +42,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Ready to connect to any form service */}
                   
-                  <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="name">Name <span className="text-destructive">*</span></Label>
                       <Input id="name" name="name" placeholder="Your name" required />
@@ -53,7 +53,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone</Label>
                       <Input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" />

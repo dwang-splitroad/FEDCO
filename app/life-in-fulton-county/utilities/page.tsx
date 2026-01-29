@@ -97,14 +97,14 @@ export default function UtilitiesPage() {
             </Card>
           </div>
 
-          <div className="text-center mt-12">
-            <h3 className="text-xl font-bold text-primary mb-4">
+          <div className="text-center mt-12 px-4">
+            <h3 className="text-lg md:text-xl font-bold text-primary mb-4">
               Ready to build or expand in Fulton County?
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-sm md:text-base text-muted-foreground mb-6">
               Contact our team to learn more about utility services and how we can help you establish your business in Fulton County.
             </p>
-            <Link href="/contact" className="inline-block text-primary hover:underline font-medium text-lg cursor-pointer">
+            <Link href="/contact" className="inline-block text-primary hover:underline font-medium text-base md:text-lg cursor-pointer">
               Contact Us →
             </Link>
           </div>

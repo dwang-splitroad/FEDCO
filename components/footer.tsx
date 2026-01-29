@@ -95,7 +95,7 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Small Biz</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/business-assistance" className="hover:text-white cursor-pointer">
+                <Link href="/small-business/business-assistance" className="hover:text-white cursor-pointer">
                   Business Assistance
                 </Link>
               </li>
@@ -110,12 +110,12 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/stories-of-bizgro" className="hover:text-white cursor-pointer">
+                <Link href="/small-business/stories-of-bizgro" className="hover:text-white cursor-pointer">
                   Stories of BizGro
                 </Link>
               </li>
               <li>
-                <Link href="/sign-up" className="hover:text-white cursor-pointer">
+                <Link href="/small-business/sign-up" className="hover:text-white cursor-pointer">
                   Sign up for Updates
                 </Link>
               </li>
@@ -164,17 +164,17 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Economic Development</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/economic-development" className="hover:text-white cursor-pointer">
+                <Link href="/economic-development/sites-and-buildings" className="hover:text-white cursor-pointer">
                   Sites & Buildings
                 </Link>
               </li>
               <li>
-                <Link href="/workforce" className="hover:text-white cursor-pointer">
+                <Link href="/fulton-county/workforce" className="hover:text-white cursor-pointer">
                   Workforce
                 </Link>
               </li>
               <li>
-                <Link href="/top-employers" className="hover:text-white cursor-pointer">
+                <Link href="/fulton-county/top-employers" className="hover:text-white cursor-pointer">
                   Top Employers
                 </Link>
               </li>
@@ -194,8 +194,8 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>© 2026 Fulton Economic Development Corp. All rights reserved.</p>
-          <div className="flex gap-6">
+          <p className="text-center md:text-left">© 2026 Fulton Economic Development Corp. All rights reserved.</p>
+          <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
             <Link href="/contact" className="hover:text-white cursor-pointer">
               Privacy Policy
             </Link>

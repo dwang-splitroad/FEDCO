@@ -45,7 +45,7 @@ export default function TopEmployersPage() {
               Top Employers in Fulton County
             </h2>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
               {employers.map((employer, index) => {
                 const Icon = employer.icon
                 return (
@@ -78,7 +78,7 @@ export default function TopEmployersPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link 
-              href="/workforce"
+              href="/fulton-county/workforce"
               className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium cursor-pointer hover:shadow-xl hover:brightness-110 transition-all"
             >
               View Workforce Data

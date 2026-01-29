@@ -77,18 +77,18 @@ export default function WorkforcePage() {
               </Table>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <div className="mt-8 grid gap-4 grid-cols-1 sm:grid-cols-3">
               <Card className="text-center p-6">
-                <div className="text-4xl font-bold text-primary mb-2">3.00%</div>
-                <p className="text-muted-foreground">Unemployment Rate</p>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">3.00%</div>
+                <p className="text-sm md:text-base text-muted-foreground">Unemployment Rate</p>
               </Card>
               <Card className="text-center p-6">
-                <div className="text-4xl font-bold text-primary mb-2">10,344</div>
-                <p className="text-muted-foreground">Labor Force</p>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">10,344</div>
+                <p className="text-sm md:text-base text-muted-foreground">Labor Force</p>
               </Card>
               <Card className="text-center p-6">
-                <div className="text-4xl font-bold text-primary mb-2">10,031</div>
-                <p className="text-muted-foreground">Employed</p>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">10,031</div>
+                <p className="text-sm md:text-base text-muted-foreground">Employed</p>
               </Card>
             </div>
           </div>

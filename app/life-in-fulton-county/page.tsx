@@ -97,7 +97,7 @@ export default function LifeInFultonCountyPage() {
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <Card>
               <CardHeader>
                 <Users className="h-8 w-8 text-accent mb-2" />
@@ -262,8 +262,8 @@ export default function LifeInFultonCountyPage() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold text-primary mb-6">K-12 Schools</h3>
-            <div className="grid gap-6 md:grid-cols-3 mb-12">
+            <h3 className="text-xl md:text-2xl font-bold text-primary mb-6">K-12 Schools</h3>
+            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-12">
               {schools.map((school) => (
                 <Card key={school.name}>
                   <CardHeader>
@@ -285,9 +285,9 @@ export default function LifeInFultonCountyPage() {
               ))}
             </div>
 
-            <h3 className="text-xl font-bold text-primary mb-6">Higher Education</h3>
-            <p className="text-muted-foreground mb-6 text-center">Within 50 miles of Fulton County</p>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <h3 className="text-xl md:text-2xl font-bold text-primary mb-6 text-center">Higher Education</h3>
+            <p className="text-sm md:text-base text-muted-foreground mb-6 text-center">Within 50 miles of Fulton County</p>
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {higherEd.map((school) => (
                 <Card key={school.name}>
                   <CardHeader className="pb-2">
@@ -375,11 +375,11 @@ export default function LifeInFultonCountyPage() {
             </Card>
           </div>
 
-          <div className="text-center mt-12">
-            <h3 className="text-xl font-bold text-primary mb-4">
+          <div className="text-center mt-12 px-4">
+            <h3 className="text-lg md:text-xl font-bold text-primary mb-4">
               Ready to build or expand in Fulton County?
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-sm md:text-base text-muted-foreground mb-6">
               Contact our team to learn more about utility services and how we can help you establish your business in Fulton County.
             </p>
             <Link href="/contact" className="text-primary hover:underline font-medium cursor-pointer">
