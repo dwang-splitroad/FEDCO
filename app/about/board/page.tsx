@@ -20,25 +20,32 @@ function BoardMember({ name, role, org, highlight = false }: BoardMemberProps) {
 }
 
 export default function BoardPage() {
-  const executiveBoard = [
-    { name: "Jason Grube", role: "President", org: "Rochester Iron & Metal" },
-    { name: "Andrew Horstman", role: "Vice President", org: "Fulton County REMC" },
-    { name: "Brian Johnson", role: "Treasurer", org: "Smith, Sawyer & Smith" },
-    { name: "Kathy Rans", role: "Secretary", org: "Fulton County Chamber of Commerce" },
+  const officers = [
+    { name: "Mark McCall", role: "President", org: "" },
+    { name: "Renell Finke", role: "Vice President", org: "" },
+    { name: "Michelle Million", role: "Treasurer", org: "" },
   ]
 
   const directors = [
-    { name: "Lauren Adley", role: "Board Attorney", org: "Peterson Waggoner & Perkins LLP" },
-    { name: "Rennell Finke", org: "Akron" },
-    { name: "Mike McCarter", org: "Kewanna" },
-    { name: "Mark McCall", org: "Beacon Credit Union" },
-    { name: "Randy Gundrum", org: "Fulton County Council" },
+    { name: "Brian Goodman", org: "Modern Materials" },
+    { name: "Lisa Reffett", org: "Redline Equipment" },
+    { name: "Tiffany Lukens", org: "Fulton County Chamber of Commerce" },
+    { name: "Ted Waggoner", org: "Retired" },
+    { name: "Jana Vance", org: "Rochester School District" },
+    { name: "Angie Miller", org: "Caston School District" },
+    { name: "Orville Haney", org: "Homes, Land & Lakes Realty" },
+    { name: "Chris Hoffman", org: "Machine Casting Specialities" },
+    { name: "Alan Fisher", org: "Woodlawn Hospital" },
+  ]
+
+  const boardAttorney = [
+    { name: "Lauren Adley", org: "Perkins-Adley Attorneys at Law" },
   ]
 
   const exOfficio = [
-    { name: "Brian Goodman", org: "Modern Materials/Rochester City Council" },
+    { name: "Andrew Horstman", role: "Immediate Past President", org: "FCREMC" },
     { name: "Randy Gundrum", org: "Fulton County Council" },
-    { name: "Mark McCall", org: "Beacon Credit Union" },
+    { name: "Evan Gottschalk", org: "City of Rochester" },
   ]
 
   return (
@@ -50,13 +57,13 @@ export default function BoardPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-16">
-            {/* Executive Board */}
+            {/* Officers */}
             <div>
               <h2 className="text-2xl font-bold text-primary mb-8 uppercase tracking-wide">
-                Executive Board
+                Officers
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {executiveBoard.map((member) => (
+                {officers.map((member) => (
                   <BoardMember 
                     key={member.name} 
                     {...member} 
@@ -75,6 +82,21 @@ export default function BoardPage() {
                 {directors.map((member) => (
                   <BoardMember 
                     key={member.name + member.org} 
+                    {...member} 
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Board Attorney */}
+            <div>
+              <h2 className="text-2xl font-bold text-primary mb-8 uppercase tracking-wide">
+                Board Attorney
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {boardAttorney.map((member) => (
+                  <BoardMember 
+                    key={member.name} 
                     {...member} 
                   />
                 ))}
