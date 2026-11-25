@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://fultondevelopment.org
+Host: https://www.fultonedc.com
 
 # Sitemaps
-Sitemap: https://fultondevelopment.org/sitemap.xml
+Sitemap: https://www.fultonedc.com/sitemap.xml

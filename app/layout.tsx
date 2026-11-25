@@ -7,7 +7,7 @@ import "./globals.css"
 // Follows whichever production domain Vercel is serving, so the logo URL always resolves.
 const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : "https://fultondevelopment.org"
+  : "https://www.fultonedc.com"
 
 // Structured data so search engines can pick up the logo without it being shown on the page.
 const organizationJsonLd = {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FEDCO - Fulton Economic Development Corporation",
     description: "Building tomorrow's economy in the heart of America.",
-    url: "https://fultondevelopment.org",
+    url: "https://www.fultonedc.com",
     siteName: "FEDCO",
     locale: "en_US",
     type: "website",

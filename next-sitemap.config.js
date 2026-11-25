@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://fultondevelopment.org',
+  siteUrl: process.env.SITE_URL || 'https://www.fultonedc.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ['/server-sitemap.xml', '/icon.png', '/apple-icon.png'],
