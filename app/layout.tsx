@@ -55,6 +55,12 @@ export const metadata: Metadata = {
         height: 630,
         alt: "FEDCO - Fulton Economic Development Corp logo",
       },
+      {
+        url: "/images/fedco-logo.png",
+        width: 1639,
+        height: 575,
+        alt: "FEDCO - Fulton Economic Development Corp primary logo",
+      },
     ],
   },
 }
@@ -78,6 +84,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         {children}
+        {/* Not displayed: lets crawlers that only read page content find the primary logo. */}
+        <img
+          src="/images/fedco-logo.png"
+          alt="FEDCO - Fulton Economic Development Corp primary logo"
+          width={1639}
+          height={575}
+          loading="lazy"
+          className="hidden"
+        />
         <Analytics />
       </body>
     </html>
