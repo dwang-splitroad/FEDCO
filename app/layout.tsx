@@ -2,34 +2,13 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
+import { organizationJsonLd } from "@/lib/organization-schema"
 import "./globals.css"
 
-// Follows whichever production domain Vercel is serving, so the logo URL always resolves.
+// Follows whichever production domain Vercel is serving, so preview image URLs always resolve.
 const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
   : "https://www.fultonedc.com"
-
-// Structured data so search engines can pick up the logo without it being shown on the page.
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Fulton Economic Development Corporation",
-  alternateName: "FEDCO",
-  url: siteUrl,
-  logo: `${siteUrl}/images/fedco-logo.png`,
-  image: `${siteUrl}/images/fedco-logo.png`,
-  email: "director@fultondevelopment.org",
-  telephone: "+1-574-223-3326",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "822 Main Street",
-    addressLocality: "Rochester",
-    addressRegion: "IN",
-    postalCode: "46975",
-    addressCountry: "US",
-  },
-  sameAs: ["https://www.facebook.com/fedco46975"],
-}
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
