@@ -3,7 +3,7 @@ export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "NGO"],
+      "@type": "Organization",
       "@id": "https://www.fultonedc.com/#organization",
       name: "Fulton Economic Development Corporation",
       alternateName: ["FEDCO", "Fulton Economic Development Corp"],
