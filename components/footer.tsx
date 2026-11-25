@@ -1,11 +1,11 @@
 import Link from "next/link"
-import { Facebook, Linkedin, Twitter, Youtube } from "lucide-react"
+import { Facebook } from "lucide-react"
 
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="container px-4 md:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-8 mb-8">
           {/* Brand Column */}
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Fulton Economic Development Corp</h3>
@@ -19,33 +19,6 @@ export function Footer() {
               >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a
-                href="https://www.linkedin.com/company/fulton-economic-development-corporation/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white cursor-pointer"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="https://twitter.com/fedco46975"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white cursor-pointer"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCXZr1Z5Y9Z9Z9Z9Z9Z9Z9Zw"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white cursor-pointer"
-                aria-label="YouTube"
-              >
-                <Youtube className="h-5 w-5" />
-              </a>
             </div>
             <div className="mt-4 space-y-1 text-sm">
               <p>822 Main Street</p>
@@ -56,8 +29,8 @@ export function Footer() {
                 </a>
               </p>
               <p>
-                <a href="mailto:info@fedco.org" className="hover:text-white cursor-pointer">
-                  info@fedco.org
+                <a href="mailto:director@fultondevelopment.org" className="hover:text-white cursor-pointer">
+                  director@fultondevelopment.org
                 </a>
               </p>
             </div>
